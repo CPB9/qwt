@@ -252,7 +252,7 @@ qt5_wrap_cpp(MOC_SOURCES
     qwt_wheel.h
 )
 
-set(LIB_TYPE SHARED)
+set(LIB_TYPE STATIC)
 if(WIN32)
     set(LIB_TYPE SHARED)
     add_definitions(-DQT_DLL -DQWT_DLL -DQWT_MAKEDLL)
