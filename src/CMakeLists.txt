@@ -253,12 +253,14 @@ qt5_wrap_cpp(MOC_SOURCES
 )
 
 set(LIB_TYPE STATIC)
+set(LIB_DEFINITIONS)
 if(WIN32)
     set(LIB_TYPE SHARED)
+    set(LIB_DEFINITIONS QT_DLL QWT_DLL)
     add_definitions(-DQT_DLL -DQWT_DLL -DQWT_MAKEDLL)
 endif()
 
-add_library(qwt ${LIB_TYPE}
+add_library(Qwt ${LIB_TYPE}
     ${SOURCES}
     ${PLOT_SOURCES}
     ${SVG_SOURCES}
@@ -267,7 +269,7 @@ add_library(qwt ${LIB_TYPE}
     ${MOC_SOURCES}
 )
 
-target_link_libraries(qwt
+target_link_libraries(Qwt
     Qt5::Core
     Qt5::Gui
     Qt5::Widgets
@@ -276,3 +278,7 @@ target_link_libraries(qwt
     Qt5::Concurrent
     Qt5::PrintSupport
 )
+
+set_property(TARGET Qwt PROPERTY INTERFACE_INCLUDE_DIRECTORIES ${CMAKE_CURRENT_SOURCE_DIR})
+set_property(TARGET Qwt PROPERTY INTERFACE_COMPILE_DEFINITIONS ${LIB_DEFINITIONS})
+
