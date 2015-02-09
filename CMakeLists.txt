@@ -18,3 +18,23 @@ if(HAS_PARENT_SCOPE)
     set(QWT_LIBRARIES qwt PARENT_SCOPE)
 endif()
 
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/src)
+
+if(QWT_BUILD_CPUPLOT)
+    qt5_wrap_cpp(MOC_CPP
+        examples/cpuplot/cpupiemarker.h
+        examples/cpuplot/cpuplot.h
+        examples/cpuplot/cpustat.h
+    )
+
+    add_executable(cpuplot
+        examples/cpuplot/cpupiemarker.cpp
+        examples/cpuplot/cpuplot.cpp
+        examples/cpuplot/cpustat.cpp
+        ${MOC_CPP}
+    )
+
+    target_link_libraries(cpuplot
+        qwt
+    )
+endif()
