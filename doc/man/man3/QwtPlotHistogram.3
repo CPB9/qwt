@@ -1,10 +1,8 @@
-.TH "QwtPlotHistogram" 3 "Thu Dec 11 2014" "Version 6.1.2" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotHistogram" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-QwtPlotHistogram \- 
-.PP
-\fBQwtPlotHistogram\fP represents a series of samples, where an interval is associated with a value ( $y = f([x1,x2])$ )\&.  
+QwtPlotHistogram \- \fBQwtPlotHistogram\fP represents a series of samples, where an interval is associated with a value ( $y = f([x1,x2])$ )\&.  
 
 .SH SYNOPSIS
 .br
@@ -117,7 +115,7 @@ The representation depends on the \fBstyle()\fP and an optional \fBsymbol()\fP t
 The term 'histogram' is used in a different way in the areas of digital image processing and statistics\&. Wikipedia introduces the terms 'image histogram' and 'color histogram' to avoid confusions\&. While 'image histograms' can be displayed by a \fBQwtPlotCurve\fP there is no applicable plot item for a 'color histogram' yet\&.
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBQwtPlotBarChart\fP, \fBQwtPlotMultiBarChart\fP 
 .RE
@@ -128,7 +126,7 @@ The term 'histogram' is used in a different way in the areas of digital image pr
 .SS "enum \fBQwtPlotHistogram::HistogramStyle\fP"
 Histogram styles\&. The default style is \fBQwtPlotHistogram::Columns\fP\&.
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetStyle()\fP, \fBstyle()\fP, \fBsetSymbol()\fP, \fBsymbol()\fP, \fBsetBaseline()\fP 
 .RE
@@ -151,7 +149,7 @@ Draw a simple line using the \fBpen()\fP for each interval\&.
 Styles >= UserStyle are reserved for derived classes that overload \fBdrawSeries()\fP with additional application specific ways to display a histogram\&. 
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "QwtPlotHistogram::QwtPlotHistogram (const QString &title = \fCQString::null\fP)\fC [explicit]\fP"
+.SS "QwtPlotHistogram::QwtPlotHistogram (const QString & title = \fCQString::null\fP)\fC [explicit]\fP"
 Constructor 
 .PP
 \fBParameters:\fP
@@ -160,7 +158,7 @@ Constructor
 .RE
 .PP
 
-.SS "QwtPlotHistogram::QwtPlotHistogram (const \fBQwtText\fP &title)\fC [explicit]\fP"
+.SS "QwtPlotHistogram::QwtPlotHistogram (const \fBQwtText\fP & title)\fC [explicit]\fP"
 Constructor 
 .PP
 \fBParameters:\fP
@@ -179,7 +177,7 @@ Constructor
 Value of the baseline 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetBaseline()\fP 
 .RE
@@ -204,13 +202,13 @@ Reimplemented from \fBQwtPlotSeriesItem\fP\&.
 Brush used in a \fBstyle()\fP depending way\&. 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetPen()\fP, \fBbrush()\fP 
 .RE
 .PP
 
-.SS "\fBQwtColumnRect\fP QwtPlotHistogram::columnRect (const \fBQwtIntervalSample\fP &sample, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap) const\fC [protected]\fP, \fC [virtual]\fP"
+.SS "\fBQwtColumnRect\fP QwtPlotHistogram::columnRect (const \fBQwtIntervalSample\fP & sample, const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap) const\fC [protected]\fP, \fC [virtual]\fP"
 Calculate the area that is covered by a sample
 .PP
 \fBParameters:\fP
@@ -228,7 +226,7 @@ Rectangle, that is covered by a sample
 .RE
 .PP
 
-.SS "void QwtPlotHistogram::drawColumn (QPainter *painter, const \fBQwtColumnRect\fP &rect, const \fBQwtIntervalSample\fP &sample) const\fC [protected]\fP, \fC [virtual]\fP"
+.SS "void QwtPlotHistogram::drawColumn (QPainter * painter, const \fBQwtColumnRect\fP & rect, const \fBQwtIntervalSample\fP & sample) const\fC [protected]\fP, \fC [virtual]\fP"
 Draw a column for a sample in Columns \fBstyle()\fP\&.
 .PP
 When a \fBsymbol()\fP has been set the symbol is used otherwise the column is displayed as plain rectangle using \fBpen()\fP and \fBbrush()\fP\&.
@@ -248,7 +246,7 @@ In applications, where different intervals need to be displayed in a different w
 .RE
 .PP
 
-.SS "void QwtPlotHistogram::drawColumns (QPainter *painter, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, intfrom, intto) const\fC [protected]\fP"
+.SS "void QwtPlotHistogram::drawColumns (QPainter * painter, const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, int from, int to) const\fC [protected]\fP"
 Draw a histogram in Columns \fBstyle()\fP
 .PP
 \fBParameters:\fP
@@ -264,13 +262,13 @@ Draw a histogram in Columns \fBstyle()\fP
 \fIto\fP Index of the last sample to be painted\&. If to < 0 the histogram will be painted to its last point\&.
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetStyle()\fP, \fBstyle()\fP, \fBsetSymbol()\fP, \fBdrawColumn()\fP 
 .RE
 .PP
 
-.SS "void QwtPlotHistogram::drawLines (QPainter *painter, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, intfrom, intto) const\fC [protected]\fP"
+.SS "void QwtPlotHistogram::drawLines (QPainter * painter, const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, int from, int to) const\fC [protected]\fP"
 Draw a histogram in Lines \fBstyle()\fP
 .PP
 \fBParameters:\fP
@@ -286,13 +284,13 @@ Draw a histogram in Lines \fBstyle()\fP
 \fIto\fP Index of the last sample to be painted\&. If to < 0 the histogram will be painted to its last point\&.
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetStyle()\fP, \fBstyle()\fP, \fBsetPen()\fP 
 .RE
 .PP
 
-.SS "void QwtPlotHistogram::drawOutline (QPainter *painter, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, intfrom, intto) const\fC [protected]\fP"
+.SS "void QwtPlotHistogram::drawOutline (QPainter * painter, const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, int from, int to) const\fC [protected]\fP"
 Draw a histogram in Outline \fBstyle()\fP
 .PP
 \fBParameters:\fP
@@ -308,7 +306,7 @@ Draw a histogram in Outline \fBstyle()\fP
 \fIto\fP Index of the last sample to be painted\&. If to < 0 the histogram will be painted to its last point\&.
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetStyle()\fP, \fBstyle()\fP 
 .RE
@@ -319,7 +317,7 @@ The outline style requires, that the intervals are in increasing order and not o
 .RE
 .PP
 
-.SS "void QwtPlotHistogram::drawSeries (QPainter *painter, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect, intfrom, intto) const\fC [virtual]\fP"
+.SS "void QwtPlotHistogram::drawSeries (QPainter * painter, const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & canvasRect, int from, int to) const\fC [virtual]\fP"
 Draw a subset of the histogram samples
 .PP
 \fBParameters:\fP
@@ -337,7 +335,7 @@ Draw a subset of the histogram samples
 \fIto\fP Index of the last sample to be painted\&. If to < 0 the series will be painted to its last sample\&.
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBdrawOutline()\fP, \fBdrawLines()\fP, \fBdrawColumns\fP 
 .RE
@@ -345,7 +343,7 @@ Draw a subset of the histogram samples
 
 .PP
 Implements \fBQwtPlotSeriesItem\fP\&.
-.SS "\fBQwtGraphic\fP QwtPlotHistogram::legendIcon (intindex, const QSizeF &size) const\fC [virtual]\fP"
+.SS "\fBQwtGraphic\fP QwtPlotHistogram::legendIcon (int index, const QSizeF & size) const\fC [virtual]\fP"
 A plain rectangle without pen using the \fBbrush()\fP
 .PP
 \fBParameters:\fP
@@ -360,7 +358,7 @@ A plain rectangle without pen using the \fBbrush()\fP
 A graphic displaying the icon
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBQwtPlotItem::setLegendIconSize()\fP, \fBQwtPlotItem::legendData()\fP 
 .RE
@@ -376,7 +374,7 @@ Reimplemented from \fBQwtPlotItem\fP\&.
 Pen used in a \fBstyle()\fP depending way\&. 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetPen()\fP, \fBbrush()\fP 
 .RE
@@ -393,7 +391,7 @@ Pen used in a \fBstyle()\fP depending way\&.
 
 .PP
 Reimplemented from \fBQwtPlotItem\fP\&.
-.SS "void QwtPlotHistogram::setBaseline (doublevalue)"
+.SS "void QwtPlotHistogram::setBaseline (double value)"
 
 .PP
 Set the value of the baseline\&. Each column representing an \fBQwtIntervalSample\fP is defined by its interval and the interval between baseline and the value of the sample\&.
@@ -405,13 +403,13 @@ The default value of the baseline is 0\&.0\&.
 \fIvalue\fP Value of the baseline 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBbaseline()\fP 
 .RE
 .PP
 
-.SS "void QwtPlotHistogram::setBrush (const QBrush &brush)"
+.SS "void QwtPlotHistogram::setBrush (const QBrush & brush)"
 Assign a brush, that is used in a \fBstyle()\fP depending way\&.
 .PP
 \fBParameters:\fP
@@ -419,13 +417,13 @@ Assign a brush, that is used in a \fBstyle()\fP depending way\&.
 \fIbrush\fP New brush 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBpen()\fP, \fBbrush()\fP 
 .RE
 .PP
 
-.SS "void QwtPlotHistogram::setPen (const QColor &color, qrealwidth = \fC0\&.0\fP, Qt::PenStylestyle = \fCQt::SolidLine\fP)"
+.SS "void QwtPlotHistogram::setPen (const QColor & color, qreal width = \fC0\&.0\fP, Qt::PenStyle style = \fCQt::SolidLine\fP)"
 Build and assign a pen
 .PP
 In Qt5 the default pen width is 1\&.0 ( 0\&.0 in Qt4 ) what makes it non cosmetic ( see QPen::isCosmetic() )\&. This method has been introduced to hide this incompatibility\&.
@@ -439,13 +437,13 @@ In Qt5 the default pen width is 1\&.0 ( 0\&.0 in Qt4 ) what makes it non cosmeti
 \fIstyle\fP Pen style
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBpen()\fP, \fBbrush()\fP 
 .RE
 .PP
 
-.SS "void QwtPlotHistogram::setPen (const QPen &pen)"
+.SS "void QwtPlotHistogram::setPen (const QPen & pen)"
 Assign a pen, that is used in a \fBstyle()\fP depending way\&.
 .PP
 \fBParameters:\fP
@@ -453,13 +451,13 @@ Assign a pen, that is used in a \fBstyle()\fP depending way\&.
 \fIpen\fP New pen 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBpen()\fP, \fBbrush()\fP 
 .RE
 .PP
 
-.SS "void QwtPlotHistogram::setSamples (const QVector< \fBQwtIntervalSample\fP > &samples)"
+.SS "void QwtPlotHistogram::setSamples (const QVector< \fBQwtIntervalSample\fP > & samples)"
 Initialize data with an array of samples\&. 
 .PP
 \fBParameters:\fP
@@ -468,7 +466,7 @@ Initialize data with an array of samples\&.
 .RE
 .PP
 
-.SS "void QwtPlotHistogram::setSamples (\fBQwtSeriesData\fP< \fBQwtIntervalSample\fP > *data)"
+.SS "void QwtPlotHistogram::setSamples (\fBQwtSeriesData\fP< \fBQwtIntervalSample\fP > * data)"
 Assign a series of samples
 .PP
 \fBsetSamples()\fP is just a wrapper for \fBsetData()\fP without any additional value - beside that it is easier to find for the developer\&.
@@ -484,7 +482,7 @@ The item takes ownership of the data object, deleting it when its not used anymo
 .RE
 .PP
 
-.SS "void QwtPlotHistogram::setStyle (\fBHistogramStyle\fPstyle)"
+.SS "void QwtPlotHistogram::setStyle (\fBHistogramStyle\fP style)"
 Set the histogram's drawing style
 .PP
 \fBParameters:\fP
@@ -492,18 +490,18 @@ Set the histogram's drawing style
 \fIstyle\fP Histogram style 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBHistogramStyle\fP, \fBstyle()\fP 
 .RE
 .PP
 
-.SS "void QwtPlotHistogram::setSymbol (const \fBQwtColumnSymbol\fP *symbol)"
+.SS "void QwtPlotHistogram::setSymbol (const \fBQwtColumnSymbol\fP * symbol)"
 
 .PP
 Assign a symbol\&. In Column style an optional symbol can be assigned, that is responsible for displaying the rectangle that is defined by the interval and the distance between \fBbaseline()\fP and value\&. When no symbol has been defined the area is displayed as plain rectangle using \fBpen()\fP and \fBbrush()\fP\&.
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBstyle()\fP, \fBsymbol()\fP, \fBdrawColumn()\fP, \fBpen()\fP, \fBbrush()\fP
 .RE
@@ -522,7 +520,7 @@ In applications, where different intervals need to be displayed in a different w
 Style of the histogram 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBHistogramStyle\fP, \fBsetStyle()\fP 
 .RE
@@ -536,7 +534,7 @@ Style of the histogram
 Current symbol or NULL, when no symbol has been assigned 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetSymbol()\fP 
 .RE

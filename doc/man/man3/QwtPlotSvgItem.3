@@ -1,10 +1,8 @@
-.TH "QwtPlotSvgItem" 3 "Thu Dec 11 2014" "Version 6.1.2" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotSvgItem" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-QwtPlotSvgItem \- 
-.PP
-A plot item, which displays data in Scalable Vector Graphics (SVG) format\&.  
+QwtPlotSvgItem \- A plot item, which displays data in Scalable Vector Graphics (SVG) format\&.  
 
 .SH SYNOPSIS
 .br
@@ -69,7 +67,7 @@ A plot item, which displays data in Scalable Vector Graphics (SVG) format\&.
 SVG images are often used to display maps 
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "QwtPlotSvgItem::QwtPlotSvgItem (const QString &title = \fCQString::null\fP)\fC [explicit]\fP"
+.SS "QwtPlotSvgItem::QwtPlotSvgItem (const QString & title = \fCQString::null\fP)\fC [explicit]\fP"
 
 .PP
 Constructor\&. Sets the following item attributes:
@@ -85,7 +83,7 @@ Constructor\&. Sets the following item attributes:
 .RE
 .PP
 
-.SS "QwtPlotSvgItem::QwtPlotSvgItem (const \fBQwtText\fP &title)\fC [explicit]\fP"
+.SS "QwtPlotSvgItem::QwtPlotSvgItem (const \fBQwtText\fP & title)\fC [explicit]\fP"
 
 .PP
 Constructor\&. Sets the following item attributes:
@@ -103,7 +101,7 @@ Constructor\&. Sets the following item attributes:
 
 .SH "Member Function Documentation"
 .PP 
-.SS "void QwtPlotSvgItem::draw (QPainter *painter, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect) const\fC [virtual]\fP"
+.SS "void QwtPlotSvgItem::draw (QPainter * painter, const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & canvasRect) const\fC [virtual]\fP"
 Draw the SVG item
 .PP
 \fBParameters:\fP
@@ -120,7 +118,7 @@ Draw the SVG item
 
 .PP
 Implements \fBQwtPlotItem\fP\&.
-.SS "bool QwtPlotSvgItem::loadData (const QRectF &rect, const QByteArray &data)"
+.SS "bool QwtPlotSvgItem::loadData (const QRectF & rect, const QByteArray & data)"
 Load SVG data
 .PP
 \fBParameters:\fP
@@ -136,7 +134,7 @@ true, if the SVG data could be loaded
 .RE
 .PP
 
-.SS "bool QwtPlotSvgItem::loadFile (const QRectF &rect, const QString &fileName)"
+.SS "bool QwtPlotSvgItem::loadFile (const QRectF & rect, const QString & fileName)"
 Load a SVG file
 .PP
 \fBParameters:\fP
@@ -152,7 +150,7 @@ true, if the SVG file could be loaded
 .RE
 .PP
 
-.SS "void QwtPlotSvgItem::render (QPainter *painter, const QRectF &viewBox, const QRectF &rect) const\fC [protected]\fP"
+.SS "void QwtPlotSvgItem::render (QPainter * painter, const QRectF & viewBox, const QRectF & rect) const\fC [protected]\fP"
 Render the SVG data
 .PP
 \fBParameters:\fP
@@ -194,7 +192,7 @@ Renderer used to render the SVG data
 
 .PP
 Reimplemented from \fBQwtPlotItem\fP\&.
-.SS "QRectF QwtPlotSvgItem::viewBox (const QRectF &rect) const\fC [protected]\fP"
+.SS "QRectF QwtPlotSvgItem::viewBox (const QRectF & rect) const\fC [protected]\fP"
 Calculate the view box from rect and \fBboundingRect()\fP\&.
 .PP
 \fBParameters:\fP

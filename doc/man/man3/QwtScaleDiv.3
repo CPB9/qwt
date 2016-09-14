@@ -1,10 +1,8 @@
-.TH "QwtScaleDiv" 3 "Thu Dec 11 2014" "Version 6.1.2" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtScaleDiv" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-QwtScaleDiv \- 
-.PP
-A class representing a scale division\&.  
+QwtScaleDiv \- A class representing a scale division\&.  
 
 .SH SYNOPSIS
 .br
@@ -15,9 +13,9 @@ A class representing a scale division\&.
 
 .in +1c
 .ti -1c
-.RI "enum \fBTickType\fP { \fBNoTick\fP = -1, \fBMinorTick\fP, \fBMediumTick\fP, \fBMajorTick\fP, \fBNTickTypes\fP }"
+.RI "enum \fBTickType\fP { \fBNoTick\fP = -1, \fBMinorTick\fP, \fBMediumTick\fP, \fBMajorTick\fP, \fBNTickTypes\fP }
+.RI "\fIScale tick types\&. \fP""
 .br
-.RI "\fIScale tick types\&. \fP"
 .in -1c
 .SS "Public Member Functions"
 
@@ -99,11 +97,11 @@ A class representing a scale division\&.
 
 A Qwt scale is defined by its boundaries and 3 list for the positions of the major, medium and minor ticks\&.
 .PP
-The upperLimit() might be smaller than the lowerLimit() to indicate inverted scales\&.
+The \fBupperBound()\fP might be smaller than the \fBlowerBound()\fP to indicate inverted scales\&.
 .PP
 Scale divisions can be calculated from a \fBQwtScaleEngine\fP\&.
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBQwtScaleEngine::divideScale()\fP, \fBQwtPlot::setAxisScaleDiv()\fP, QwtAbstractSlider::setScaleDiv() 
 .RE
@@ -135,7 +133,7 @@ Major ticks\&.
 Number of valid tick types\&. 
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "QwtScaleDiv::QwtScaleDiv (doublelowerBound = \fC0\&.0\fP, doubleupperBound = \fC0\&.0\fP)\fC [explicit]\fP"
+.SS "QwtScaleDiv::QwtScaleDiv (double lowerBound = \fC0\&.0\fP, double upperBound = \fC0\&.0\fP)\fC [explicit]\fP"
 Construct a division without ticks
 .PP
 \fBParameters:\fP
@@ -151,7 +149,7 @@ lowerBound might be greater than upperBound for inverted scales
 .RE
 .PP
 
-.SS "QwtScaleDiv::QwtScaleDiv (const \fBQwtInterval\fP &interval, QList< double >ticks[NTickTypes])\fC [explicit]\fP"
+.SS "QwtScaleDiv::QwtScaleDiv (const \fBQwtInterval\fP & interval, QList< double > ticks[NTickTypes])\fC [explicit]\fP"
 Construct a scale division
 .PP
 \fBParameters:\fP
@@ -162,7 +160,7 @@ Construct a scale division
 .RE
 .PP
 
-.SS "QwtScaleDiv::QwtScaleDiv (doublelowerBound, doubleupperBound, QList< double >ticks[NTickTypes])\fC [explicit]\fP"
+.SS "QwtScaleDiv::QwtScaleDiv (double lowerBound, double upperBound, QList< double > ticks[NTickTypes])\fC [explicit]\fP"
 Construct a scale division
 .PP
 \fBParameters:\fP
@@ -180,7 +178,7 @@ lowerBound might be greater than upperBound for inverted scales
 .RE
 .PP
 
-.SS "QwtScaleDiv::QwtScaleDiv (doublelowerBound, doubleupperBound, const QList< double > &minorTicks, const QList< double > &mediumTicks, const QList< double > &majorTicks)\fC [explicit]\fP"
+.SS "QwtScaleDiv::QwtScaleDiv (double lowerBound, double upperBound, const QList< double > & minorTicks, const QList< double > & mediumTicks, const QList< double > & majorTicks)\fC [explicit]\fP"
 Construct a scale division
 .PP
 \fBParameters:\fP
@@ -204,7 +202,7 @@ lowerBound might be greater than upperBound for inverted scales
 
 .SH "Member Function Documentation"
 .PP 
-.SS "\fBQwtScaleDiv\fP QwtScaleDiv::bounded (doublelowerBound, doubleupperBound) const"
+.SS "\fBQwtScaleDiv\fP QwtScaleDiv::bounded (double lowerBound, double upperBound) const"
 Return a scale division with an interval [lowerBound, upperBound] where all ticks outside this interval are removed
 .PP
 \fBParameters:\fP
@@ -225,7 +223,7 @@ lowerBound might be greater than upperBound for inverted scales
 .RE
 .PP
 
-.SS "bool QwtScaleDiv::contains (doublevalue) const"
+.SS "bool QwtScaleDiv::contains (double value) const"
 Return if a value is between \fBlowerBound()\fP and \fBupperBound()\fP
 .PP
 \fBParameters:\fP
@@ -251,7 +249,7 @@ lowerBound -> upperBound
 .SS "void QwtScaleDiv::invert ()"
 Invert the scale division 
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBinverted()\fP 
 .RE
@@ -265,7 +263,7 @@ Invert the scale division
 A scale division with inverted boundaries and ticks 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBinvert()\fP 
 .RE
@@ -279,13 +277,13 @@ A scale division with inverted boundaries and ticks
 First boundary 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBupperBound()\fP 
 .RE
 .PP
 
-.SS "bool QwtScaleDiv::operator!= (const \fBQwtScaleDiv\fP &other) const"
+.SS "bool QwtScaleDiv::operator!= (const \fBQwtScaleDiv\fP & other) const"
 
 .PP
 Inequality\&. 
@@ -296,7 +294,7 @@ true if this instance is not equal to other
 .RE
 .PP
 
-.SS "bool QwtScaleDiv::operator== (const \fBQwtScaleDiv\fP &other) const"
+.SS "bool QwtScaleDiv::operator== (const \fBQwtScaleDiv\fP & other) const"
 
 .PP
 Equality operator\&. 
@@ -316,7 +314,7 @@ true if this instance is equal to other
 .RE
 .PP
 
-.SS "void QwtScaleDiv::setInterval (doublelowerBound, doubleupperBound)"
+.SS "void QwtScaleDiv::setInterval (double lowerBound, double upperBound)"
 Change the interval
 .PP
 \fBParameters:\fP
@@ -332,7 +330,7 @@ lowerBound might be greater than upperBound for inverted scales
 .RE
 .PP
 
-.SS "void QwtScaleDiv::setInterval (const \fBQwtInterval\fP &interval)"
+.SS "void QwtScaleDiv::setInterval (const \fBQwtInterval\fP & interval)"
 Change the interval
 .PP
 \fBParameters:\fP
@@ -341,7 +339,7 @@ Change the interval
 .RE
 .PP
 
-.SS "void QwtScaleDiv::setLowerBound (doublelowerBound)"
+.SS "void QwtScaleDiv::setLowerBound (double lowerBound)"
 Set the first boundary
 .PP
 \fBParameters:\fP
@@ -349,13 +347,13 @@ Set the first boundary
 \fIlowerBound\fP First boundary 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 lowerBiound(), \fBsetUpperBound()\fP 
 .RE
 .PP
 
-.SS "void QwtScaleDiv::setTicks (inttype, const QList< double > &ticks)"
+.SS "void QwtScaleDiv::setTicks (int type, const QList< double > & ticks)"
 Assign ticks
 .PP
 \fBParameters:\fP
@@ -366,7 +364,7 @@ Assign ticks
 .RE
 .PP
 
-.SS "void QwtScaleDiv::setUpperBound (doubleupperBound)"
+.SS "void QwtScaleDiv::setUpperBound (double upperBound)"
 Set the second boundary
 .PP
 \fBParameters:\fP
@@ -374,13 +372,13 @@ Set the second boundary
 \fIupperBound\fP Second boundary 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBupperBound()\fP, \fBsetLowerBound()\fP 
 .RE
 .PP
 
-.SS "QList< double > QwtScaleDiv::ticks (inttype) const"
+.SS "QList< double > QwtScaleDiv::ticks (int type) const"
 Return a list of ticks
 .PP
 \fBParameters:\fP
@@ -402,7 +400,7 @@ Tick list
 upper bound 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBlowerBound()\fP 
 .RE

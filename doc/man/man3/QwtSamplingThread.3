@@ -1,10 +1,8 @@
-.TH "QwtSamplingThread" 3 "Thu Dec 11 2014" "Version 6.1.2" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtSamplingThread" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-QwtSamplingThread \- 
-.PP
-A thread collecting samples at regular intervals\&.  
+QwtSamplingThread \- A thread collecting samples at regular intervals\&.  
 
 .SH SYNOPSIS
 .br
@@ -59,7 +57,7 @@ Continuous signals are converted into a discrete signal by collecting samples at
 .PP
 \fBQwtSamplingThread\fP starts a thread calling periodically \fBsample()\fP, to collect and store ( or emit ) a single sample\&.
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBQwtPlotCurve\fP, \fBQwtPlotSeriesItem\fP 
 .RE
@@ -75,7 +73,7 @@ Continuous signals are converted into a discrete signal by collecting samples at
 Time (in ms) since the thread was started 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 QThread::start(), \fBrun()\fP 
 .RE
@@ -89,7 +87,7 @@ QThread::start(), \fBrun()\fP
 Interval (in ms), between 2 calls of \fBsample()\fP 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetInterval()\fP 
 .RE
@@ -98,13 +96,13 @@ Interval (in ms), between 2 calls of \fBsample()\fP
 .SS "void QwtSamplingThread::run ()\fC [protected]\fP, \fC [virtual]\fP"
 Loop collecting samples started from QThread::start() 
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBstop()\fP 
 .RE
 .PP
 
-.SS "virtual void QwtSamplingThread::sample (doubleelapsed)\fC [protected]\fP, \fC [pure virtual]\fP"
+.SS "virtual void QwtSamplingThread::sample (double elapsed)\fC [protected]\fP, \fC [pure virtual]\fP"
 Collect a sample
 .PP
 \fBParameters:\fP
@@ -113,7 +111,7 @@ Collect a sample
 .RE
 .PP
 
-.SS "void QwtSamplingThread::setInterval (doubleinterval)\fC [slot]\fP"
+.SS "void QwtSamplingThread::setInterval (double interval)\fC [slot]\fP"
 Change the interval (in ms), when \fBsample()\fP is called\&. The default interval is 1000\&.0 ( = 1s )
 .PP
 \fBParameters:\fP
@@ -121,7 +119,7 @@ Change the interval (in ms), when \fBsample()\fP is called\&. The default interv
 \fIinterval\fP Interval 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBinterval()\fP 
 .RE
@@ -130,7 +128,7 @@ Change the interval (in ms), when \fBsample()\fP is called\&. The default interv
 .SS "void QwtSamplingThread::stop ()\fC [slot]\fP"
 Terminate the collecting thread 
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 QThread::start(), \fBrun()\fP 
 .RE

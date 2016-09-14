@@ -1,10 +1,8 @@
-.TH "QwtPointArrayData" 3 "Thu Dec 11 2014" "Version 6.1.2" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPointArrayData" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-QwtPointArrayData \- 
-.PP
-Interface for iterating over two QVector<double> objects\&.  
+QwtPointArrayData \- Interface for iterating over two QVector<double> objects\&.  
 
 .SH SYNOPSIS
 .br
@@ -45,7 +43,7 @@ Inherits \fBQwtSeriesData< QPointF >\fP\&.
 Interface for iterating over two QVector<double> objects\&. 
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "QwtPointArrayData::QwtPointArrayData (const QVector< double > &x, const QVector< double > &y)"
+.SS "QwtPointArrayData::QwtPointArrayData (const QVector< double > & x, const QVector< double > & y)"
 Constructor
 .PP
 \fBParameters:\fP
@@ -55,13 +53,13 @@ Constructor
 \fIy\fP Array of y values
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBQwtPlotCurve::setData()\fP, \fBQwtPlotCurve::setSamples()\fP 
 .RE
 .PP
 
-.SS "QwtPointArrayData::QwtPointArrayData (const double *x, const double *y, size_tsize)"
+.SS "QwtPointArrayData::QwtPointArrayData (const double * x, const double * y, size_t size)"
 Constructor
 .PP
 \fBParameters:\fP
@@ -73,7 +71,7 @@ Constructor
 \fIsize\fP Size of the x and y arrays 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBQwtPlotCurve::setData()\fP, \fBQwtPlotCurve::setSamples()\fP 
 .RE
@@ -94,7 +92,7 @@ Bounding rectangle
 
 .PP
 Implements \fBQwtSeriesData< QPointF >\fP\&.
-.SS "QPointF QwtPointArrayData::sample (size_tindex) const\fC [virtual]\fP"
+.SS "QPointF QwtPointArrayData::sample (size_t index) const\fC [virtual]\fP"
 Return the sample at position i
 .PP
 \fBParameters:\fP

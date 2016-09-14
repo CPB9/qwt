@@ -1,10 +1,8 @@
-.TH "QwtSeriesData< T >" 3 "Thu Dec 11 2014" "Version 6.1.2" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtSeriesData< T >" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-QwtSeriesData< T > \- 
-.PP
-Abstract interface for iterating over samples\&.  
+QwtSeriesData< T > \- Abstract interface for iterating over samples\&.  
 
 .SH SYNOPSIS
 .br
@@ -25,13 +23,13 @@ Inherited by \fBQwtArraySeriesData< T >\fP\&.
 .br
 .RI "\fIDestructor\&. \fP"
 .ti -1c
-.RI "virtual size_t \fBsize\fP () const =0"
+.RI "virtual size_t \fBsize\fP () const  =0"
 .br
 .ti -1c
-.RI "virtual T \fBsample\fP (size_t i) const =0"
+.RI "virtual T \fBsample\fP (size_t i) const  =0"
 .br
 .ti -1c
-.RI "virtual QRectF \fBboundingRect\fP () const =0"
+.RI "virtual QRectF \fBboundingRect\fP () const  =0"
 .br
 .ti -1c
 .RI "virtual void \fBsetRectOfInterest\fP (const QRectF &rect)"
@@ -48,7 +46,9 @@ Inherited by \fBQwtArraySeriesData< T >\fP\&.
 .SH "Detailed Description"
 .PP 
 
-.SS "template<typename T>class QwtSeriesData< T >"
+.SS "template<typename T>
+.br
+class QwtSeriesData< T >"
 Abstract interface for iterating over samples\&. 
 
 Qwt offers several implementations of the \fBQwtSeriesData\fP API, but in situations, where data of an application specific format needs to be displayed, without having to copy it, it is recommended to implement an individual data access\&.
@@ -86,7 +86,7 @@ Bounding rectangle
 
 .PP
 Implemented in \fBQwtTradingChartData\fP, \fBQwtSetSeriesData\fP, \fBQwtIntervalSeriesData\fP, \fBQwtPoint3DSeriesData\fP, \fBQwtPointSeriesData\fP, \fBQwtSyntheticPointData\fP, \fBQwtCPointerData\fP, and \fBQwtPointArrayData\fP\&.
-.SS "template<typename T> virtual T \fBQwtSeriesData\fP< T >::sample (size_ti) const\fC [pure virtual]\fP"
+.SS "template<typename T> virtual T \fBQwtSeriesData\fP< T >::sample (size_t i) const\fC [pure virtual]\fP"
 Return a sample 
 .PP
 \fBParameters:\fP
@@ -102,7 +102,7 @@ Sample at position i
 
 .PP
 Implemented in \fBQwtArraySeriesData< T >\fP, \fBQwtArraySeriesData< QwtIntervalSample >\fP, \fBQwtArraySeriesData< QwtOHLCSample >\fP, \fBQwtArraySeriesData< QPointF >\fP, \fBQwtArraySeriesData< QwtPoint3D >\fP, \fBQwtArraySeriesData< QwtSetSample >\fP, \fBQwtSyntheticPointData\fP, \fBQwtCPointerData\fP, and \fBQwtPointArrayData\fP\&.
-.SS "template<typename T > void \fBQwtSeriesData\fP< T >::setRectOfInterest (const QRectF &rect)\fC [virtual]\fP"
+.SS "template<typename T > void \fBQwtSeriesData\fP< T >::setRectOfInterest (const QRectF & rect)\fC [virtual]\fP"
 Set a the 'rect of interest'
 .PP
 \fBQwtPlotSeriesItem\fP defines the current area of the plot canvas as 'rectangle of interest' ( \fBQwtPlotSeriesItem::updateScaleDiv()\fP )\&. It can be used to implement different levels of details\&.

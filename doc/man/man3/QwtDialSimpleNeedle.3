@@ -1,10 +1,8 @@
-.TH "QwtDialSimpleNeedle" 3 "Thu Dec 11 2014" "Version 6.1.2" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtDialSimpleNeedle" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-QwtDialSimpleNeedle \- 
-.PP
-A needle for dial widgets\&.  
+QwtDialSimpleNeedle \- A needle for dial widgets\&.  
 
 .SH SYNOPSIS
 .br
@@ -17,9 +15,9 @@ Inherits \fBQwtDialNeedle\fP\&.
 
 .in +1c
 .ti -1c
-.RI "enum \fBStyle\fP { \fBArrow\fP, \fBRay\fP }"
+.RI "enum \fBStyle\fP { \fBArrow\fP, \fBRay\fP }
+.RI "\fIStyle of the needle\&. \fP""
 .br
-.RI "\fIStyle of the needle\&. \fP"
 .in -1c
 .SS "Public Member Functions"
 
@@ -57,7 +55,7 @@ QPalette::Base
  Knob
 .PP
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBQwtDial\fP, \fBQwtCompass\fP 
 .RE
@@ -80,7 +78,7 @@ Arrow\&.
 A straight line from the center\&. 
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "QwtDialSimpleNeedle::QwtDialSimpleNeedle (\fBStyle\fPstyle, boolhasKnob = \fCtrue\fP, const QColor &mid = \fCQt::gray\fP, const QColor &base = \fCQt::darkGray\fP)"
+.SS "QwtDialSimpleNeedle::QwtDialSimpleNeedle (\fBStyle\fP style, bool hasKnob = \fCtrue\fP, const QColor & mid = \fCQt::gray\fP, const QColor & base = \fCQt::darkGray\fP)"
 Constructor
 .PP
 \fBParameters:\fP
@@ -97,7 +95,7 @@ Constructor
 
 .SH "Member Function Documentation"
 .PP 
-.SS "void QwtDialSimpleNeedle::drawNeedle (QPainter *painter, doublelength, QPalette::ColorGroupcolorGroup) const\fC [protected]\fP, \fC [virtual]\fP"
+.SS "void QwtDialSimpleNeedle::drawNeedle (QPainter * painter, double length, QPalette::ColorGroup colorGroup) const\fC [protected]\fP, \fC [virtual]\fP"
 Draw the needle
 .PP
 \fBParameters:\fP
@@ -112,7 +110,7 @@ Draw the needle
 
 .PP
 Implements \fBQwtDialNeedle\fP\&.
-.SS "void QwtDialSimpleNeedle::setWidth (doublewidth)"
+.SS "void QwtDialSimpleNeedle::setWidth (double width)"
 Set the width of the needle 
 .PP
 \fBParameters:\fP
@@ -120,7 +118,7 @@ Set the width of the needle
 \fIwidth\fP Width 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBwidth()\fP 
 .RE
@@ -134,7 +132,7 @@ Set the width of the needle
 the width of the needle 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetWidth()\fP 
 .RE

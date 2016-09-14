@@ -1,10 +1,8 @@
-.TH "QwtSpline" 3 "Thu Dec 11 2014" "Version 6.1.2" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtSpline" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-QwtSpline \- 
-.PP
-A class for spline interpolation\&.  
+QwtSpline \- A class for spline interpolation\&.  
 
 .SH SYNOPSIS
 .br
@@ -15,9 +13,9 @@ A class for spline interpolation\&.
 
 .in +1c
 .ti -1c
-.RI "enum \fBSplineType\fP { \fBNatural\fP, \fBPeriodic\fP }"
+.RI "enum \fBSplineType\fP { \fBNatural\fP, \fBPeriodic\fP }
+.RI "\fISpline type\&. \fP""
 .br
-.RI "\fISpline type\&. \fP"
 .in -1c
 .SS "Public Member Functions"
 
@@ -149,7 +147,7 @@ A natural spline\&.
 A periodic spline\&. 
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "QwtSpline::QwtSpline (const \fBQwtSpline\fP &other)"
+.SS "QwtSpline::QwtSpline (const \fBQwtSpline\fP & other)"
 Copy constructor 
 .PP
 \fBParameters:\fP
@@ -160,7 +158,7 @@ Copy constructor
 
 .SH "Member Function Documentation"
 .PP 
-.SS "bool QwtSpline::buildNaturalSpline (const QPolygonF &points)\fC [protected]\fP"
+.SS "bool QwtSpline::buildNaturalSpline (const QPolygonF & points)\fC [protected]\fP"
 
 .PP
 Determines the coefficients for a natural spline\&. 
@@ -171,7 +169,7 @@ true if successful
 .RE
 .PP
 
-.SS "bool QwtSpline::buildPeriodicSpline (const QPolygonF &points)\fC [protected]\fP"
+.SS "bool QwtSpline::buildPeriodicSpline (const QPolygonF & points)\fC [protected]\fP"
 
 .PP
 Determines the coefficients for a periodic spline\&. 
@@ -209,7 +207,7 @@ C coefficients
 .RE
 .PP
 
-.SS "\fBQwtSpline\fP & QwtSpline::operator= (const \fBQwtSpline\fP &other)"
+.SS "\fBQwtSpline\fP & QwtSpline::operator= (const \fBQwtSpline\fP & other)"
 Assignment operator 
 .PP
 \fBParameters:\fP
@@ -232,7 +230,7 @@ Points, that have been by \fBsetPoints()\fP
 .RE
 .PP
 
-.SS "bool QwtSpline::setPoints (const QPolygonF &points)"
+.SS "bool QwtSpline::setPoints (const QPolygonF & points)"
 
 .PP
 Calculate the spline coefficients\&. Depending on the value of \fIperiodic\fP, this function will determine the coefficients for a natural or a periodic spline and store them internally\&.
@@ -253,7 +251,7 @@ The sequence of x (but not y) values has to be strictly monotone increasing, whi
 .RE
 .PP
 
-.SS "void QwtSpline::setSplineType (\fBSplineType\fPsplineType)"
+.SS "void QwtSpline::setSplineType (\fBSplineType\fP splineType)"
 Select the algorithm used for calculating the spline
 .PP
 \fBParameters:\fP
@@ -261,7 +259,7 @@ Select the algorithm used for calculating the spline
 \fIsplineType\fP Spline type 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsplineType()\fP 
 .RE
@@ -275,13 +273,13 @@ Select the algorithm used for calculating the spline
 the spline type 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetSplineType()\fP 
 .RE
 .PP
 
-.SS "double QwtSpline::value (doublex) const"
+.SS "double QwtSpline::value (double x) const"
 Calculate the interpolated function value corresponding to a given argument x\&.
 .PP
 \fBParameters:\fP

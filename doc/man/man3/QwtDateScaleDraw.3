@@ -1,10 +1,8 @@
-.TH "QwtDateScaleDraw" 3 "Thu Dec 11 2014" "Version 6.1.2" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtDateScaleDraw" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-QwtDateScaleDraw \- 
-.PP
-A class for drawing datetime scales\&.  
+QwtDateScaleDraw \- A class for drawing datetime scales\&.  
 
 .SH SYNOPSIS
 .br
@@ -113,7 +111,7 @@ The format strings can be modified using \fBsetDateFormat()\fP or individually f
 .PP
 Usually \fBQwtDateScaleDraw\fP is used in combination with \fBQwtDateScaleEngine\fP, that calculates scales for datetime intervals\&.
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBQwtDateScaleEngine\fP, \fBQwtPlot::setAxisScaleDraw()\fP 
 .RE
@@ -121,7 +119,7 @@ Usually \fBQwtDateScaleDraw\fP is used in combination with \fBQwtDateScaleEngine
 
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "QwtDateScaleDraw::QwtDateScaleDraw (Qt::TimeSpectimeSpec = \fCQt::LocalTime\fP)"
+.SS "QwtDateScaleDraw::QwtDateScaleDraw (Qt::TimeSpec timeSpec = \fCQt::LocalTime\fP)"
 
 .PP
 Constructor\&. The default setting is to display tick labels for the given time specification\&. The first week of a year is defined like for \fBQwtDate::FirstThursday\fP\&.
@@ -131,7 +129,7 @@ Constructor\&. The default setting is to display tick labels for the given time 
 \fItimeSpec\fP Time specification
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetTimeSpec()\fP, \fBsetWeek0Type()\fP 
 .RE
@@ -139,7 +137,7 @@ Constructor\&. The default setting is to display tick labels for the given time 
 
 .SH "Member Function Documentation"
 .PP 
-.SS "QString QwtDateScaleDraw::dateFormat (\fBQwtDate::IntervalType\fPintervalType) const"
+.SS "QString QwtDateScaleDraw::dateFormat (\fBQwtDate::IntervalType\fP intervalType) const"
 
 .PP
 \fBParameters:\fP
@@ -152,13 +150,13 @@ Constructor\&. The default setting is to display tick labels for the given time 
 Default format string for an datetime interval type 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetDateFormat()\fP, \fBdateFormatOfDate()\fP 
 .RE
 .PP
 
-.SS "QString QwtDateScaleDraw::dateFormatOfDate (const QDateTime &dateTime, \fBQwtDate::IntervalType\fPintervalType) const\fC [protected]\fP, \fC [virtual]\fP"
+.SS "QString QwtDateScaleDraw::dateFormatOfDate (const QDateTime & dateTime, \fBQwtDate::IntervalType\fP intervalType) const\fC [protected]\fP, \fC [virtual]\fP"
 Format string for the representation of a datetime
 .PP
 \fBdateFormatOfDate()\fP is intended to be overloaded for situations, where formats are individual for specific datetime values\&.
@@ -177,13 +175,13 @@ The default setting ignores dateTime and return the default format for the inter
 Format string
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetDateFormat()\fP, \fBQwtDate::toString()\fP 
 .RE
 .PP
 
-.SS "\fBQwtDate::IntervalType\fP QwtDateScaleDraw::intervalType (const \fBQwtScaleDiv\fP &scaleDiv) const\fC [protected]\fP, \fC [virtual]\fP"
+.SS "\fBQwtDate::IntervalType\fP QwtDateScaleDraw::intervalType (const \fBQwtScaleDiv\fP & scaleDiv) const\fC [protected]\fP, \fC [virtual]\fP"
 Find the less detailed datetime unit, where no rounding errors happen\&.
 .PP
 \fBParameters:\fP
@@ -196,13 +194,13 @@ Find the less detailed datetime unit, where no rounding errors happen\&.
 Interval type
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBdateFormatOfDate()\fP 
 .RE
 .PP
 
-.SS "\fBQwtText\fP QwtDateScaleDraw::label (doublevalue) const\fC [virtual]\fP"
+.SS "\fBQwtText\fP QwtDateScaleDraw::label (double value) const\fC [virtual]\fP"
 
 .PP
 Convert a value into its representing label\&. The value is converted to a datetime value using \fBtoDateTime()\fP and converted to a plain text using \fBQwtDate::toString()\fP\&.
@@ -217,7 +215,7 @@ Convert a value into its representing label\&. The value is converted to a datet
 Label string\&.
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBdateFormatOfDate()\fP 
 .RE
@@ -225,7 +223,7 @@ Label string\&.
 
 .PP
 Reimplemented from \fBQwtAbstractScaleDraw\fP\&.
-.SS "void QwtDateScaleDraw::setDateFormat (\fBQwtDate::IntervalType\fPintervalType, const QString &format)"
+.SS "void QwtDateScaleDraw::setDateFormat (\fBQwtDate::IntervalType\fP intervalType, const QString & format)"
 Set the default format string for an datetime interval type
 .PP
 \fBParameters:\fP
@@ -235,13 +233,13 @@ Set the default format string for an datetime interval type
 \fIformat\fP Default format string
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBdateFormat()\fP, \fBdateFormatOfDate()\fP, \fBQwtDate::toString()\fP 
 .RE
 .PP
 
-.SS "void QwtDateScaleDraw::setTimeSpec (Qt::TimeSpectimeSpec)"
+.SS "void QwtDateScaleDraw::setTimeSpec (Qt::TimeSpec timeSpec)"
 Set the time specification used for the tick labels
 .PP
 \fBParameters:\fP
@@ -249,13 +247,13 @@ Set the time specification used for the tick labels
 \fItimeSpec\fP Time specification 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBtimeSpec()\fP, \fBsetUtcOffset()\fP, \fBtoDateTime()\fP 
 .RE
 .PP
 
-.SS "void QwtDateScaleDraw::setUtcOffset (intseconds)"
+.SS "void QwtDateScaleDraw::setUtcOffset (int seconds)"
 Set the offset in seconds from Coordinated Universal Time
 .PP
 \fBParameters:\fP
@@ -268,13 +266,13 @@ Set the offset in seconds from Coordinated Universal Time
 The offset has no effect beside for the time specification Qt::OffsetFromUTC\&.
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 QDate::utcOffset(), \fBsetTimeSpec()\fP, \fBtoDateTime()\fP 
 .RE
 .PP
 
-.SS "void QwtDateScaleDraw::setWeek0Type (\fBQwtDate::Week0Type\fPweek0Type)"
+.SS "void QwtDateScaleDraw::setWeek0Type (\fBQwtDate::Week0Type\fP week0Type)"
 Sets how to identify the first week of a year\&.
 .PP
 \fBParameters:\fP
@@ -282,7 +280,7 @@ Sets how to identify the first week of a year\&.
 \fIweek0Type\fP Mode how to identify the first week of a year
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBweek0Type()\fP\&. 
 .RE
@@ -301,13 +299,13 @@ week0Type has no effect beside for intervals classified as \fBQwtDate::Week\fP\&
 Time specification used for the tick labels 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetTimeSpec()\fP, \fButcOffset()\fP, \fBtoDateTime()\fP 
 .RE
 .PP
 
-.SS "QDateTime QwtDateScaleDraw::toDateTime (doublevalue) const"
+.SS "QDateTime QwtDateScaleDraw::toDateTime (double value) const"
 Translate a double value into a QDateTime object\&.
 .PP
 \fBReturns:\fP
@@ -315,7 +313,7 @@ Translate a double value into a QDateTime object\&.
 QDateTime object initialized with \fBtimeSpec()\fP and \fButcOffset()\fP\&. 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBtimeSpec()\fP, \fButcOffset()\fP, \fBQwtDate::toDateTime()\fP 
 .RE
@@ -334,7 +332,7 @@ Offset in seconds from Coordinated Universal Time
 The offset has no effect beside for the time specification Qt::OffsetFromUTC\&.
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 QDate::setUtcOffset(), \fBsetTimeSpec()\fP, \fBtoDateTime()\fP 
 .RE
@@ -348,7 +346,7 @@ QDate::setUtcOffset(), \fBsetTimeSpec()\fP, \fBtoDateTime()\fP
 Setting how to identify the first week of a year\&. 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetWeek0Type()\fP 
 .RE

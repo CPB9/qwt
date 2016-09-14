@@ -1,10 +1,8 @@
-.TH "QwtLinearScaleEngine" 3 "Thu Dec 11 2014" "Version 6.1.2" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtLinearScaleEngine" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-QwtLinearScaleEngine \- 
-.PP
-A scale engine for linear scales\&.  
+QwtLinearScaleEngine \- A scale engine for linear scales\&.  
 
 .SH SYNOPSIS
 .br
@@ -61,7 +59,7 @@ A scale engine for linear scales\&.
 The step size will fit into the pattern $\left\{ 1,2,5\right\} \cdot 10^{n}$, where n is an integer\&. 
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "QwtLinearScaleEngine::QwtLinearScaleEngine (uintbase = \fC10\fP)"
+.SS "QwtLinearScaleEngine::QwtLinearScaleEngine (uint base = \fC10\fP)"
 Constructor
 .PP
 \fBParameters:\fP
@@ -69,7 +67,7 @@ Constructor
 \fIbase\fP Base of the scale engine 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetBase()\fP 
 .RE
@@ -77,7 +75,7 @@ Constructor
 
 .SH "Member Function Documentation"
 .PP 
-.SS "\fBQwtInterval\fP QwtLinearScaleEngine::align (const \fBQwtInterval\fP &interval, doublestepSize) const\fC [protected]\fP"
+.SS "\fBQwtInterval\fP QwtLinearScaleEngine::align (const \fBQwtInterval\fP & interval, double stepSize) const\fC [protected]\fP"
 
 .PP
 Align an interval to a step size\&. The limits of an interval are aligned that both are integer multiples of the step size\&.
@@ -95,7 +93,7 @@ Aligned interval
 .RE
 .PP
 
-.SS "void QwtLinearScaleEngine::autoScale (intmaxNumSteps, double &x1, double &x2, double &stepSize) const\fC [virtual]\fP"
+.SS "void QwtLinearScaleEngine::autoScale (int maxNumSteps, double & x1, double & x2, double & stepSize) const\fC [virtual]\fP"
 Align and divide an interval
 .PP
 \fBParameters:\fP
@@ -109,7 +107,7 @@ Align and divide an interval
 \fIstepSize\fP Step size (Out)
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetAttribute()\fP 
 .RE
@@ -119,7 +117,7 @@ Align and divide an interval
 Implements \fBQwtScaleEngine\fP\&.
 .PP
 Reimplemented in \fBQwtDateScaleEngine\fP\&.
-.SS "QList< double > QwtLinearScaleEngine::buildMajorTicks (const \fBQwtInterval\fP &interval, doublestepSize) const\fC [protected]\fP"
+.SS "QList< double > QwtLinearScaleEngine::buildMajorTicks (const \fBQwtInterval\fP & interval, double stepSize) const\fC [protected]\fP"
 
 .PP
 Calculate major ticks for an interval\&. 
@@ -137,7 +135,7 @@ Calculated ticks
 .RE
 .PP
 
-.SS "void QwtLinearScaleEngine::buildMinorTicks (const QList< double > &majorTicks, intmaxMinorSteps, doublestepSize, QList< double > &minorTicks, QList< double > &mediumTicks) const\fC [protected]\fP"
+.SS "void QwtLinearScaleEngine::buildMinorTicks (const QList< double > & majorTicks, int maxMinorSteps, double stepSize, QList< double > & minorTicks, QList< double > & mediumTicks) const\fC [protected]\fP"
 
 .PP
 Calculate minor/medium ticks for major ticks\&. 
@@ -156,7 +154,7 @@ Calculate minor/medium ticks for major ticks\&.
 .RE
 .PP
 
-.SS "void QwtLinearScaleEngine::buildTicks (const \fBQwtInterval\fP &interval, doublestepSize, intmaxMinorSteps, QList< double >ticks[QwtScaleDiv::NTickTypes]) const\fC [protected]\fP"
+.SS "void QwtLinearScaleEngine::buildTicks (const \fBQwtInterval\fP & interval, double stepSize, int maxMinorSteps, QList< double > ticks[QwtScaleDiv::NTickTypes]) const\fC [protected]\fP"
 
 .PP
 Calculate ticks for an interval\&. 
@@ -172,13 +170,13 @@ Calculate ticks for an interval\&.
 \fIticks\fP Arrays to be filled with the calculated ticks
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBbuildMajorTicks()\fP, \fBbuildMinorTicks\fP 
 .RE
 .PP
 
-.SS "\fBQwtScaleDiv\fP QwtLinearScaleEngine::divideScale (doublex1, doublex2, intmaxMajorSteps, intmaxMinorSteps, doublestepSize = \fC0\&.0\fP) const\fC [virtual]\fP"
+.SS "\fBQwtScaleDiv\fP QwtLinearScaleEngine::divideScale (double x1, double x2, int maxMajorSteps, int maxMinorSteps, double stepSize = \fC0\&.0\fP) const\fC [virtual]\fP"
 
 .PP
 Calculate a scale division for an interval\&. 

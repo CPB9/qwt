@@ -1,10 +1,8 @@
-.TH "QwtRasterData" 3 "Thu Dec 11 2014" "Version 6.1.2" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtRasterData" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-QwtRasterData \- 
-.PP
-\fBQwtRasterData\fP defines an interface to any type of raster data\&.  
+QwtRasterData \- \fBQwtRasterData\fP defines an interface to any type of raster data\&.  
 
 .SH SYNOPSIS
 .br
@@ -17,9 +15,9 @@ Inherited by \fBQwtMatrixRasterData\fP\&.
 
 .in +1c
 .ti -1c
-.RI "enum \fBConrecFlag\fP { \fBIgnoreAllVerticesOnLevel\fP = 0x01, \fBIgnoreOutOfRange\fP = 0x02 }"
+.RI "enum \fBConrecFlag\fP { \fBIgnoreAllVerticesOnLevel\fP = 0x01, \fBIgnoreOutOfRange\fP = 0x02 }
+.RI "\fIFlags to modify the contour algorithm\&. \fP""
 .br
-.RI "\fIFlags to modify the contour algorithm\&. \fP"
 .ti -1c
 .RI "typedef QMap< double, QPolygonF > \fBContourLines\fP"
 .br
@@ -59,7 +57,7 @@ Inherited by \fBQwtMatrixRasterData\fP\&.
 .br
 .RI "\fIDiscard a raster\&. \fP"
 .ti -1c
-.RI "virtual double \fBvalue\fP (double x, double y) const =0"
+.RI "virtual double \fBvalue\fP (double x, double y) const  =0"
 .br
 .ti -1c
 .RI "virtual \fBContourLines\fP \fBcontourLines\fP (const QRectF &rect, const QSize &raster, const QList< double > &levels, \fBConrecFlags\fP) const "
@@ -89,7 +87,7 @@ Ignore all vertices on the same level\&.
 Ignore all values, that are out of range\&. 
 .SH "Member Function Documentation"
 .PP 
-.SS "\fBQwtRasterData::ContourLines\fP QwtRasterData::contourLines (const QRectF &rect, const QSize &raster, const QList< double > &levels, \fBConrecFlags\fPflags) const\fC [virtual]\fP"
+.SS "\fBQwtRasterData::ContourLines\fP QwtRasterData::contourLines (const QRectF & rect, const QSize & raster, const QList< double > & levels, \fBConrecFlags\fP flags) const\fC [virtual]\fP"
 Calculate contour lines
 .PP
 \fBParameters:\fP
@@ -116,13 +114,13 @@ Discard a raster\&. After the composition of an image \fBQwtPlotSpectrogram\fP c
 .PP
 The default implementation does nothing, but if data has been loaded in \fBinitRaster()\fP, it could deleted now\&.
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBinitRaster()\fP, \fBvalue()\fP 
 .RE
 .PP
 
-.SS "void QwtRasterData::initRaster (const QRectF &area, const QSize &raster)\fC [virtual]\fP"
+.SS "void QwtRasterData::initRaster (const QRectF & area, const QSize & raster)\fC [virtual]\fP"
 
 .PP
 Initialize a raster\&. Before the composition of an image \fBQwtPlotSpectrogram\fP calls \fBinitRaster()\fP, announcing the area and its resolution that will be requested\&.
@@ -136,13 +134,13 @@ The default implementation does nothing, but for data sets that are stored in fi
 \fIraster\fP Number of horizontal and vertical pixels
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBinitRaster()\fP, \fBvalue()\fP 
 .RE
 .PP
 
-.SS "const \fBQwtInterval\fP & QwtRasterData::interval (Qt::Axisaxis) const\fC [inline]\fP"
+.SS "const \fBQwtInterval\fP & QwtRasterData::interval (Qt::Axis axis) const\fC [inline]\fP"
 
 .PP
 \fBReturns:\fP
@@ -150,13 +148,13 @@ The default implementation does nothing, but for data sets that are stored in fi
 Bounding interval for a axis 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetInterval\fP 
 .RE
 .PP
 
-.SS "QRectF QwtRasterData::pixelHint (const QRectF &area) const\fC [virtual]\fP"
+.SS "QRectF QwtRasterData::pixelHint (const QRectF & area) const\fC [virtual]\fP"
 
 .PP
 Pixel hint\&. \fBpixelHint()\fP returns the geometry of a pixel, that can be used to calculate the resolution and alignment of the plot item, that is representing the data\&.
@@ -182,7 +180,7 @@ Bounding rectangle of a pixel
 
 .PP
 Reimplemented in \fBQwtMatrixRasterData\fP\&.
-.SS "void QwtRasterData::setInterval (Qt::Axisaxis, const \fBQwtInterval\fP &interval)\fC [virtual]\fP"
+.SS "void QwtRasterData::setInterval (Qt::Axis axis, const \fBQwtInterval\fP & interval)\fC [virtual]\fP"
 Set the bounding interval for the x, y or z coordinates\&.
 .PP
 \fBParameters:\fP
@@ -192,7 +190,7 @@ Set the bounding interval for the x, y or z coordinates\&.
 \fIinterval\fP Bounding interval
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBinterval()\fP 
 .RE
@@ -200,7 +198,7 @@ Set the bounding interval for the x, y or z coordinates\&.
 
 .PP
 Reimplemented in \fBQwtMatrixRasterData\fP\&.
-.SS "virtual double QwtRasterData::value (doublex, doubley) const\fC [pure virtual]\fP"
+.SS "virtual double QwtRasterData::value (double x, double y) const\fC [pure virtual]\fP"
 
 .PP
 \fBReturns:\fP

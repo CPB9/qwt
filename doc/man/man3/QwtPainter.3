@@ -1,10 +1,8 @@
-.TH "QwtPainter" 3 "Thu Dec 11 2014" "Version 6.1.2" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPainter" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-QwtPainter \- 
-.PP
-A collection of QPainter workarounds\&.  
+QwtPainter \- A collection of QPainter workarounds\&.  
 
 .SH SYNOPSIS
 .br
@@ -186,7 +184,7 @@ A collection of QPainter workarounds\&.
 A collection of QPainter workarounds\&. 
 .SH "Member Function Documentation"
 .PP 
-.SS "QPixmap QwtPainter::backingStore (QWidget *widget, const QSize &size)\fC [static]\fP"
+.SS "QPixmap QwtPainter::backingStore (QWidget * widget, const QSize & size)\fC [static]\fP"
 
 .PP
 \fBReturns:\fP
@@ -202,7 +200,7 @@ A pixmap that can be used as backing store
 .RE
 .PP
 
-.SS "void QwtPainter::drawBackgound (QPainter *painter, const QRectF &rect, const QWidget *widget)\fC [static]\fP"
+.SS "void QwtPainter::drawBackgound (QPainter * painter, const QRectF & rect, const QWidget * widget)\fC [static]\fP"
 Fill rect with the background of a widget
 .PP
 \fBParameters:\fP
@@ -214,13 +212,13 @@ Fill rect with the background of a widget
 \fIwidget\fP Widget
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 QStyle::PE_Widget, QWidget::backgroundRole() 
 .RE
 .PP
 
-.SS "void QwtPainter::drawColorBar (QPainter *painter, const \fBQwtColorMap\fP &colorMap, const \fBQwtInterval\fP &interval, const \fBQwtScaleMap\fP &scaleMap, Qt::Orientationorientation, const QRectF &rect)\fC [static]\fP"
+.SS "void QwtPainter::drawColorBar (QPainter * painter, const \fBQwtColorMap\fP & colorMap, const \fBQwtInterval\fP & interval, const \fBQwtScaleMap\fP & scaleMap, Qt::Orientation orientation, const QRectF & rect)\fC [static]\fP"
 Draw a color bar into a rectangle
 .PP
 \fBParameters:\fP
@@ -239,7 +237,7 @@ Draw a color bar into a rectangle
 .RE
 .PP
 
-.SS "void QwtPainter::drawFrame (QPainter *painter, const QRectF &rect, const QPalette &palette, QPalette::ColorRoleforegroundRole, intframeWidth, intmidLineWidth, intframeStyle)\fC [static]\fP"
+.SS "void QwtPainter::drawFrame (QPainter * painter, const QRectF & rect, const QPalette & palette, QPalette::ColorRole foregroundRole, int frameWidth, int midLineWidth, int frameStyle)\fC [static]\fP"
 Draw a rectangular frame
 .PP
 \fBParameters:\fP
@@ -260,7 +258,7 @@ Draw a rectangular frame
 .RE
 .PP
 
-.SS "void QwtPainter::drawRoundedFrame (QPainter *painter, const QRectF &rect, doublexRadius, doubleyRadius, const QPalette &palette, intlineWidth, intframeStyle)\fC [static]\fP"
+.SS "void QwtPainter::drawRoundedFrame (QPainter * painter, const QRectF & rect, double xRadius, double yRadius, const QPalette & palette, int lineWidth, int frameStyle)\fC [static]\fP"
 Draw a rectangular frame with rounded borders
 .PP
 \fBParameters:\fP
@@ -281,7 +279,7 @@ Draw a rectangular frame with rounded borders
 .RE
 .PP
 
-.SS "void QwtPainter::drawRoundFrame (QPainter *painter, const QRectF &rect, const QPalette &palette, intlineWidth, intframeStyle)\fC [static]\fP"
+.SS "void QwtPainter::drawRoundFrame (QPainter * painter, const QRectF & rect, const QPalette & palette, int lineWidth, int frameStyle)\fC [static]\fP"
 Draw a round frame
 .PP
 \fBParameters:\fP
@@ -298,7 +296,7 @@ Draw a round frame
 .RE
 .PP
 
-.SS "void QwtPainter::drawSimpleRichText (QPainter *painter, const QRectF &rect, intflags, const QTextDocument &text)\fC [static]\fP"
+.SS "void QwtPainter::drawSimpleRichText (QPainter * painter, const QRectF & rect, int flags, const QTextDocument & text)\fC [static]\fP"
 Draw a text document into a rectangle
 .PP
 \fBParameters:\fP
@@ -313,7 +311,7 @@ Draw a text document into a rectangle
 .RE
 .PP
 
-.SS "void QwtPainter::fillPixmap (const QWidget *widget, QPixmap &pixmap, const QPoint &offset = \fCQPoint()\fP)\fC [static]\fP"
+.SS "void QwtPainter::fillPixmap (const QWidget * widget, QPixmap & pixmap, const QPoint & offset = \fCQPoint()\fP)\fC [static]\fP"
 Fill a pixmap with the content of a widget
 .PP
 In Qt >= 5\&.0 QPixmap::fill() is a nop, in Qt 4\&.x it is buggy for backgrounds with gradients\&. Thus \fBfillPixmap()\fP offers an alternative implementation\&.
@@ -327,13 +325,13 @@ In Qt >= 5\&.0 QPixmap::fill() is a nop, in Qt 4\&.x it is buggy for backgrounds
 \fIoffset\fP Offset
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 QPixmap::fill() 
 .RE
 .PP
 
-.SS "bool QwtPainter::isAligning (QPainter *painter)\fC [static]\fP"
+.SS "bool QwtPainter::isAligning (QPainter * painter)\fC [static]\fP"
 Check if the painter is using a paint engine, that aligns coordinates to integers\&. Today these are all paint engines beside QPaintEngine::Pdf and QPaintEngine::SVG\&.
 .PP
 If we have an integer based paint engine it is also checked if the painter has a transformation matrix, that rotates or scales\&.
@@ -348,7 +346,7 @@ If we have an integer based paint engine it is also checked if the painter has a
 true, when the painter is aligning
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetRoundingAlignment()\fP 
 .RE
@@ -371,7 +369,7 @@ True, when the graphics system is X11
 True, when line splitting for the raster paint engine is enabled\&. 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetPolylineSplitting()\fP 
 .RE
@@ -385,13 +383,13 @@ Check whether coordinates should be rounded, before they are painted to a paint 
 True, when rounding is enabled 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetRoundingAlignment()\fP, \fBisAligning()\fP 
 .RE
 .PP
 
-.SS "bool QwtPainter::roundingAlignment (QPainter *painter)\fC [inline]\fP, \fC [static]\fP"
+.SS "bool QwtPainter::roundingAlignment (QPainter * painter)\fC [inline]\fP, \fC [static]\fP"
 
 .PP
 \fBReturns:\fP
@@ -405,25 +403,25 @@ True, when rounding is enabled
 .RE
 .PP
 
-.SS "void QwtPainter::setPolylineSplitting (boolenable)\fC [static]\fP"
+.SS "void QwtPainter::setPolylineSplitting (bool enable)\fC [static]\fP"
 
 .PP
 En/Disable line splitting for the raster paint engine\&. In some Qt versions the raster paint engine paints polylines of many points much faster when they are split in smaller chunks: f\&.e all supported Qt versions >= Qt 5\&.0 when drawing an antialiased polyline with a pen width >=2\&.
 .PP
 The default setting is true\&.
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBpolylineSplitting()\fP 
 .RE
 .PP
 
-.SS "void QwtPainter::setRoundingAlignment (boolenable)\fC [static]\fP"
-Enable whether coordinates should be rounded, before they are painted to a paint engine that floors to integer values\&. For other paint engines this ( PDF, SVG ), this flag has no effect\&. \fBQwtPainter\fP stores this flag only, the rounding itself is done in the painting code ( f\&.e the plot items )\&.
+.SS "void QwtPainter::setRoundingAlignment (bool enable)\fC [static]\fP"
+Enable whether coordinates should be rounded, before they are painted to a paint engine that floors to integer values\&. For other paint engines ( PDF, SVG ) this flag has no effect\&. \fBQwtPainter\fP stores this flag only, the rounding itself is done in the painting code ( f\&.e the plot items )\&.
 .PP
 The default setting is true\&.
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBroundingAlignment()\fP, \fBisAligning()\fP 
 .RE

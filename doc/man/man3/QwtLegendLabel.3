@@ -1,10 +1,8 @@
-.TH "QwtLegendLabel" 3 "Thu Dec 11 2014" "Version 6.1.2" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtLegendLabel" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-QwtLegendLabel \- 
-.PP
-A widget representing something on a \fBQwtLegend\fP\&.  
+QwtLegendLabel \- A widget representing something on a \fBQwtLegend\fP\&.  
 
 .SH SYNOPSIS
 .br
@@ -124,7 +122,7 @@ Inherits \fBQwtTextLabel\fP\&.
 A widget representing something on a \fBQwtLegend\fP\&. 
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "QwtLegendLabel::QwtLegendLabel (QWidget *parent = \fC0\fP)\fC [explicit]\fP"
+.SS "QwtLegendLabel::QwtLegendLabel (QWidget * parent = \fC0\fP)\fC [explicit]\fP"
 
 .PP
 \fBParameters:\fP
@@ -143,7 +141,7 @@ A widget representing something on a \fBQwtLegend\fP\&.
 Attributes of the label 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetData()\fP, \fBQwtPlotItem::legendData()\fP 
 .RE
@@ -157,7 +155,7 @@ Attributes of the label
 Pixmap representing a plot item 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetIcon()\fP 
 .RE
@@ -171,13 +169,13 @@ Pixmap representing a plot item
 Item mode 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetItemMode()\fP 
 .RE
 .PP
 
-.SS "void QwtLegendLabel::setChecked (boolon)\fC [slot]\fP"
+.SS "void QwtLegendLabel::setChecked (bool on)\fC [slot]\fP"
 Check/Uncheck a the item
 .PP
 \fBParameters:\fP
@@ -185,13 +183,13 @@ Check/Uncheck a the item
 \fIon\fP check/uncheck 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetItemMode()\fP 
 .RE
 .PP
 
-.SS "void QwtLegendLabel::setData (const \fBQwtLegendData\fP &legendData)"
+.SS "void QwtLegendLabel::setData (const \fBQwtLegendData\fP & legendData)"
 Set the attributes of the legend label
 .PP
 \fBParameters:\fP
@@ -199,13 +197,13 @@ Set the attributes of the legend label
 \fIlegendData\fP Attributes of the label 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBdata()\fP 
 .RE
 .PP
 
-.SS "void QwtLegendLabel::setIcon (const QPixmap &icon)"
+.SS "void QwtLegendLabel::setIcon (const QPixmap & icon)"
 Assign the icon
 .PP
 \fBParameters:\fP
@@ -213,13 +211,13 @@ Assign the icon
 \fIicon\fP Pixmap representing a plot item
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBicon()\fP, \fBQwtPlotItem::legendIcon()\fP 
 .RE
 .PP
 
-.SS "void QwtLegendLabel::setItemMode (\fBQwtLegendData::Mode\fPmode)"
+.SS "void QwtLegendLabel::setItemMode (\fBQwtLegendData::Mode\fP mode)"
 Set the item mode The default is \fBQwtLegendData::ReadOnly\fP
 .PP
 \fBParameters:\fP
@@ -227,13 +225,13 @@ Set the item mode The default is \fBQwtLegendData::ReadOnly\fP
 \fImode\fP Item mode 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBitemMode()\fP 
 .RE
 .PP
 
-.SS "void QwtLegendLabel::setSpacing (intspacing)"
+.SS "void QwtLegendLabel::setSpacing (int spacing)"
 
 .PP
 Change the spacing between icon and text\&. 
@@ -243,13 +241,13 @@ Change the spacing between icon and text\&.
 \fIspacing\fP Spacing 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBspacing()\fP, \fBQwtTextLabel::margin()\fP 
 .RE
 .PP
 
-.SS "void QwtLegendLabel::setText (const \fBQwtText\fP &text)\fC [virtual]\fP"
+.SS "void QwtLegendLabel::setText (const \fBQwtText\fP & text)\fC [virtual]\fP"
 Set the text to the legend item
 .PP
 \fBParameters:\fP
@@ -257,7 +255,7 @@ Set the text to the legend item
 \fItext\fP Text label 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBQwtTextLabel::text()\fP 
 .RE
@@ -273,7 +271,7 @@ Reimplemented from \fBQwtTextLabel\fP\&.
 Spacing between icon and text 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetSpacing()\fP, \fBQwtTextLabel::margin()\fP 
 .RE

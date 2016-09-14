@@ -1,10 +1,8 @@
-.TH "QwtNullPaintDevice" 3 "Thu Dec 11 2014" "Version 6.1.2" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtNullPaintDevice" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-QwtNullPaintDevice \- 
-.PP
-A null paint device doing nothing\&.  
+QwtNullPaintDevice \- A null paint device doing nothing\&.  
 
 .SH SYNOPSIS
 .br
@@ -19,9 +17,9 @@ Inherited by \fBQwtGraphic\fP, and QwtStyleSheetRecorder\&.
 
 .in +1c
 .ti -1c
-.RI "enum \fBMode\fP { \fBNormalMode\fP, \fBPolygonPathMode\fP, \fBPathMode\fP }"
+.RI "enum \fBMode\fP { \fBNormalMode\fP, \fBPolygonPathMode\fP, \fBPathMode\fP }
+.RI "\fIRender mode\&. \fP""
 .br
-.RI "\fIRender mode\&. \fP"
 .in -1c
 .SS "Public Member Functions"
 
@@ -116,7 +114,7 @@ Inherited by \fBQwtGraphic\fP, and QwtStyleSheetRecorder\&.
 
 .in +1c
 .ti -1c
-.RI "virtual QSize \fBsizeMetrics\fP () const =0"
+.RI "virtual QSize \fBsizeMetrics\fP () const  =0"
 .br
 .in -1c
 .SH "Detailed Description"
@@ -135,7 +133,7 @@ F\&.e\&. \fBQwtNullPaintDevice\fP is used by \fBQwtPlotCanvas\fP to identify sty
 .PP
 Render mode\&. 
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetMode()\fP, \fBmode()\fP 
 .RE
@@ -175,7 +173,7 @@ Vector graphic primitives are mapped to a QPainterPath and are painted by drawPa
 
 .SH "Member Function Documentation"
 .PP 
-.SS "int QwtNullPaintDevice::metric (PaintDeviceMetricdeviceMetric) const\fC [virtual]\fP"
+.SS "int QwtNullPaintDevice::metric (PaintDeviceMetric deviceMetric) const\fC [virtual]\fP"
 See QPaintDevice::metric()
 .PP
 \fBParameters:\fP
@@ -188,7 +186,7 @@ See QPaintDevice::metric()
 Metric information for the given paint device metric\&.
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsizeMetrics()\fP 
 .RE
@@ -202,13 +200,13 @@ Metric information for the given paint device metric\&.
 Render mode 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetMode()\fP 
 .RE
 .PP
 
-.SS "void QwtNullPaintDevice::setMode (\fBMode\fPmode)"
+.SS "void QwtNullPaintDevice::setMode (\fBMode\fP mode)"
 Set the render mode
 .PP
 \fBParameters:\fP
@@ -216,7 +214,7 @@ Set the render mode
 \fImode\fP New mode 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBmode()\fP 
 .RE

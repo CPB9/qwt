@@ -1,4 +1,4 @@
-.TH "QwtPainterCommand" 3 "Thu Dec 11 2014" "Version 6.1.2" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPainterCommand" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -28,9 +28,9 @@ QwtPainterCommand \-
 
 .in +1c
 .ti -1c
-.RI "enum \fBType\fP { \fBInvalid\fP = -1, \fBPath\fP, \fBPixmap\fP, \fBImage\fP, \fBState\fP }"
+.RI "enum \fBType\fP { \fBInvalid\fP = -1, \fBPath\fP, \fBPixmap\fP, \fBImage\fP, \fBState\fP }
+.RI "\fIType of the paint command\&. \fP""
 .br
-.RI "\fIType of the paint command\&. \fP"
 .in -1c
 .SS "Public Member Functions"
 
@@ -96,7 +96,7 @@ QwtPainterCommand \-
 .PP
 It is used by \fBQwtGraphic\fP to record and replay paint operations
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBQwtGraphic::commands()\fP 
 .RE
@@ -128,7 +128,7 @@ Draw a QImage\&.
 QPainter state change\&. 
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "QwtPainterCommand::QwtPainterCommand (const \fBQwtPainterCommand\fP &other)"
+.SS "QwtPainterCommand::QwtPainterCommand (const \fBQwtPainterCommand\fP & other)"
 Copy constructor 
 .PP
 \fBParameters:\fP
@@ -137,7 +137,7 @@ Copy constructor
 .RE
 .PP
 
-.SS "QwtPainterCommand::QwtPainterCommand (const QRectF &rect, const QPixmap &pixmap, const QRectF &subRect)"
+.SS "QwtPainterCommand::QwtPainterCommand (const QRectF & rect, const QPixmap & pixmap, const QRectF & subRect)"
 Constructor for Pixmap paint operation
 .PP
 \fBParameters:\fP
@@ -149,13 +149,13 @@ Constructor for Pixmap paint operation
 \fIsubRect\fP Rectangle inside the pixmap
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 QPainter::drawPixmap() 
 .RE
 .PP
 
-.SS "QwtPainterCommand::QwtPainterCommand (const QRectF &rect, const QImage &image, const QRectF &subRect, Qt::ImageConversionFlagsflags)"
+.SS "QwtPainterCommand::QwtPainterCommand (const QRectF & rect, const QImage & image, const QRectF & subRect, Qt::ImageConversionFlags flags)"
 Constructor for Image paint operation
 .PP
 \fBParameters:\fP
@@ -169,13 +169,13 @@ Constructor for Image paint operation
 \fIflags\fP Conversion flags
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 QPainter::drawImage() 
 .RE
 .PP
 
-.SS "QwtPainterCommand::QwtPainterCommand (const QPaintEngineState &state)"
+.SS "QwtPainterCommand::QwtPainterCommand (const QPaintEngineState & state)"
 Constructor for State paint operation 
 .PP
 \fBParameters:\fP
@@ -204,7 +204,7 @@ Attributes how to paint a QImage
 .RE
 .PP
 
-.SS "\fBQwtPainterCommand\fP & QwtPainterCommand::operator= (const \fBQwtPainterCommand\fP &other)"
+.SS "\fBQwtPainterCommand\fP & QwtPainterCommand::operator= (const \fBQwtPainterCommand\fP & other)"
 Assignment operator
 .PP
 \fBParameters:\fP

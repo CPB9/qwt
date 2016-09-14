@@ -1,10 +1,8 @@
-.TH "QwtTransform" 3 "Thu Dec 11 2014" "Version 6.1.2" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtTransform" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-QwtTransform \- 
-.PP
-A transformation between coordinate systems\&.  
+QwtTransform \- A transformation between coordinate systems\&.  
 
 .SH SYNOPSIS
 .br
@@ -28,13 +26,13 @@ Inherited by \fBQwtLogTransform\fP, \fBQwtNullTransform\fP, and \fBQwtPowerTrans
 .RI "virtual double \fBbounded\fP (double value) const "
 .br
 .ti -1c
-.RI "virtual double \fBtransform\fP (double value) const =0"
+.RI "virtual double \fBtransform\fP (double value) const  =0"
 .br
 .ti -1c
-.RI "virtual double \fBinvTransform\fP (double value) const =0"
+.RI "virtual double \fBinvTransform\fP (double value) const  =0"
 .br
 .ti -1c
-.RI "virtual \fBQwtTransform\fP * \fBcopy\fP () const =0"
+.RI "virtual \fBQwtTransform\fP * \fBcopy\fP () const  =0"
 .br
 .RI "\fIVirtualized copy operation\&. \fP"
 .in -1c
@@ -64,7 +62,7 @@ s = invT ( T( s1 ) + ( T( s2 ) - T( s1 ) ) * ( p - p1 ) / ( p2 - p1 ) );
 
 .SH "Member Function Documentation"
 .PP 
-.SS "double QwtTransform::bounded (doublevalue) const\fC [virtual]\fP"
+.SS "double QwtTransform::bounded (double value) const\fC [virtual]\fP"
 Modify value to be a valid value for the transformation\&. The default implementation does nothing\&.
 .PP
 \fBParameters:\fP
@@ -80,7 +78,7 @@ value unmodified
 
 .PP
 Reimplemented in \fBQwtLogTransform\fP\&.
-.SS "virtual double QwtTransform::invTransform (doublevalue) const\fC [pure virtual]\fP"
+.SS "virtual double QwtTransform::invTransform (double value) const\fC [pure virtual]\fP"
 Inverse transformation function
 .PP
 \fBParameters:\fP
@@ -93,7 +91,7 @@ Inverse transformation function
 Modified value
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBtransform()\fP 
 .RE
@@ -101,7 +99,7 @@ Modified value
 
 .PP
 Implemented in \fBQwtPowerTransform\fP, \fBQwtLogTransform\fP, and \fBQwtNullTransform\fP\&.
-.SS "virtual double QwtTransform::transform (doublevalue) const\fC [pure virtual]\fP"
+.SS "virtual double QwtTransform::transform (double value) const\fC [pure virtual]\fP"
 Transformation function
 .PP
 \fBParameters:\fP
@@ -114,7 +112,7 @@ Transformation function
 Modified value
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBinvTransform()\fP 
 .RE

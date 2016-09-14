@@ -1,10 +1,8 @@
-.TH "QwtPlotTextLabel" 3 "Thu Dec 11 2014" "Version 6.1.2" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotTextLabel" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-QwtPlotTextLabel \- 
-.PP
-A plot item, which displays a text label\&.  
+QwtPlotTextLabel \- A plot item, which displays a text label\&.  
 
 .SH SYNOPSIS
 .br
@@ -86,7 +84,7 @@ The following code shows how to add a title\&.
 .fi
 .PP
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBQwtPlotMarker\fP 
 .RE
@@ -109,7 +107,7 @@ Sets the following item attributes:
 .PP
 The z value is initialized by 150
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBQwtPlotItem::setItemAttribute()\fP, \fBQwtPlotItem::setZ()\fP 
 .RE
@@ -117,7 +115,7 @@ The z value is initialized by 150
 
 .SH "Member Function Documentation"
 .PP 
-.SS "void QwtPlotTextLabel::draw (QPainter *painter, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect) const\fC [protected]\fP, \fC [virtual]\fP"
+.SS "void QwtPlotTextLabel::draw (QPainter * painter, const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & canvasRect) const\fC [protected]\fP, \fC [virtual]\fP"
 Draw the text label
 .PP
 \fBParameters:\fP
@@ -131,7 +129,7 @@ Draw the text label
 \fIcanvasRect\fP Contents rectangle of the canvas in painter coordinates
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBtextRect()\fP 
 .RE
@@ -147,7 +145,7 @@ Implements \fBQwtPlotItem\fP\&.
 Margin added to the contentsMargins() of the canvas 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetMargin()\fP 
 .RE
@@ -164,7 +162,7 @@ Margin added to the contentsMargins() of the canvas
 
 .PP
 Reimplemented from \fBQwtPlotItem\fP\&.
-.SS "void QwtPlotTextLabel::setMargin (intmargin)"
+.SS "void QwtPlotTextLabel::setMargin (int margin)"
 Set the margin
 .PP
 The margin is the distance between the contentsRect() of the plot canvas and the rectangle where the label can be displayed\&.
@@ -174,13 +172,13 @@ The margin is the distance between the contentsRect() of the plot canvas and the
 \fImargin\fP Margin
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBmargin()\fP, \fBtextRect()\fP 
 .RE
 .PP
 
-.SS "void QwtPlotTextLabel::setText (const \fBQwtText\fP &text)"
+.SS "void QwtPlotTextLabel::setText (const \fBQwtText\fP & text)"
 Set the text
 .PP
 The label will be aligned to the plot canvas according to the alignment flags of text\&.
@@ -190,7 +188,7 @@ The label will be aligned to the plot canvas according to the alignment flags of
 \fItext\fP Text to be displayed
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBtext()\fP, \fBQwtText::renderFlags()\fP 
 .RE
@@ -204,13 +202,13 @@ The label will be aligned to the plot canvas according to the alignment flags of
 Text to be displayed 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetText()\fP 
 .RE
 .PP
 
-.SS "QRectF QwtPlotTextLabel::textRect (const QRectF &rect, const QSizeF &textSize) const\fC [virtual]\fP"
+.SS "QRectF QwtPlotTextLabel::textRect (const QRectF & rect, const QSizeF & textSize) const\fC [virtual]\fP"
 
 .PP
 Align the text label\&. 
@@ -227,7 +225,7 @@ Align the text label\&.
 A rectangle aligned according the the alignment flags of the text\&.
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetMargin()\fP, \fBQwtText::renderFlags()\fP, \fBQwtText::textSize()\fP 
 .RE

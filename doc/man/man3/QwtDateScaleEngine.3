@@ -1,10 +1,8 @@
-.TH "QwtDateScaleEngine" 3 "Thu Dec 11 2014" "Version 6.1.2" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtDateScaleEngine" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-QwtDateScaleEngine \- 
-.PP
-A scale engine for date/time values\&.  
+QwtDateScaleEngine \- A scale engine for date/time values\&.  
 
 .SH SYNOPSIS
 .br
@@ -82,7 +80,7 @@ Years, months, weeks, days, hours and minutes are organized in steps with non co
 .PP
 Datetime values are expected as the number of milliseconds since 1970-01-01T00:00:00 Universal Coordinated Time - also known as 'The Epoch', that can be converted to QDateTime using \fBQwtDate::toDateTime()\fP\&.
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBQwtDate\fP, \fBQwtPlot::setAxisScaleEngine()\fP, \fBQwtAbstractScale::setScaleEngine()\fP 
 .RE
@@ -90,7 +88,7 @@ Datetime values are expected as the number of milliseconds since 1970-01-01T00:0
 
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "QwtDateScaleEngine::QwtDateScaleEngine (Qt::TimeSpectimeSpec = \fCQt::LocalTime\fP)"
+.SS "QwtDateScaleEngine::QwtDateScaleEngine (Qt::TimeSpec timeSpec = \fCQt::LocalTime\fP)"
 
 .PP
 Constructor\&. The engine is initialized to build scales for the given time specification\&. It classifies intervals > 4 weeks as >= Qt::Month\&. The first week of a year is defined like for \fBQwtDate::FirstThursday\fP\&.
@@ -100,7 +98,7 @@ Constructor\&. The engine is initialized to build scales for the given time spec
 \fItimeSpec\fP Time specification
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetTimeSpec()\fP, \fBsetMaxWeeks()\fP, \fBsetWeek0Type()\fP 
 .RE
@@ -108,7 +106,7 @@ Constructor\&. The engine is initialized to build scales for the given time spec
 
 .SH "Member Function Documentation"
 .PP 
-.SS "QDateTime QwtDateScaleEngine::alignDate (const QDateTime &dateTime, doublestepSize, \fBQwtDate::IntervalType\fPintervalType, boolup) const\fC [protected]\fP, \fC [virtual]\fP"
+.SS "QDateTime QwtDateScaleEngine::alignDate (const QDateTime & dateTime, double stepSize, \fBQwtDate::IntervalType\fP intervalType, bool up) const\fC [protected]\fP, \fC [virtual]\fP"
 Align a date/time value for a step size
 .PP
 For Qt::Day alignments there is no 'natural day 0' - instead the first day of the year is used to avoid jumping major ticks positions when panning a scale\&. For other alignments ( f\&.e according to the first day of the month ) \fBalignDate()\fP has to be overloaded\&.
@@ -130,7 +128,7 @@ Aligned date/time value
 .RE
 .PP
 
-.SS "void QwtDateScaleEngine::autoScale (intmaxNumSteps, double &x1, double &x2, double &stepSize) const\fC [virtual]\fP"
+.SS "void QwtDateScaleEngine::autoScale (int maxNumSteps, double & x1, double & x2, double & stepSize) const\fC [virtual]\fP"
 Align and divide an interval
 .PP
 The algorithm aligns and divides the interval into steps\&.
@@ -148,7 +146,7 @@ Datetime interval divisions are usually not equidistant and the calculated stepS
 \fIstepSize\fP Step size (Out)
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBQwtScaleEngine::setAttribute()\fP 
 .RE
@@ -156,7 +154,7 @@ Datetime interval divisions are usually not equidistant and the calculated stepS
 
 .PP
 Reimplemented from \fBQwtLinearScaleEngine\fP\&.
-.SS "\fBQwtScaleDiv\fP QwtDateScaleEngine::divideScale (doublex1, doublex2, intmaxMajorSteps, intmaxMinorSteps, doublestepSize = \fC0\&.0\fP) const\fC [virtual]\fP"
+.SS "\fBQwtScaleDiv\fP QwtDateScaleEngine::divideScale (double x1, double x2, int maxMajorSteps, int maxMinorSteps, double stepSize = \fC0\&.0\fP) const\fC [virtual]\fP"
 
 .PP
 Calculate a scale division for a date/time interval\&. 
@@ -182,7 +180,7 @@ Calculated scale division
 
 .PP
 Reimplemented from \fBQwtLinearScaleEngine\fP\&.
-.SS "\fBQwtDate::IntervalType\fP QwtDateScaleEngine::intervalType (const QDateTime &minDate, const QDateTime &maxDate, intmaxSteps) const\fC [virtual]\fP"
+.SS "\fBQwtDate::IntervalType\fP QwtDateScaleEngine::intervalType (const QDateTime & minDate, const QDateTime & maxDate, int maxSteps) const\fC [virtual]\fP"
 Classification of a date/time interval division
 .PP
 \fBParameters:\fP
@@ -208,13 +206,13 @@ Interval classification
 Upper limit for the number of weeks, when an interval can be classified as Qt::Week\&. 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetMaxWeeks()\fP, \fBweek0Type()\fP 
 .RE
 .PP
 
-.SS "void QwtDateScaleEngine::setMaxWeeks (intweeks)"
+.SS "void QwtDateScaleEngine::setMaxWeeks (int weeks)"
 Set a upper limit for the number of weeks, when an interval can be classified as Qt::Week\&.
 .PP
 The default setting is 4 weeks\&.
@@ -229,13 +227,13 @@ The default setting is 4 weeks\&.
 In business charts a year is often devided into weeks [1-52] 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBmaxWeeks()\fP, \fBsetWeek0Type()\fP 
 .RE
 .PP
 
-.SS "void QwtDateScaleEngine::setTimeSpec (Qt::TimeSpectimeSpec)"
+.SS "void QwtDateScaleEngine::setTimeSpec (Qt::TimeSpec timeSpec)"
 Set the time specification used by the engine
 .PP
 \fBParameters:\fP
@@ -243,13 +241,13 @@ Set the time specification used by the engine
 \fItimeSpec\fP Time specification 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBtimeSpec()\fP, \fBsetUtcOffset()\fP, \fBtoDateTime()\fP 
 .RE
 .PP
 
-.SS "void QwtDateScaleEngine::setUtcOffset (intseconds)"
+.SS "void QwtDateScaleEngine::setUtcOffset (int seconds)"
 Set the offset in seconds from Coordinated Universal Time
 .PP
 \fBParameters:\fP
@@ -262,13 +260,13 @@ Set the offset in seconds from Coordinated Universal Time
 The offset has no effect beside for the time specification Qt::OffsetFromUTC\&.
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 QDate::utcOffset(), \fBsetTimeSpec()\fP, \fBtoDateTime()\fP 
 .RE
 .PP
 
-.SS "void QwtDateScaleEngine::setWeek0Type (\fBQwtDate::Week0Type\fPweek0Type)"
+.SS "void QwtDateScaleEngine::setWeek0Type (\fBQwtDate::Week0Type\fP week0Type)"
 Sets how to identify the first week of a year\&.
 .PP
 \fBParameters:\fP
@@ -276,7 +274,7 @@ Sets how to identify the first week of a year\&.
 \fIweek0Type\fP Mode how to identify the first week of a year
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBweek0Type()\fP, \fBsetMaxWeeks()\fP 
 .RE
@@ -295,13 +293,13 @@ week0Type has no effect beside for intervals classified as \fBQwtDate::Week\fP\&
 Time specification used by the engine 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetTimeSpec()\fP, \fButcOffset()\fP, \fBtoDateTime()\fP 
 .RE
 .PP
 
-.SS "QDateTime QwtDateScaleEngine::toDateTime (doublevalue) const"
+.SS "QDateTime QwtDateScaleEngine::toDateTime (double value) const"
 Translate a double value into a QDateTime object\&.
 .PP
 For QDateTime result is bounded by \fBQwtDate::minDate()\fP and \fBQwtDate::maxDate()\fP
@@ -311,7 +309,7 @@ For QDateTime result is bounded by \fBQwtDate::minDate()\fP and \fBQwtDate::maxD
 QDateTime object initialized with \fBtimeSpec()\fP and \fButcOffset()\fP\&. 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBtimeSpec()\fP, \fButcOffset()\fP, \fBQwtDate::toDateTime()\fP 
 .RE
@@ -330,7 +328,7 @@ Offset in seconds from Coordinated Universal Time
 The offset has no effect beside for the time specification Qt::OffsetFromUTC\&.
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 QDate::setUtcOffset(), \fBsetTimeSpec()\fP, \fBtoDateTime()\fP 
 .RE
@@ -344,7 +342,7 @@ QDate::setUtcOffset(), \fBsetTimeSpec()\fP, \fBtoDateTime()\fP
 Setting how to identify the first week of a year\&. 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetWeek0Type()\fP, \fBmaxWeeks()\fP 
 .RE

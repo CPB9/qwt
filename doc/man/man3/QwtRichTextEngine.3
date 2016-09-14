@@ -1,10 +1,8 @@
-.TH "QwtRichTextEngine" 3 "Thu Dec 11 2014" "Version 6.1.2" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtRichTextEngine" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-QwtRichTextEngine \- 
-.PP
-A text engine for Qt rich texts\&.  
+QwtRichTextEngine \- A text engine for Qt rich texts\&.  
 
 .SH SYNOPSIS
 .br
@@ -44,7 +42,7 @@ A text engine for Qt rich texts\&.
 \fBQwtRichTextEngine\fP renders Qt rich texts using the classes of the Scribe framework of Qt\&. 
 .SH "Member Function Documentation"
 .PP 
-.SS "void QwtRichTextEngine::draw (QPainter *painter, const QRectF &rect, intflags, const QString &text) const\fC [virtual]\fP"
+.SS "void QwtRichTextEngine::draw (QPainter * painter, const QRectF & rect, int flags, const QString & text) const\fC [virtual]\fP"
 Draw the text in a clipping rectangle
 .PP
 \fBParameters:\fP
@@ -61,7 +59,7 @@ Draw the text in a clipping rectangle
 
 .PP
 Implements \fBQwtTextEngine\fP\&.
-.SS "double QwtRichTextEngine::heightForWidth (const QFont &font, intflags, const QString &text, doublewidth) const\fC [virtual]\fP"
+.SS "double QwtRichTextEngine::heightForWidth (const QFont & font, int flags, const QString & text, double width) const\fC [virtual]\fP"
 Find the height for a given width
 .PP
 \fBParameters:\fP
@@ -83,7 +81,7 @@ Calculated height
 
 .PP
 Implements \fBQwtTextEngine\fP\&.
-.SS "bool QwtRichTextEngine::mightRender (const QString &text) const\fC [virtual]\fP"
+.SS "bool QwtRichTextEngine::mightRender (const QString & text) const\fC [virtual]\fP"
 Test if a string can be rendered by this text engine
 .PP
 \fBParameters:\fP
@@ -99,7 +97,7 @@ Qt::mightBeRichText(text);
 
 .PP
 Implements \fBQwtTextEngine\fP\&.
-.SS "void QwtRichTextEngine::textMargins (const QFont &, const QString &, double &left, double &right, double &top, double &bottom) const\fC [virtual]\fP"
+.SS "void QwtRichTextEngine::textMargins (const QFont &, const QString &, double & left, double & right, double & top, double & bottom) const\fC [virtual]\fP"
 Return margins around the texts
 .PP
 \fBParameters:\fP
@@ -116,7 +114,7 @@ Return margins around the texts
 
 .PP
 Implements \fBQwtTextEngine\fP\&.
-.SS "QSizeF QwtRichTextEngine::textSize (const QFont &font, intflags, const QString &text) const\fC [virtual]\fP"
+.SS "QSizeF QwtRichTextEngine::textSize (const QFont & font, int flags, const QString & text) const\fC [virtual]\fP"
 Returns the size, that is needed to render text
 .PP
 \fBParameters:\fP
@@ -130,7 +128,7 @@ Returns the size, that is needed to render text
 .PP
 \fBReturns:\fP
 .RS 4
-Caluclated size 
+Calculated size 
 .RE
 .PP
 

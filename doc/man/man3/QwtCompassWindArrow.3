@@ -1,10 +1,8 @@
-.TH "QwtCompassWindArrow" 3 "Thu Dec 11 2014" "Version 6.1.2" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtCompassWindArrow" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-QwtCompassWindArrow \- 
-.PP
-An indicator for the wind direction\&.  
+QwtCompassWindArrow \- An indicator for the wind direction\&.  
 
 .SH SYNOPSIS
 .br
@@ -17,9 +15,9 @@ Inherits \fBQwtDialNeedle\fP\&.
 
 .in +1c
 .ti -1c
-.RI "enum \fBStyle\fP { \fBStyle1\fP, \fBStyle2\fP }"
+.RI "enum \fBStyle\fP { \fBStyle1\fP, \fBStyle2\fP }
+.RI "\fIStyle of the arrow\&. \fP""
 .br
-.RI "\fIStyle of the arrow\&. \fP"
 .in -1c
 .SS "Public Member Functions"
 
@@ -51,7 +49,7 @@ QPalette::Dark
  Used for the dark half of Style2
 .PP
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBQwtDial\fP, \fBQwtCompass\fP 
 .RE
@@ -74,7 +72,7 @@ A needle pointing to the center\&.
 A needle pointing to the center\&. 
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "QwtCompassWindArrow::QwtCompassWindArrow (\fBStyle\fPstyle, const QColor &light = \fCQt::white\fP, const QColor &dark = \fCQt::gray\fP)"
+.SS "QwtCompassWindArrow::QwtCompassWindArrow (\fBStyle\fP style, const QColor & light = \fCQt::white\fP, const QColor & dark = \fCQt::gray\fP)"
 Constructor
 .PP
 \fBParameters:\fP
@@ -89,7 +87,7 @@ Constructor
 
 .SH "Member Function Documentation"
 .PP 
-.SS "void QwtCompassWindArrow::drawNeedle (QPainter *painter, doublelength, QPalette::ColorGroupcolorGroup) const\fC [protected]\fP, \fC [virtual]\fP"
+.SS "void QwtCompassWindArrow::drawNeedle (QPainter * painter, double length, QPalette::ColorGroup colorGroup) const\fC [protected]\fP, \fC [virtual]\fP"
 Draw the needle
 .PP
 \fBParameters:\fP

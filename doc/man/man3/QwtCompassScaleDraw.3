@@ -1,10 +1,8 @@
-.TH "QwtCompassScaleDraw" 3 "Thu Dec 11 2014" "Version 6.1.2" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtCompassScaleDraw" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-QwtCompassScaleDraw \- 
-.PP
-A special scale draw made for \fBQwtCompass\fP\&.  
+QwtCompassScaleDraw \- A special scale draw made for \fBQwtCompass\fP\&.  
 
 .SH SYNOPSIS
 .br
@@ -44,7 +42,7 @@ A special scale draw made for \fBQwtCompass\fP\&.
 .PP
 The default map consists of the labels N, NE, E, SE, S, SW, W, NW\&.
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBQwtCompass\fP 
 .RE
@@ -56,7 +54,7 @@ The default map consists of the labels N, NE, E, SE, S, SW, W, NW\&.
 
 .PP
 Constructor\&. Initializes a label map for multiples of 45 degrees 
-.SS "QwtCompassScaleDraw::QwtCompassScaleDraw (const QMap< double, QString > &map)\fC [explicit]\fP"
+.SS "QwtCompassScaleDraw::QwtCompassScaleDraw (const QMap< double, QString > & map)\fC [explicit]\fP"
 
 .PP
 Constructor\&. 
@@ -69,7 +67,7 @@ Constructor\&.
 
 .SH "Member Function Documentation"
 .PP 
-.SS "\fBQwtText\fP QwtCompassScaleDraw::label (doublevalue) const\fC [virtual]\fP"
+.SS "\fBQwtText\fP QwtCompassScaleDraw::label (double value) const\fC [virtual]\fP"
 Map a value to a corresponding label
 .PP
 \fBParameters:\fP
@@ -84,7 +82,7 @@ Map a value to a corresponding label
 Label, or QString::null 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBlabelMap()\fP, \fBsetLabelMap()\fP 
 .RE
@@ -100,13 +98,13 @@ Reimplemented from \fBQwtAbstractScaleDraw\fP\&.
 map, mapping values to labels 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetLabelMap()\fP 
 .RE
 .PP
 
-.SS "void QwtCompassScaleDraw::setLabelMap (const QMap< double, QString > &map)"
+.SS "void QwtCompassScaleDraw::setLabelMap (const QMap< double, QString > & map)"
 
 .PP
 Set a map, mapping values to labels\&. 
@@ -123,7 +121,7 @@ The values of the major ticks are found by looking into this map\&. The default 
 The map will have no effect for values that are no major tick values\&. Major ticks can be changed by QwtScaleDraw::setScale
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBlabelMap()\fP, scaleDraw(), setScale() 
 .RE

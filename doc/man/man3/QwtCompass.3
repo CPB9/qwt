@@ -1,10 +1,8 @@
-.TH "QwtCompass" 3 "Thu Dec 11 2014" "Version 6.1.2" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtCompass" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-QwtCompass \- 
-.PP
-A Compass Widget\&.  
+QwtCompass \- A Compass Widget\&.  
 
 .SH SYNOPSIS
 .br
@@ -63,7 +61,7 @@ The examples/dials example shows how to use \fBQwtCompass\fP\&.
 
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "QwtCompass::QwtCompass (QWidget *parent = \fCNULL\fP)\fC [explicit]\fP"
+.SS "QwtCompass::QwtCompass (QWidget * parent = \fCNULL\fP)\fC [explicit]\fP"
 
 .PP
 Constructor\&. 
@@ -76,7 +74,7 @@ Constructor\&.
 Create a compass widget with a scale, no needle and no rose\&. The default origin is 270\&.0 with no valid value\&. It accepts mouse and keyboard inputs and has no step size\&. The default mode is \fBQwtDial::RotateNeedle\fP\&. 
 .SH "Member Function Documentation"
 .PP 
-.SS "void QwtCompass::drawRose (QPainter *painter, const QPointF &center, doubleradius, doublenorth, QPalette::ColorGroupcg) const\fC [protected]\fP, \fC [virtual]\fP"
+.SS "void QwtCompass::drawRose (QPainter * painter, const QPointF & center, double radius, double north, QPalette::ColorGroup cg) const\fC [protected]\fP, \fC [virtual]\fP"
 Draw the compass rose
 .PP
 \fBParameters:\fP
@@ -93,7 +91,7 @@ Draw the compass rose
 .RE
 .PP
 
-.SS "void QwtCompass::drawScaleContents (QPainter *painter, const QPointF &center, doubleradius) const\fC [protected]\fP, \fC [virtual]\fP"
+.SS "void QwtCompass::drawScaleContents (QPainter * painter, const QPointF & center, double radius) const\fC [protected]\fP, \fC [virtual]\fP"
 Draw the contents of the scale
 .PP
 \fBParameters:\fP
@@ -108,12 +106,12 @@ Draw the contents of the scale
 
 .PP
 Reimplemented from \fBQwtDial\fP\&.
-.SS "void QwtCompass::keyPressEvent (QKeyEvent *kev)\fC [protected]\fP, \fC [virtual]\fP"
+.SS "void QwtCompass::keyPressEvent (QKeyEvent * kev)\fC [protected]\fP, \fC [virtual]\fP"
 Handles key events
 .PP
 Beside the keys described in \fBQwtDial::keyPressEvent\fP numbers from 1-9 (without 5) set the direction according to their position on the num pad\&.
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBisReadOnly()\fP 
 .RE
@@ -129,7 +127,7 @@ Reimplemented from \fBQwtAbstractSlider\fP\&.
 rose 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetRose()\fP 
 .RE
@@ -143,13 +141,13 @@ rose
 rose 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetRose()\fP 
 .RE
 .PP
 
-.SS "void QwtCompass::setRose (\fBQwtCompassRose\fP *rose)"
+.SS "void QwtCompass::setRose (\fBQwtCompassRose\fP * rose)"
 Set a rose for the compass 
 .PP
 \fBParameters:\fP
@@ -162,7 +160,7 @@ Set a rose for the compass
 The rose will be deleted, when a different rose is set or in ~QwtCompass 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBrose()\fP 
 .RE

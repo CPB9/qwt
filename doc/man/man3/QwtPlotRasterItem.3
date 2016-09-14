@@ -1,10 +1,8 @@
-.TH "QwtPlotRasterItem" 3 "Thu Dec 11 2014" "Version 6.1.2" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotRasterItem" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-QwtPlotRasterItem \- 
-.PP
-A class, which displays raster data\&.  
+QwtPlotRasterItem \- A class, which displays raster data\&.  
 
 .SH SYNOPSIS
 .br
@@ -19,9 +17,9 @@ Inherited by \fBQwtPlotSpectrogram\fP\&.
 
 .in +1c
 .ti -1c
-.RI "enum \fBCachePolicy\fP { \fBNoCache\fP, \fBPaintCache\fP }"
+.RI "enum \fBCachePolicy\fP { \fBNoCache\fP, \fBPaintCache\fP }
+.RI "\fICache policy The default policy is NoCache\&. \fP""
 .br
-.RI "\fICache policy The default policy is NoCache\&. \fP"
 .ti -1c
 .RI "enum \fBPaintAttribute\fP { \fBPaintInDeviceResolution\fP = 1 }"
 .br
@@ -86,7 +84,7 @@ Inherited by \fBQwtPlotSpectrogram\fP\&.
 
 .in +1c
 .ti -1c
-.RI "virtual QImage \fBrenderImage\fP (const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &area, const QSize &imageSize) const =0"
+.RI "virtual QImage \fBrenderImage\fP (const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &area, const QSize &imageSize) const  =0"
 .br
 .RI "\fIRender an image\&. \fP"
 .ti -1c
@@ -104,7 +102,7 @@ Often a plot has several types of raster data organized in layers\&. ( f\&.e a g
 .PP
 \fBQwtPlotRasterItem\fP is only implemented for images of the following formats: QImage::Format_Indexed8, QImage::Format_ARGB32\&.
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBQwtPlotSpectrogram\fP 
 .RE
@@ -130,7 +128,7 @@ This type of cache is useful for improving the performance of hide/show operatio
 .SS "enum \fBQwtPlotRasterItem::PaintAttribute\fP"
 Attributes to modify the drawing algorithm\&. 
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetPaintAttribute()\fP, \fBtestPaintAttribute()\fP 
 .RE
@@ -152,7 +150,7 @@ When the image is rendered according to the data pixels ( \fBQwtRasterData::pixe
 Alpha value of the raster item 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetAlpha()\fP 
 .RE
@@ -166,7 +164,7 @@ Alpha value of the raster item
 Bounding rectangle of the data 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBQwtPlotRasterItem::interval()\fP 
 .RE
@@ -182,13 +180,13 @@ Reimplemented from \fBQwtPlotItem\fP\&.
 Cache policy 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBCachePolicy\fP, \fBsetCachePolicy()\fP 
 .RE
 .PP
 
-.SS "void QwtPlotRasterItem::draw (QPainter *painter, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect) const\fC [virtual]\fP"
+.SS "void QwtPlotRasterItem::draw (QPainter * painter, const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & canvasRect) const\fC [virtual]\fP"
 
 .PP
 Draw the raster data\&. 
@@ -209,7 +207,7 @@ Draw the raster data\&.
 Implements \fBQwtPlotItem\fP\&.
 .PP
 Reimplemented in \fBQwtPlotSpectrogram\fP\&.
-.SS "\fBQwtScaleMap\fP QwtPlotRasterItem::imageMap (Qt::Orientationorientation, const \fBQwtScaleMap\fP &map, const QRectF &area, const QSize &imageSize, doublepixelSize) const\fC [protected]\fP, \fC [virtual]\fP"
+.SS "\fBQwtScaleMap\fP QwtPlotRasterItem::imageMap (Qt::Orientation orientation, const \fBQwtScaleMap\fP & map, const QRectF & area, const QSize & imageSize, double pixelSize) const\fC [protected]\fP, \fC [virtual]\fP"
 
 .PP
 Calculate a scale map for painting to an image\&. 
@@ -233,7 +231,7 @@ Calculated scale map
 .RE
 .PP
 
-.SS "\fBQwtInterval\fP QwtPlotRasterItem::interval (Qt::Axisaxis) const\fC [virtual]\fP"
+.SS "\fBQwtInterval\fP QwtPlotRasterItem::interval (Qt::Axis axis) const\fC [virtual]\fP"
 
 .PP
 \fBReturns:\fP
@@ -254,13 +252,13 @@ Reimplemented in \fBQwtPlotSpectrogram\fP\&.
 .SS "void QwtPlotRasterItem::invalidateCache ()"
 Invalidate the paint cache 
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetCachePolicy()\fP 
 .RE
 .PP
 
-.SS "QRectF QwtPlotRasterItem::pixelHint (const QRectF &area) const\fC [virtual]\fP"
+.SS "QRectF QwtPlotRasterItem::pixelHint (const QRectF & area) const\fC [virtual]\fP"
 
 .PP
 Pixel hint\&. The geometry of a pixel is used to calculated the resolution and alignment of the rendered image\&.
@@ -281,7 +279,7 @@ The default implementation returns an empty rectangle (QRectF()), meaning, that 
 Bounding rectangle of a pixel
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 render(), \fBrenderImage()\fP 
 .RE
@@ -289,7 +287,7 @@ render(), \fBrenderImage()\fP
 
 .PP
 Reimplemented in \fBQwtPlotSpectrogram\fP\&.
-.SS "virtual QImage QwtPlotRasterItem::renderImage (const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &area, const QSize &imageSize) const\fC [protected]\fP, \fC [pure virtual]\fP"
+.SS "virtual QImage QwtPlotRasterItem::renderImage (const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & area, const QSize & imageSize) const\fC [protected]\fP, \fC [pure virtual]\fP"
 
 .PP
 Render an image\&. An implementation of render() might iterate over all pixels of imageRect\&. Each pixel has to be translated into the corresponding position in scale coordinates using the maps\&. This position can be used to look up a value in a implementation specific way and to map it into a color\&.
@@ -313,7 +311,7 @@ Rendered image
 
 .PP
 Implemented in \fBQwtPlotSpectrogram\fP\&.
-.SS "void QwtPlotRasterItem::setAlpha (intalpha)"
+.SS "void QwtPlotRasterItem::setAlpha (int alpha)"
 
 .PP
 Set an alpha value for the raster data\&. Often a plot has several types of raster data organized in layers\&. ( f\&.e a geographical map, with weather statistics )\&. Using \fBsetAlpha()\fP raster items can be stacked easily\&.
@@ -335,13 +333,13 @@ alpha < 0 The alpha values returned by \fBrenderImage()\fP are not changed\&.
 .PP
 The default alpha value is -1\&.
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBalpha()\fP 
 .RE
 .PP
 
-.SS "void QwtPlotRasterItem::setCachePolicy (\fBQwtPlotRasterItem::CachePolicy\fPpolicy)"
+.SS "void QwtPlotRasterItem::setCachePolicy (\fBQwtPlotRasterItem::CachePolicy\fP policy)"
 Change the cache policy
 .PP
 The default policy is NoCache
@@ -351,13 +349,13 @@ The default policy is NoCache
 \fIpolicy\fP Cache policy 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBCachePolicy\fP, \fBcachePolicy()\fP 
 .RE
 .PP
 
-.SS "void QwtPlotRasterItem::setPaintAttribute (\fBPaintAttribute\fPattribute, boolon = \fCtrue\fP)"
+.SS "void QwtPlotRasterItem::setPaintAttribute (\fBPaintAttribute\fP attribute, bool on = \fCtrue\fP)"
 Specify an attribute how to draw the raster item
 .PP
 \fBParameters:\fP
@@ -368,7 +366,7 @@ Specify an attribute how to draw the raster item
 .RE
 .PP
 
-.SS "bool QwtPlotRasterItem::testPaintAttribute (\fBPaintAttribute\fPattribute) const"
+.SS "bool QwtPlotRasterItem::testPaintAttribute (\fBPaintAttribute\fP attribute) const"
 
 .PP
 \fBReturns:\fP
@@ -376,7 +374,7 @@ Specify an attribute how to draw the raster item
 True, when attribute is enabled 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBPaintAttribute\fP, \fBsetPaintAttribute()\fP 
 .RE

@@ -1,10 +1,8 @@
-.TH "QwtLegend" 3 "Thu Dec 11 2014" "Version 6.1.2" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtLegend" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-QwtLegend \- 
-.PP
-The legend widget\&.  
+QwtLegend \- The legend widget\&.  
 
 .SH SYNOPSIS
 .br
@@ -127,7 +125,7 @@ The legend widget\&.
 
 The \fBQwtLegend\fP widget is a tabular arrangement of legend items\&. Legend items might be any type of widget, but in general they will be a \fBQwtLegendLabel\fP\&.
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBQwtLegendLabel\fP, \fBQwtPlotItem\fP, \fBQwtPlot\fP 
 .RE
@@ -135,7 +133,7 @@ The \fBQwtLegend\fP widget is a tabular arrangement of legend items\&. Legend it
 
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "QwtLegend::QwtLegend (QWidget *parent = \fCNULL\fP)\fC [explicit]\fP"
+.SS "QwtLegend::QwtLegend (QWidget * parent = \fCNULL\fP)\fC [explicit]\fP"
 Constructor 
 .PP
 \fBParameters:\fP
@@ -146,7 +144,7 @@ Constructor
 
 .SH "Member Function Documentation"
 .PP 
-.SS "void QwtLegend::checked (const QVariant &itemInfo, boolon, intindex)\fC [signal]\fP"
+.SS "void QwtLegend::checked (const QVariant & itemInfo, bool on, int index)\fC [signal]\fP"
 A signal which is emitted when the user has clicked on a legend label, which is in \fBQwtLegendData::Checkable\fP mode
 .PP
 \fBParameters:\fP
@@ -163,13 +161,13 @@ A signal which is emitted when the user has clicked on a legend label, which is 
 clicks are disabled as default 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetDefaultItemMode()\fP, \fBdefaultItemMode()\fP, \fBQwtPlot::itemToInfo()\fP 
 .RE
 .PP
 
-.SS "void QwtLegend::clicked (const QVariant &itemInfo, intindex)\fC [signal]\fP"
+.SS "void QwtLegend::clicked (const QVariant & itemInfo, int index)\fC [signal]\fP"
 A signal which is emitted when the user has clicked on a legend label, which is in \fBQwtLegendData::Clickable\fP mode\&.
 .PP
 \fBParameters:\fP
@@ -184,7 +182,7 @@ A signal which is emitted when the user has clicked on a legend label, which is 
 clicks are disabled as default 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetDefaultItemMode()\fP, \fBdefaultItemMode()\fP, \fBQwtPlot::itemToInfo()\fP 
 .RE
@@ -208,7 +206,7 @@ Container widget of the legend items
 .RE
 .PP
 
-.SS "QWidget * QwtLegend::createWidget (const \fBQwtLegendData\fP &data) const\fC [protected]\fP, \fC [virtual]\fP"
+.SS "QWidget * QwtLegend::createWidget (const \fBQwtLegendData\fP & data) const\fC [protected]\fP, \fC [virtual]\fP"
 
 .PP
 Create a widget to be inserted into the legend\&. The default implementation returns a \fBQwtLegendLabel\fP\&.
@@ -237,13 +235,13 @@ Widget representing data on the legend
 Default item mode 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetDefaultItemMode()\fP 
 .RE
 .PP
 
-.SS "bool QwtLegend::eventFilter (QObject *object, QEvent *event)\fC [virtual]\fP"
+.SS "bool QwtLegend::eventFilter (QObject * object, QEvent * event)\fC [virtual]\fP"
 Handle QEvent::ChildRemoved andQEvent::LayoutRequest events for the \fBcontentsWidget()\fP\&.
 .PP
 \fBParameters:\fP
@@ -259,7 +257,7 @@ Forwarded to QwtAbstractLegend::eventFilter()
 .RE
 .PP
 
-.SS "int QwtLegend::heightForWidth (intwidth) const\fC [virtual]\fP"
+.SS "int QwtLegend::heightForWidth (int width) const\fC [virtual]\fP"
 
 .PP
 \fBReturns:\fP
@@ -281,7 +279,7 @@ The preferred height, for a width\&.
 Horizontal scrollbar 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBverticalScrollBar()\fP 
 .RE
@@ -298,11 +296,11 @@ True, when no item is inserted
 
 .PP
 Implements \fBQwtAbstractLegend\fP\&.
-.SS "void QwtLegend::itemChecked (boolon)\fC [protected]\fP, \fC [slot]\fP"
+.SS "void QwtLegend::itemChecked (bool on)\fC [protected]\fP, \fC [slot]\fP"
 Called internally when the legend has been checked Emits a \fBchecked()\fP signal\&. 
 .SS "void QwtLegend::itemClicked ()\fC [protected]\fP, \fC [slot]\fP"
 Called internally when the legend has been clicked on\&. Emits a \fBclicked()\fP signal\&. 
-.SS "QVariant QwtLegend::itemInfo (const QWidget *widget) const"
+.SS "QVariant QwtLegend::itemInfo (const QWidget * widget) const"
 Find the item that is associated to a widget
 .PP
 \fBParameters:\fP
@@ -315,13 +313,13 @@ Find the item that is associated to a widget
 Associated item info 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBlegendWidget()\fP 
 .RE
 .PP
 
-.SS "QWidget * QwtLegend::legendWidget (const QVariant &itemInfo) const"
+.SS "QWidget * QwtLegend::legendWidget (const QVariant & itemInfo) const"
 
 .PP
 \fBReturns:\fP
@@ -334,7 +332,7 @@ First widget in the list of widgets associated to an item
 \fIitemInfo\fP Info about an item 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBitemInfo()\fP, \fBQwtPlot::itemToInfo()\fP 
 .RE
@@ -345,7 +343,7 @@ Almost all types of items have only one widget
 .RE
 .PP
 
-.SS "QList< QWidget * > QwtLegend::legendWidgets (const QVariant &itemInfo) const"
+.SS "QList< QWidget * > QwtLegend::legendWidgets (const QVariant & itemInfo) const"
 
 .PP
 \fBReturns:\fP
@@ -358,7 +356,7 @@ List of widgets associated to a item
 \fIitemInfo\fP Info about an item 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBlegendWidget()\fP, \fBitemInfo()\fP, \fBQwtPlot::itemToInfo()\fP 
 .RE
@@ -372,13 +370,13 @@ List of widgets associated to a item
 Maximum number of entries in a row 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetMaxColumns()\fP, \fBQwtDynGridLayout::maxColumns()\fP 
 .RE
 .PP
 
-.SS "void QwtLegend::renderItem (QPainter *painter, const QWidget *widget, const QRectF &rect, boolfillBackground) const\fC [virtual]\fP"
+.SS "void QwtLegend::renderItem (QPainter * painter, const QWidget * widget, const QRectF & rect, bool fillBackground) const\fC [virtual]\fP"
 Render a legend entry into a given rectangle\&.
 .PP
 \fBParameters:\fP
@@ -398,7 +396,7 @@ When widget is not derived from \fBQwtLegendLabel\fP renderItem does nothing bes
 .RE
 .PP
 
-.SS "void QwtLegend::renderLegend (QPainter *painter, const QRectF &rect, boolfillBackground) const\fC [virtual]\fP"
+.SS "void QwtLegend::renderLegend (QPainter * painter, const QRectF & rect, bool fillBackground) const\fC [virtual]\fP"
 Render the legend into a given rectangle\&.
 .PP
 \fBParameters:\fP
@@ -410,7 +408,7 @@ Render the legend into a given rectangle\&.
 \fIfillBackground\fP When true, fill rect with the widget background
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBrenderLegend()\fP is used by \fBQwtPlotRenderer\fP - not by \fBQwtLegend\fP itself 
 .RE
@@ -418,7 +416,7 @@ Render the legend into a given rectangle\&.
 
 .PP
 Implements \fBQwtAbstractLegend\fP\&.
-.SS "int QwtLegend::scrollExtent (Qt::Orientationorientation) const\fC [virtual]\fP"
+.SS "int QwtLegend::scrollExtent (Qt::Orientation orientation) const\fC [virtual]\fP"
 Return the extent, that is needed for the scrollbars
 .PP
 \fBParameters:\fP
@@ -434,7 +432,7 @@ The width of the vertical scrollbar for Qt::Horizontal and v\&.v\&.
 
 .PP
 Reimplemented from \fBQwtAbstractLegend\fP\&.
-.SS "void QwtLegend::setDefaultItemMode (\fBQwtLegendData::Mode\fPmode)"
+.SS "void QwtLegend::setDefaultItemMode (\fBQwtLegendData::Mode\fP mode)"
 
 .PP
 Set the default mode for legend labels\&. Legend labels will be constructed according to the attributes in a \fBQwtLegendData\fP object\&. When it doesn't contain a value for the QwtLegendData::ModeRole the label will be initialized with the default mode of the legend\&.
@@ -444,7 +442,7 @@ Set the default mode for legend labels\&. Legend labels will be constructed acco
 \fImode\fP Default item mode
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 itemMode(), \fBQwtLegendData::value()\fP, \fBQwtPlotItem::legendData()\fP 
 .RE
@@ -455,7 +453,7 @@ Changing the mode doesn't have any effect on existing labels\&.
 .RE
 .PP
 
-.SS "void QwtLegend::setMaxColumns (uintnumColums)"
+.SS "void QwtLegend::setMaxColumns (uint numColums)"
 
 .PP
 Set the maximum number of entries in a row\&. F\&.e when the maximum is set to 1 all items are aligned vertically\&. 0 means unlimited
@@ -465,13 +463,13 @@ Set the maximum number of entries in a row\&. F\&.e when the maximum is set to 1
 \fInumColums\fP Maximum number of entries in a row
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBmaxColumns()\fP, \fBQwtDynGridLayout::setMaxColumns()\fP 
 .RE
 .PP
 
-.SS "void QwtLegend::updateLegend (const QVariant &itemInfo, const QList< \fBQwtLegendData\fP > &data)\fC [virtual]\fP, \fC [slot]\fP"
+.SS "void QwtLegend::updateLegend (const QVariant & itemInfo, const QList< \fBQwtLegendData\fP > & data)\fC [virtual]\fP, \fC [slot]\fP"
 
 .PP
 Update the entries for an item\&. 
@@ -484,7 +482,7 @@ Update the entries for an item\&.
 .RE
 .PP
 
-.SS "void QwtLegend::updateWidget (QWidget *widget, const \fBQwtLegendData\fP &data)\fC [protected]\fP, \fC [virtual]\fP"
+.SS "void QwtLegend::updateWidget (QWidget * widget, const \fBQwtLegendData\fP & data)\fC [protected]\fP, \fC [virtual]\fP"
 
 .PP
 Update the widget\&. 
@@ -496,7 +494,7 @@ Update the widget\&.
 \fIdata\fP Attributes to be displayed
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBcreateWidget()\fP 
 .RE
@@ -515,7 +513,7 @@ When widget is no \fBQwtLegendLabel\fP \fBupdateWidget()\fP does nothing\&.
 Vertical scrollbar 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBhorizontalScrollBar()\fP 
 .RE

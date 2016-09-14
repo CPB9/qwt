@@ -1,10 +1,8 @@
-.TH "QwtAnalogClock" 3 "Thu Dec 11 2014" "Version 6.1.2" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtAnalogClock" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-QwtAnalogClock \- 
-.PP
-An analog clock\&.  
+QwtAnalogClock \- An analog clock\&.  
 
 .SH SYNOPSIS
 .br
@@ -102,7 +100,7 @@ The examples/dials example shows how to use \fBQwtAnalogClock\fP\&.
 .SS "enum \fBQwtAnalogClock::Hand\fP"
 Hand type 
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetHand()\fP, \fBhand()\fP 
 .RE
@@ -125,7 +123,7 @@ Needle displaying the hours\&.
 Number of needles\&. 
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "QwtAnalogClock::QwtAnalogClock (QWidget *parent = \fCNULL\fP)\fC [explicit]\fP"
+.SS "QwtAnalogClock::QwtAnalogClock (QWidget * parent = \fCNULL\fP)\fC [explicit]\fP"
 Constructor 
 .PP
 \fBParameters:\fP
@@ -136,7 +134,7 @@ Constructor
 
 .SH "Member Function Documentation"
 .PP 
-.SS "void QwtAnalogClock::drawHand (QPainter *painter, \fBHand\fPhd, const QPointF &center, doubleradius, doubledirection, QPalette::ColorGroupcg) const\fC [protected]\fP, \fC [virtual]\fP"
+.SS "void QwtAnalogClock::drawHand (QPainter * painter, \fBHand\fP hd, const QPointF & center, double radius, double direction, QPalette::ColorGroup cg) const\fC [protected]\fP, \fC [virtual]\fP"
 Draw a clock hand
 .PP
 \fBParameters:\fP
@@ -155,7 +153,7 @@ Draw a clock hand
 .RE
 .PP
 
-.SS "void QwtAnalogClock::drawNeedle (QPainter *painter, const QPointF &center, doubleradius, doubledir, QPalette::ColorGroupcolorGroup) const\fC [protected]\fP, \fC [virtual]\fP"
+.SS "void QwtAnalogClock::drawNeedle (QPainter * painter, const QPointF & center, double radius, double dir, QPalette::ColorGroup colorGroup) const\fC [protected]\fP, \fC [virtual]\fP"
 
 .PP
 Draw the needle\&. A clock has no single needle but three hands instead\&. \fBdrawNeedle()\fP translates \fBvalue()\fP into directions for the hands and calls \fBdrawHand()\fP\&.
@@ -173,7 +171,7 @@ Draw the needle\&. A clock has no single needle but three hands instead\&. \fBdr
 \fIcolorGroup\fP ColorGroup
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBdrawHand()\fP 
 .RE
@@ -181,7 +179,7 @@ Draw the needle\&. A clock has no single needle but three hands instead\&. \fBdr
 
 .PP
 Reimplemented from \fBQwtDial\fP\&.
-.SS "const \fBQwtDialNeedle\fP * QwtAnalogClock::hand (\fBHand\fPhd) const"
+.SS "const \fBQwtDialNeedle\fP * QwtAnalogClock::hand (\fBHand\fP hd) const"
 
 .PP
 \fBReturns:\fP
@@ -194,13 +192,13 @@ Clock hand
 \fIhd\fP Specifies the type of hand 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetHand()\fP 
 .RE
 .PP
 
-.SS "\fBQwtDialNeedle\fP * QwtAnalogClock::hand (\fBHand\fPhd)"
+.SS "\fBQwtDialNeedle\fP * QwtAnalogClock::hand (\fBHand\fP hd)"
 
 .PP
 \fBReturns:\fP
@@ -213,13 +211,13 @@ Clock hand
 \fIhd\fP Specifies the type of hand 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetHand()\fP 
 .RE
 .PP
 
-.SS "void QwtAnalogClock::setHand (\fBHand\fPhand, \fBQwtDialNeedle\fP *needle)"
+.SS "void QwtAnalogClock::setHand (\fBHand\fP hand, \fBQwtDialNeedle\fP * needle)"
 Set a clock hand 
 .PP
 \fBParameters:\fP
@@ -229,13 +227,13 @@ Set a clock hand
 \fIneedle\fP Hand 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBhand()\fP 
 .RE
 .PP
 
-.SS "void QwtAnalogClock::setTime (const QTime &time)\fC [slot]\fP"
+.SS "void QwtAnalogClock::setTime (const QTime & time)\fC [slot]\fP"
 Set a time 
 .PP
 \fBParameters:\fP

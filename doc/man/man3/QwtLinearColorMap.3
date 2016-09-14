@@ -1,10 +1,8 @@
-.TH "QwtLinearColorMap" 3 "Thu Dec 11 2014" "Version 6.1.2" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtLinearColorMap" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-QwtLinearColorMap \- 
-.PP
-\fBQwtLinearColorMap\fP builds a color map from color stops\&.  
+QwtLinearColorMap \- \fBQwtLinearColorMap\fP builds a color map from color stops\&.  
 
 .SH SYNOPSIS
 .br
@@ -73,7 +71,7 @@ A color stop is a color at a specific position\&. The valid range for the positi
 .SS "enum \fBQwtLinearColorMap::Mode\fP"
 Mode of color map 
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetMode()\fP, \fBmode()\fP 
 .RE
@@ -90,7 +88,7 @@ Return the color from the next lower color stop\&.
 Interpolating the colors of the adjacent stops\&. 
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "QwtLinearColorMap::QwtLinearColorMap (\fBQwtColorMap::Format\fPformat = \fC\fBQwtColorMap::RGB\fP\fP)"
+.SS "QwtLinearColorMap::QwtLinearColorMap (\fBQwtColorMap::Format\fP format = \fC\fBQwtColorMap::RGB\fP\fP)"
 Build a color map with two stops at 0\&.0 and 1\&.0\&. The color at 0\&.0 is Qt::blue, at 1\&.0 it is Qt::yellow\&.
 .PP
 \fBParameters:\fP
@@ -99,7 +97,7 @@ Build a color map with two stops at 0\&.0 and 1\&.0\&. The color at 0\&.0 is Qt:
 .RE
 .PP
 
-.SS "QwtLinearColorMap::QwtLinearColorMap (const QColor &color1, const QColor &color2, \fBQwtColorMap::Format\fPformat = \fC\fBQwtColorMap::RGB\fP\fP)"
+.SS "QwtLinearColorMap::QwtLinearColorMap (const QColor & color1, const QColor & color2, \fBQwtColorMap::Format\fP format = \fC\fBQwtColorMap::RGB\fP\fP)"
 Build a color map with two stops at 0\&.0 and 1\&.0\&.
 .PP
 \fBParameters:\fP
@@ -114,7 +112,7 @@ Build a color map with two stops at 0\&.0 and 1\&.0\&.
 
 .SH "Member Function Documentation"
 .PP 
-.SS "void QwtLinearColorMap::addColorStop (doublevalue, const QColor &color)"
+.SS "void QwtLinearColorMap::addColorStop (double value, const QColor & color)"
 Add a color stop
 .PP
 The value has to be in the range [0\&.0, 1\&.0]\&. F\&.e\&. a stop at position 17\&.0 for a range [10\&.0,20\&.0] must be passed as: (17\&.0 - 10\&.0) / (20\&.0 - 10\&.0)
@@ -135,7 +133,7 @@ The value has to be in the range [0\&.0, 1\&.0]\&. F\&.e\&. a stop at position 1
 the first color of the color range 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetColorInterval()\fP 
 .RE
@@ -149,13 +147,13 @@ the first color of the color range
 the second color of the color range 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetColorInterval()\fP 
 .RE
 .PP
 
-.SS "unsigned char QwtLinearColorMap::colorIndex (const \fBQwtInterval\fP &interval, doublevalue) const\fC [virtual]\fP"
+.SS "unsigned char QwtLinearColorMap::colorIndex (const \fBQwtInterval\fP & interval, double value) const\fC [virtual]\fP"
 
 .PP
 Map a value of a given interval into a color index\&. 
@@ -192,13 +190,13 @@ Positions of color stops in increasing order
 Mode of the color map 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetMode()\fP 
 .RE
 .PP
 
-.SS "QRgb QwtLinearColorMap::rgb (const \fBQwtInterval\fP &interval, doublevalue) const\fC [virtual]\fP"
+.SS "QRgb QwtLinearColorMap::rgb (const \fBQwtInterval\fP & interval, double value) const\fC [virtual]\fP"
 Map a value of a given interval into a RGB value
 .PP
 \fBParameters:\fP
@@ -216,7 +214,7 @@ RGB value for value
 
 .PP
 Implements \fBQwtColorMap\fP\&.
-.SS "void QwtLinearColorMap::setColorInterval (const QColor &color1, const QColor &color2)"
+.SS "void QwtLinearColorMap::setColorInterval (const QColor & color1, const QColor & color2)"
 Set the color range
 .PP
 Add stops at 0\&.0 and 1\&.0\&.
@@ -228,18 +226,18 @@ Add stops at 0\&.0 and 1\&.0\&.
 \fIcolor2\fP Color used for the maximum value of the value interval
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBcolor1()\fP, \fBcolor2()\fP 
 .RE
 .PP
 
-.SS "void QwtLinearColorMap::setMode (\fBMode\fPmode)"
+.SS "void QwtLinearColorMap::setMode (\fBMode\fP mode)"
 
 .PP
 Set the mode of the color map\&. FixedColors means the color is calculated from the next lower color stop\&. ScaledColors means the color is calculated by interpolating the colors of the adjacent stops\&.
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBmode()\fP 
 .RE

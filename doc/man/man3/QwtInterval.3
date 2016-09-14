@@ -1,10 +1,8 @@
-.TH "QwtInterval" 3 "Thu Dec 11 2014" "Version 6.1.2" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtInterval" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-QwtInterval \- 
-.PP
-A class representing an interval\&.  
+QwtInterval \- A class representing an interval\&.  
 
 .SH SYNOPSIS
 .br
@@ -138,7 +136,7 @@ The interval is represented by 2 doubles, the lower and the upper limit\&.
 .SS "enum \fBQwtInterval::BorderFlag\fP"
 Flag indicating if a border is included or excluded 
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetBorderFlags()\fP, \fBborderFlags()\fP 
 .RE
@@ -166,13 +164,13 @@ Min/Max values are not included in the interval\&.
 .PP
 Default Constructor\&. Creates an invalid interval [0\&.0, -1\&.0] 
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetInterval()\fP, \fBisValid()\fP 
 .RE
 .PP
 
-.SS "QwtInterval::QwtInterval (doubleminValue, doublemaxValue, \fBBorderFlags\fPborderFlags = \fC\fBIncludeBorders\fP\fP)\fC [inline]\fP"
+.SS "QwtInterval::QwtInterval (double minValue, double maxValue, \fBBorderFlags\fP borderFlags = \fC\fBIncludeBorders\fP\fP)\fC [inline]\fP"
 Constructor
 .PP
 Build an interval with from min/max values
@@ -197,13 +195,13 @@ Build an interval with from min/max values
 Border flags 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetBorderFlags()\fP 
 .RE
 .PP
 
-.SS "bool QwtInterval::contains (doublevalue) const"
+.SS "bool QwtInterval::contains (double value) const"
 Test if a value is inside an interval
 .PP
 \fBParameters:\fP
@@ -217,7 +215,7 @@ true, if value >= \fBminValue()\fP && value <= \fBmaxValue()\fP
 .RE
 .PP
 
-.SS "\fBQwtInterval\fP QwtInterval::extend (doublevalue) const"
+.SS "\fBQwtInterval\fP QwtInterval::extend (double value) const"
 
 .PP
 Extend the interval\&. If value is below \fBminValue()\fP, value becomes the lower limit\&. If value is above \fBmaxValue()\fP, value becomes the upper limit\&.
@@ -234,13 +232,13 @@ Extend the interval\&. If value is below \fBminValue()\fP, value becomes the low
 extended interval
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBisValid()\fP 
 .RE
 .PP
 
-.SS "\fBQwtInterval\fP QwtInterval::intersect (const \fBQwtInterval\fP &other) const"
+.SS "\fBQwtInterval\fP QwtInterval::intersect (const \fBQwtInterval\fP & other) const"
 
 .PP
 Intersect 2 intervals\&. 
@@ -256,7 +254,7 @@ Intersection
 .RE
 .PP
 
-.SS "bool QwtInterval::intersects (const \fBQwtInterval\fP &other) const"
+.SS "bool QwtInterval::intersects (const \fBQwtInterval\fP & other) const"
 
 .PP
 Test if two intervals overlap\&. 
@@ -277,7 +275,7 @@ Invalidate the interval
 .PP
 The limits are set to interval [0\&.0, -1\&.0] 
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBisValid()\fP 
 .RE
@@ -291,7 +289,7 @@ Invert the limits of the interval
 Inverted interval 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBnormalized()\fP 
 .RE
@@ -315,7 +313,7 @@ True, when the interval is valid
 .RE
 .PP
 
-.SS "\fBQwtInterval\fP QwtInterval::limited (doublelowerBound, doubleupperBound) const"
+.SS "\fBQwtInterval\fP QwtInterval::limited (double lowerBound, double upperBound) const"
 Limit the interval, keeping the border modes
 .PP
 \fBParameters:\fP
@@ -359,13 +357,13 @@ Normalize the limits of the interval\&. If \fBmaxValue()\fP < \fBminValue()\fP t
 Normalized interval
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBisValid()\fP, \fBinverted()\fP 
 .RE
 .PP
 
-.SS "bool QwtInterval::operator!= (const \fBQwtInterval\fP &other) const\fC [inline]\fP"
+.SS "bool QwtInterval::operator!= (const \fBQwtInterval\fP & other) const\fC [inline]\fP"
 
 .PP
 Compare two intervals\&. 
@@ -381,7 +379,7 @@ True, when this and other are not equal
 .RE
 .PP
 
-.SS "\fBQwtInterval\fP QwtInterval::operator& (const \fBQwtInterval\fP &other) const\fC [inline]\fP"
+.SS "\fBQwtInterval\fP QwtInterval::operator& (const \fBQwtInterval\fP & other) const\fC [inline]\fP"
 
 .PP
 Intersection of two intervals\&. 
@@ -396,13 +394,13 @@ Intersection of two intervals\&.
 Intersection of this and other
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBintersect()\fP 
 .RE
 .PP
 
-.SS "\fBQwtInterval\fP & QwtInterval::operator&= (const \fBQwtInterval\fP &other)"
+.SS "\fBQwtInterval\fP & QwtInterval::operator&= (const \fBQwtInterval\fP & other)"
 
 .PP
 Intersect this interval with the given interval\&. 
@@ -418,7 +416,7 @@ This interval
 .RE
 .PP
 
-.SS "bool QwtInterval::operator== (const \fBQwtInterval\fP &other) const\fC [inline]\fP"
+.SS "bool QwtInterval::operator== (const \fBQwtInterval\fP & other) const\fC [inline]\fP"
 
 .PP
 Compare two intervals\&. 
@@ -434,7 +432,7 @@ True, when this and other are equal
 .RE
 .PP
 
-.SS "\fBQwtInterval\fP QwtInterval::operator| (const \fBQwtInterval\fP &other) const\fC [inline]\fP"
+.SS "\fBQwtInterval\fP QwtInterval::operator| (const \fBQwtInterval\fP & other) const\fC [inline]\fP"
 Union of two intervals
 .PP
 \fBParameters:\fP
@@ -447,13 +445,13 @@ Union of two intervals
 Union of this and other
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBunite()\fP 
 .RE
 .PP
 
-.SS "\fBQwtInterval\fP QwtInterval::operator| (doublevalue) const\fC [inline]\fP"
+.SS "\fBQwtInterval\fP QwtInterval::operator| (double value) const\fC [inline]\fP"
 Extend an interval
 .PP
 \fBParameters:\fP
@@ -466,13 +464,13 @@ Extend an interval
 Extended interval 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBextend()\fP 
 .RE
 .PP
 
-.SS "\fBQwtInterval\fP & QwtInterval::operator|= (const \fBQwtInterval\fP &other)"
+.SS "\fBQwtInterval\fP & QwtInterval::operator|= (const \fBQwtInterval\fP & other)"
 
 .PP
 Unite this interval with the given interval\&. 
@@ -488,7 +486,7 @@ This interval
 .RE
 .PP
 
-.SS "\fBQwtInterval\fP & QwtInterval::operator|= (doublevalue)"
+.SS "\fBQwtInterval\fP & QwtInterval::operator|= (double value)"
 Extend an interval
 .PP
 \fBParameters:\fP
@@ -501,13 +499,13 @@ Extend an interval
 Reference of the extended interval
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBextend()\fP 
 .RE
 .PP
 
-.SS "void QwtInterval::setBorderFlags (\fBBorderFlags\fPborderFlags)\fC [inline]\fP"
+.SS "void QwtInterval::setBorderFlags (\fBBorderFlags\fP borderFlags)\fC [inline]\fP"
 Change the border flags
 .PP
 \fBParameters:\fP
@@ -515,13 +513,13 @@ Change the border flags
 \fIborderFlags\fP Or'd BorderMode flags 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBborderFlags()\fP 
 .RE
 .PP
 
-.SS "void QwtInterval::setInterval (doubleminValue, doublemaxValue, \fBBorderFlags\fPborderFlags = \fC\fBIncludeBorders\fP\fP)\fC [inline]\fP"
+.SS "void QwtInterval::setInterval (double minValue, double maxValue, \fBBorderFlags\fP borderFlags = \fC\fBIncludeBorders\fP\fP)\fC [inline]\fP"
 Assign the limits of the interval
 .PP
 \fBParameters:\fP
@@ -534,7 +532,7 @@ Assign the limits of the interval
 .RE
 .PP
 
-.SS "void QwtInterval::setMaxValue (doublemaxValue)\fC [inline]\fP"
+.SS "void QwtInterval::setMaxValue (double maxValue)\fC [inline]\fP"
 Assign the upper limit of the interval
 .PP
 \fBParameters:\fP
@@ -543,7 +541,7 @@ Assign the upper limit of the interval
 .RE
 .PP
 
-.SS "void QwtInterval::setMinValue (doubleminValue)\fC [inline]\fP"
+.SS "void QwtInterval::setMinValue (double minValue)\fC [inline]\fP"
 Assign the lower limit of the interval
 .PP
 \fBParameters:\fP
@@ -552,7 +550,7 @@ Assign the lower limit of the interval
 .RE
 .PP
 
-.SS "\fBQwtInterval\fP QwtInterval::symmetrize (doublevalue) const"
+.SS "\fBQwtInterval\fP QwtInterval::symmetrize (double value) const"
 Adjust the limit that is closer to value, so that value becomes the center of the interval\&.
 .PP
 \fBParameters:\fP
@@ -576,7 +574,7 @@ Return the width of an interval\&. The width of invalid intervals is 0\&.0, othe
 Interval width 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBisValid()\fP 
 .RE

@@ -1,10 +1,8 @@
-.TH "QwtScaleArithmetic" 3 "Thu Dec 11 2014" "Version 6.1.2" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtScaleArithmetic" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-QwtScaleArithmetic \- 
-.PP
-Arithmetic including a tolerance\&.  
+QwtScaleArithmetic \- Arithmetic including a tolerance\&.  
 
 .SH SYNOPSIS
 .br
@@ -33,7 +31,7 @@ Arithmetic including a tolerance\&.
 Arithmetic including a tolerance\&. 
 .SH "Member Function Documentation"
 .PP 
-.SS "double QwtScaleArithmetic::ceilEps (doublevalue, doubleintervalSize)\fC [static]\fP"
+.SS "double QwtScaleArithmetic::ceilEps (double value, double intervalSize)\fC [static]\fP"
 Ceil a value, relative to an interval
 .PP
 \fBParameters:\fP
@@ -48,13 +46,13 @@ Ceil a value, relative to an interval
 Rounded value
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBfloorEps()\fP 
 .RE
 .PP
 
-.SS "double QwtScaleArithmetic::divideEps (doubleintervalSize, doublenumSteps)\fC [static]\fP"
+.SS "double QwtScaleArithmetic::divideEps (double intervalSize, double numSteps)\fC [static]\fP"
 
 .PP
 Divide an interval into steps\&. $stepSize = (intervalSize - intervalSize * 10e^{-6}) / numSteps$
@@ -72,7 +70,7 @@ Step size
 .RE
 .PP
 
-.SS "double QwtScaleArithmetic::divideInterval (doubleintervalSize, intnumSteps, uintbase)\fC [static]\fP"
+.SS "double QwtScaleArithmetic::divideInterval (double intervalSize, int numSteps, uint base)\fC [static]\fP"
 Calculate a step size for a given interval
 .PP
 \fBParameters:\fP
@@ -90,7 +88,7 @@ Calculated step size
 .RE
 .PP
 
-.SS "double QwtScaleArithmetic::floorEps (doublevalue, doubleintervalSize)\fC [static]\fP"
+.SS "double QwtScaleArithmetic::floorEps (double value, double intervalSize)\fC [static]\fP"
 Floor a value, relative to an interval
 .PP
 \fBParameters:\fP
@@ -105,7 +103,7 @@ Floor a value, relative to an interval
 Rounded value 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBfloorEps()\fP 
 .RE

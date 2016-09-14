@@ -1,10 +1,8 @@
-.TH "QwtPlotRenderer" 3 "Thu Dec 11 2014" "Version 6.1.2" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotRenderer" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-QwtPlotRenderer \- 
-.PP
-Renderer for exporting a plot to a document, a printer or anything else, that is supported by QPainter/QPaintDevice\&.  
+QwtPlotRenderer \- Renderer for exporting a plot to a document, a printer or anything else, that is supported by QPainter/QPaintDevice\&.  
 
 .SH SYNOPSIS
 .br
@@ -17,13 +15,13 @@ Inherits QObject\&.
 
 .in +1c
 .ti -1c
-.RI "enum \fBDiscardFlag\fP { \fBDiscardNone\fP = 0x00, \fBDiscardBackground\fP = 0x01, \fBDiscardTitle\fP = 0x02, \fBDiscardLegend\fP = 0x04, \fBDiscardCanvasBackground\fP = 0x08, \fBDiscardFooter\fP = 0x10, \fBDiscardCanvasFrame\fP = 0x20 }"
+.RI "enum \fBDiscardFlag\fP { \fBDiscardNone\fP = 0x00, \fBDiscardBackground\fP = 0x01, \fBDiscardTitle\fP = 0x02, \fBDiscardLegend\fP = 0x04, \fBDiscardCanvasBackground\fP = 0x08, \fBDiscardFooter\fP = 0x10, \fBDiscardCanvasFrame\fP = 0x20 }
+.RI "\fIDisard flags\&. \fP""
 .br
-.RI "\fIDisard flags\&. \fP"
 .ti -1c
-.RI "enum \fBLayoutFlag\fP { \fBDefaultLayout\fP = 0x00, \fBFrameWithScales\fP = 0x01 }"
+.RI "enum \fBLayoutFlag\fP { \fBDefaultLayout\fP = 0x00, \fBFrameWithScales\fP = 0x01 }
+.RI "\fILayout flags\&. \fP""
 .br
-.RI "\fILayout flags\&. \fP"
 .ti -1c
 .RI "typedef QFlags< \fBDiscardFlag\fP > \fBDiscardFlags\fP"
 .br
@@ -150,7 +148,7 @@ This flag has no effect when using style sheets, where the frame is part of the 
 .PP
 Layout flags\&. 
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetLayoutFlag()\fP, \fBtestLayoutFlag()\fP 
 .RE
@@ -167,7 +165,7 @@ Use the default layout as on screen\&.
 Instead of the scales a box is painted around the plot canvas, where the scale ticks are aligned to\&. 
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "QwtPlotRenderer::QwtPlotRenderer (QObject *parent = \fCNULL\fP)\fC [explicit]\fP"
+.SS "QwtPlotRenderer::QwtPlotRenderer (QObject * parent = \fCNULL\fP)\fC [explicit]\fP"
 Constructor 
 .PP
 \fBParameters:\fP
@@ -186,13 +184,13 @@ Constructor
 Flags, indicating what to discard from rendering 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBDiscardFlag\fP, \fBsetDiscardFlags()\fP, \fBsetDiscardFlag()\fP, \fBtestDiscardFlag()\fP 
 .RE
 .PP
 
-.SS "bool QwtPlotRenderer::exportTo (\fBQwtPlot\fP *plot, const QString &documentName, const QSizeF &sizeMM = \fCQSizeF( 300, 200 )\fP, intresolution = \fC85\fP)"
+.SS "bool QwtPlotRenderer::exportTo (\fBQwtPlot\fP * plot, const QString & documentName, const QSizeF & sizeMM = \fCQSizeF( 300, 200 )\fP, int resolution = \fC85\fP)"
 
 .PP
 Execute a file dialog and render the plot to the selected file\&. 
@@ -213,7 +211,7 @@ Execute a file dialog and render the plot to the selected file\&.
 True, when exporting was successful 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBrenderDocument()\fP 
 .RE
@@ -227,13 +225,13 @@ True, when exporting was successful
 Layout flags 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBLayoutFlag\fP, \fBsetLayoutFlags()\fP, \fBsetLayoutFlag()\fP, \fBtestLayoutFlag()\fP 
 .RE
 .PP
 
-.SS "void QwtPlotRenderer::render (\fBQwtPlot\fP *plot, QPainter *painter, const QRectF &plotRect) const\fC [virtual]\fP"
+.SS "void QwtPlotRenderer::render (\fBQwtPlot\fP * plot, QPainter * painter, const QRectF & plotRect) const\fC [virtual]\fP"
 Paint the contents of a \fBQwtPlot\fP instance into a given rectangle\&.
 .PP
 \fBParameters:\fP
@@ -245,13 +243,13 @@ Paint the contents of a \fBQwtPlot\fP instance into a given rectangle\&.
 \fIplotRect\fP Bounding rectangle
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBrenderDocument()\fP, \fBrenderTo()\fP, \fBQwtPainter::setRoundingAlignment()\fP 
 .RE
 .PP
 
-.SS "void QwtPlotRenderer::renderCanvas (const \fBQwtPlot\fP *plot, QPainter *painter, const QRectF &canvasRect, const \fBQwtScaleMap\fP *map) const\fC [virtual]\fP"
+.SS "void QwtPlotRenderer::renderCanvas (const \fBQwtPlot\fP * plot, QPainter * painter, const QRectF & canvasRect, const \fBQwtScaleMap\fP * map) const\fC [virtual]\fP"
 Render the canvas into a given rectangle\&.
 .PP
 \fBParameters:\fP
@@ -266,7 +264,7 @@ Render the canvas into a given rectangle\&.
 .RE
 .PP
 
-.SS "void QwtPlotRenderer::renderDocument (\fBQwtPlot\fP *plot, const QString &fileName, const QSizeF &sizeMM, intresolution = \fC85\fP)"
+.SS "void QwtPlotRenderer::renderDocument (\fBQwtPlot\fP * plot, const QString & fileName, const QSizeF & sizeMM, int resolution = \fC85\fP)"
 Render a plot to a file
 .PP
 The format of the document will be auto-detected from the suffix of the file name\&.
@@ -283,7 +281,7 @@ The format of the document will be auto-detected from the suffix of the file nam
 .RE
 .PP
 
-.SS "void QwtPlotRenderer::renderDocument (\fBQwtPlot\fP *plot, const QString &fileName, const QString &format, const QSizeF &sizeMM, intresolution = \fC85\fP)"
+.SS "void QwtPlotRenderer::renderDocument (\fBQwtPlot\fP * plot, const QString & fileName, const QString & format, const QSizeF & sizeMM, int resolution = \fC85\fP)"
 Render a plot to a file
 .PP
 Supported formats are:
@@ -321,13 +319,13 @@ Scalable vector graphic formats like PDF or SVG are superior to raster graphics 
 \fIresolution\fP Resolution in dots per Inch (dpi)
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBrenderTo()\fP, \fBrender()\fP, \fBQwtPainter::setRoundingAlignment()\fP 
 .RE
 .PP
 
-.SS "void QwtPlotRenderer::renderFooter (const \fBQwtPlot\fP *plot, QPainter *painter, const QRectF &rect) const\fC [virtual]\fP"
+.SS "void QwtPlotRenderer::renderFooter (const \fBQwtPlot\fP * plot, QPainter * painter, const QRectF & rect) const\fC [virtual]\fP"
 Render the footer into a given rectangle\&.
 .PP
 \fBParameters:\fP
@@ -340,7 +338,7 @@ Render the footer into a given rectangle\&.
 .RE
 .PP
 
-.SS "void QwtPlotRenderer::renderLegend (const \fBQwtPlot\fP *plot, QPainter *painter, const QRectF &rect) const\fC [virtual]\fP"
+.SS "void QwtPlotRenderer::renderLegend (const \fBQwtPlot\fP * plot, QPainter * painter, const QRectF & rect) const\fC [virtual]\fP"
 Render the legend into a given rectangle\&.
 .PP
 \fBParameters:\fP
@@ -353,7 +351,7 @@ Render the legend into a given rectangle\&.
 .RE
 .PP
 
-.SS "void QwtPlotRenderer::renderScale (const \fBQwtPlot\fP *plot, QPainter *painter, intaxisId, intstartDist, intendDist, intbaseDist, const QRectF &rect) const\fC [virtual]\fP"
+.SS "void QwtPlotRenderer::renderScale (const \fBQwtPlot\fP * plot, QPainter * painter, int axisId, int startDist, int endDist, int baseDist, const QRectF & rect) const\fC [virtual]\fP"
 
 .PP
 Paint a scale into a given rectangle\&. Paint the scale into a given rectangle\&. 
@@ -376,7 +374,7 @@ Paint a scale into a given rectangle\&. Paint the scale into a given rectangle\&
 .RE
 .PP
 
-.SS "void QwtPlotRenderer::renderTitle (const \fBQwtPlot\fP *plot, QPainter *painter, const QRectF &rect) const\fC [virtual]\fP"
+.SS "void QwtPlotRenderer::renderTitle (const \fBQwtPlot\fP * plot, QPainter * painter, const QRectF & rect) const\fC [virtual]\fP"
 Render the title into a given rectangle\&.
 .PP
 \fBParameters:\fP
@@ -389,7 +387,7 @@ Render the title into a given rectangle\&.
 .RE
 .PP
 
-.SS "void QwtPlotRenderer::renderTo (\fBQwtPlot\fP *plot, QPrinter &printer) const"
+.SS "void QwtPlotRenderer::renderTo (\fBQwtPlot\fP * plot, QPrinter & printer) const"
 
 .PP
 Render the plot to a QPrinter\&. This function renders the contents of a \fBQwtPlot\fP instance to \fCQPaintDevice\fP object\&. The size is derived from the printer metrics\&.
@@ -401,13 +399,13 @@ Render the plot to a QPrinter\&. This function renders the contents of a \fBQwtP
 \fIprinter\fP Printer to paint on
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBrenderDocument()\fP, \fBrender()\fP, \fBQwtPainter::setRoundingAlignment()\fP 
 .RE
 .PP
 
-.SS "void QwtPlotRenderer::renderTo (\fBQwtPlot\fP *plot, QPaintDevice &paintDevice) const"
+.SS "void QwtPlotRenderer::renderTo (\fBQwtPlot\fP * plot, QPaintDevice & paintDevice) const"
 
 .PP
 Render the plot to a \fCQPaintDevice\fP\&. This function renders the contents of a \fBQwtPlot\fP instance to \fCQPaintDevice\fP object\&. The target rectangle is derived from its device metrics\&.
@@ -419,13 +417,13 @@ Render the plot to a \fCQPaintDevice\fP\&. This function renders the contents of
 \fIpaintDevice\fP device to paint on, f\&.e a QImage
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBrenderDocument()\fP, \fBrender()\fP, \fBQwtPainter::setRoundingAlignment()\fP 
 .RE
 .PP
 
-.SS "void QwtPlotRenderer::setDiscardFlag (\fBDiscardFlag\fPflag, boolon = \fCtrue\fP)"
+.SS "void QwtPlotRenderer::setDiscardFlag (\fBDiscardFlag\fP flag, bool on = \fCtrue\fP)"
 Change a flag, indicating what to discard from rendering
 .PP
 \fBParameters:\fP
@@ -435,13 +433,13 @@ Change a flag, indicating what to discard from rendering
 \fIon\fP On/Off
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBDiscardFlag\fP, \fBtestDiscardFlag()\fP, \fBsetDiscardFlags()\fP, \fBdiscardFlags()\fP 
 .RE
 .PP
 
-.SS "void QwtPlotRenderer::setDiscardFlags (\fBDiscardFlags\fPflags)"
+.SS "void QwtPlotRenderer::setDiscardFlags (\fBDiscardFlags\fP flags)"
 Set the flags, indicating what to discard from rendering
 .PP
 \fBParameters:\fP
@@ -449,13 +447,13 @@ Set the flags, indicating what to discard from rendering
 \fIflags\fP Flags 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBDiscardFlag\fP, \fBsetDiscardFlag()\fP, \fBtestDiscardFlag()\fP, \fBdiscardFlags()\fP 
 .RE
 .PP
 
-.SS "void QwtPlotRenderer::setLayoutFlag (\fBLayoutFlag\fPflag, boolon = \fCtrue\fP)"
+.SS "void QwtPlotRenderer::setLayoutFlag (\fBLayoutFlag\fP flag, bool on = \fCtrue\fP)"
 Change a layout flag
 .PP
 \fBParameters:\fP
@@ -465,13 +463,13 @@ Change a layout flag
 \fIon\fP On/Off
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBLayoutFlag\fP, \fBtestLayoutFlag()\fP, \fBsetLayoutFlags()\fP, \fBlayoutFlags()\fP 
 .RE
 .PP
 
-.SS "void QwtPlotRenderer::setLayoutFlags (\fBLayoutFlags\fPflags)"
+.SS "void QwtPlotRenderer::setLayoutFlags (\fBLayoutFlags\fP flags)"
 Set the layout flags
 .PP
 \fBParameters:\fP
@@ -479,13 +477,13 @@ Set the layout flags
 \fIflags\fP Flags 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBLayoutFlag\fP, \fBsetLayoutFlag()\fP, \fBtestLayoutFlag()\fP, \fBlayoutFlags()\fP 
 .RE
 .PP
 
-.SS "bool QwtPlotRenderer::testDiscardFlag (\fBDiscardFlag\fPflag) const"
+.SS "bool QwtPlotRenderer::testDiscardFlag (\fBDiscardFlag\fP flag) const"
 
 .PP
 \fBReturns:\fP
@@ -498,13 +496,13 @@ True, if flag is enabled\&.
 \fIflag\fP Flag to be tested 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBDiscardFlag\fP, \fBsetDiscardFlag()\fP, \fBsetDiscardFlags()\fP, \fBdiscardFlags()\fP 
 .RE
 .PP
 
-.SS "bool QwtPlotRenderer::testLayoutFlag (\fBLayoutFlag\fPflag) const"
+.SS "bool QwtPlotRenderer::testLayoutFlag (\fBLayoutFlag\fP flag) const"
 
 .PP
 \fBReturns:\fP
@@ -517,7 +515,7 @@ True, if flag is enabled\&.
 \fIflag\fP Flag to be tested 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBLayoutFlag\fP, \fBsetLayoutFlag()\fP, \fBsetLayoutFlags()\fP, \fBlayoutFlags()\fP 
 .RE

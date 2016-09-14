@@ -1,10 +1,8 @@
-.TH "QwtPlotIntervalCurve" 3 "Thu Dec 11 2014" "Version 6.1.2" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotIntervalCurve" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-QwtPlotIntervalCurve \- 
-.PP
-\fBQwtPlotIntervalCurve\fP represents a series of samples, where each value is associated with an interval ( $[y1,y2] = f(x)$ )\&.  
+QwtPlotIntervalCurve \- \fBQwtPlotIntervalCurve\fP represents a series of samples, where each value is associated with an interval ( $[y1,y2] = f(x)$ )\&.  
 
 .SH SYNOPSIS
 .br
@@ -17,9 +15,9 @@ Inherits \fBQwtPlotSeriesItem\fP, and \fBQwtSeriesStore< QwtIntervalSample >\fP\
 
 .in +1c
 .ti -1c
-.RI "enum \fBCurveStyle\fP { \fBNoCurve\fP, \fBTube\fP, \fBUserCurve\fP = 100 }"
+.RI "enum \fBCurveStyle\fP { \fBNoCurve\fP, \fBTube\fP, \fBUserCurve\fP = 100 }
+.RI "\fICurve styles\&. The default setting is \fBQwtPlotIntervalCurve::Tube\fP\&. \fP""
 .br
-.RI "\fICurve styles\&. The default setting is \fBQwtPlotIntervalCurve::Tube\fP\&. \fP"
 .ti -1c
 .RI "enum \fBPaintAttribute\fP { \fBClipPolygons\fP = 0x01, \fBClipSymbol\fP = 0x02 }"
 .br
@@ -120,7 +118,7 @@ The representation depends on the \fBstyle()\fP and an optional \fBsymbol()\fP t
 .PP
 Curve styles\&. The default setting is \fBQwtPlotIntervalCurve::Tube\fP\&. 
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetStyle()\fP, \fBstyle()\fP 
 .RE
@@ -141,7 +139,7 @@ Styles >= \fBQwtPlotIntervalCurve::UserCurve\fP are reserved for derived classes
 .SS "enum \fBQwtPlotIntervalCurve::PaintAttribute\fP"
 Attributes to modify the drawing algorithm\&. 
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetPaintAttribute()\fP, \fBtestPaintAttribute()\fP 
 .RE
@@ -158,7 +156,7 @@ Clip polygons before painting them\&. In situations, where points are far outsid
 Check if a symbol is on the plot canvas before painting it\&. 
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "QwtPlotIntervalCurve::QwtPlotIntervalCurve (const QString &title = \fCQString::null\fP)\fC [explicit]\fP"
+.SS "QwtPlotIntervalCurve::QwtPlotIntervalCurve (const QString & title = \fCQString::null\fP)\fC [explicit]\fP"
 Constructor 
 .PP
 \fBParameters:\fP
@@ -167,7 +165,7 @@ Constructor
 .RE
 .PP
 
-.SS "QwtPlotIntervalCurve::QwtPlotIntervalCurve (const \fBQwtText\fP &title)\fC [explicit]\fP"
+.SS "QwtPlotIntervalCurve::QwtPlotIntervalCurve (const \fBQwtText\fP & title)\fC [explicit]\fP"
 Constructor 
 .PP
 \fBParameters:\fP
@@ -197,13 +195,13 @@ Reimplemented from \fBQwtPlotSeriesItem\fP\&.
 Brush used to fill the area in Tube \fBstyle()\fP 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetBrush()\fP, \fBsetStyle()\fP, \fBCurveStyle\fP 
 .RE
 .PP
 
-.SS "void QwtPlotIntervalCurve::drawSeries (QPainter *painter, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect, intfrom, intto) const\fC [virtual]\fP"
+.SS "void QwtPlotIntervalCurve::drawSeries (QPainter * painter, const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & canvasRect, int from, int to) const\fC [virtual]\fP"
 Draw a subset of the samples
 .PP
 \fBParameters:\fP
@@ -221,7 +219,7 @@ Draw a subset of the samples
 \fIto\fP Index of the last sample to be painted\&. If to < 0 the series will be painted to its last sample\&.
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBdrawTube()\fP, \fBdrawSymbols()\fP 
 .RE
@@ -229,7 +227,7 @@ Draw a subset of the samples
 
 .PP
 Implements \fBQwtPlotSeriesItem\fP\&.
-.SS "void QwtPlotIntervalCurve::drawSymbols (QPainter *painter, const \fBQwtIntervalSymbol\fP &symbol, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect, intfrom, intto) const\fC [protected]\fP, \fC [virtual]\fP"
+.SS "void QwtPlotIntervalCurve::drawSymbols (QPainter * painter, const \fBQwtIntervalSymbol\fP & symbol, const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & canvasRect, int from, int to) const\fC [protected]\fP, \fC [virtual]\fP"
 Draw symbols for a subset of the samples
 .PP
 \fBParameters:\fP
@@ -249,13 +247,13 @@ Draw symbols for a subset of the samples
 \fIto\fP Index of the last sample to be painted
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetSymbol()\fP, \fBdrawSeries()\fP, \fBdrawTube()\fP 
 .RE
 .PP
 
-.SS "void QwtPlotIntervalCurve::drawTube (QPainter *painter, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect, intfrom, intto) const\fC [protected]\fP, \fC [virtual]\fP"
+.SS "void QwtPlotIntervalCurve::drawTube (QPainter * painter, const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & canvasRect, int from, int to) const\fC [protected]\fP, \fC [virtual]\fP"
 Draw a tube
 .PP
 Builds 2 curves from the upper and lower limits of the intervals and draws them with the \fBpen()\fP\&. The area between the curves is filled with the \fBbrush()\fP\&.
@@ -275,13 +273,13 @@ Builds 2 curves from the upper and lower limits of the intervals and draws them 
 \fIto\fP Index of the last sample to be painted\&. If to < 0 the series will be painted to its last sample\&.
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBdrawSeries()\fP, \fBdrawSymbols()\fP 
 .RE
 .PP
 
-.SS "\fBQwtGraphic\fP QwtPlotIntervalCurve::legendIcon (intindex, const QSizeF &size) const\fC [virtual]\fP"
+.SS "\fBQwtGraphic\fP QwtPlotIntervalCurve::legendIcon (int index, const QSizeF & size) const\fC [virtual]\fP"
 
 .PP
 \fBReturns:\fP
@@ -298,7 +296,7 @@ In case of Tube \fBstyle()\fP the icon is a plain rectangle filled with the \fBb
 \fIsize\fP Icon size
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBQwtPlotItem::setLegendIconSize()\fP, \fBQwtPlotItem::legendData()\fP 
 .RE
@@ -314,7 +312,7 @@ Reimplemented from \fBQwtPlotItem\fP\&.
 Pen used to draw the lines 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetPen()\fP, \fBbrush()\fP 
 .RE
@@ -331,7 +329,7 @@ Pen used to draw the lines
 
 .PP
 Reimplemented from \fBQwtPlotItem\fP\&.
-.SS "void QwtPlotIntervalCurve::setBrush (const QBrush &brush)"
+.SS "void QwtPlotIntervalCurve::setBrush (const QBrush & brush)"
 Assign a brush\&.
 .PP
 The brush is used to fill the area in Tube \fBstyle()\fP\&.
@@ -341,13 +339,13 @@ The brush is used to fill the area in Tube \fBstyle()\fP\&.
 \fIbrush\fP Brush 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBbrush()\fP, \fBpen()\fP, \fBsetStyle()\fP, \fBCurveStyle\fP 
 .RE
 .PP
 
-.SS "void QwtPlotIntervalCurve::setPaintAttribute (\fBPaintAttribute\fPattribute, boolon = \fCtrue\fP)"
+.SS "void QwtPlotIntervalCurve::setPaintAttribute (\fBPaintAttribute\fP attribute, bool on = \fCtrue\fP)"
 Specify an attribute how to draw the curve
 .PP
 \fBParameters:\fP
@@ -357,13 +355,13 @@ Specify an attribute how to draw the curve
 \fIon\fP On/Off 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBtestPaintAttribute()\fP 
 .RE
 .PP
 
-.SS "void QwtPlotIntervalCurve::setPen (const QColor &color, qrealwidth = \fC0\&.0\fP, Qt::PenStylestyle = \fCQt::SolidLine\fP)"
+.SS "void QwtPlotIntervalCurve::setPen (const QColor & color, qreal width = \fC0\&.0\fP, Qt::PenStyle style = \fCQt::SolidLine\fP)"
 Build and assign a pen
 .PP
 In Qt5 the default pen width is 1\&.0 ( 0\&.0 in Qt4 ) what makes it non cosmetic ( see QPen::isCosmetic() )\&. This method has been introduced to hide this incompatibility\&.
@@ -377,13 +375,13 @@ In Qt5 the default pen width is 1\&.0 ( 0\&.0 in Qt4 ) what makes it non cosmeti
 \fIstyle\fP Pen style
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBpen()\fP, \fBbrush()\fP 
 .RE
 .PP
 
-.SS "void QwtPlotIntervalCurve::setPen (const QPen &pen)"
+.SS "void QwtPlotIntervalCurve::setPen (const QPen & pen)"
 
 .PP
 Assign a pen\&. 
@@ -393,13 +391,13 @@ Assign a pen\&.
 \fIpen\fP New pen 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBpen()\fP, \fBbrush()\fP 
 .RE
 .PP
 
-.SS "void QwtPlotIntervalCurve::setSamples (const QVector< \fBQwtIntervalSample\fP > &samples)"
+.SS "void QwtPlotIntervalCurve::setSamples (const QVector< \fBQwtIntervalSample\fP > & samples)"
 Initialize data with an array of samples\&. 
 .PP
 \fBParameters:\fP
@@ -408,7 +406,7 @@ Initialize data with an array of samples\&.
 .RE
 .PP
 
-.SS "void QwtPlotIntervalCurve::setSamples (\fBQwtSeriesData\fP< \fBQwtIntervalSample\fP > *data)"
+.SS "void QwtPlotIntervalCurve::setSamples (\fBQwtSeriesData\fP< \fBQwtIntervalSample\fP > * data)"
 Assign a series of samples
 .PP
 \fBsetSamples()\fP is just a wrapper for \fBsetData()\fP without any additional value - beside that it is easier to find for the developer\&.
@@ -424,7 +422,7 @@ The item takes ownership of the data object, deleting it when its not used anymo
 .RE
 .PP
 
-.SS "void QwtPlotIntervalCurve::setStyle (\fBCurveStyle\fPstyle)"
+.SS "void QwtPlotIntervalCurve::setStyle (\fBCurveStyle\fP style)"
 Set the curve's drawing style
 .PP
 \fBParameters:\fP
@@ -432,13 +430,13 @@ Set the curve's drawing style
 \fIstyle\fP Curve style 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBCurveStyle\fP, \fBstyle()\fP 
 .RE
 .PP
 
-.SS "void QwtPlotIntervalCurve::setSymbol (const \fBQwtIntervalSymbol\fP *symbol)"
+.SS "void QwtPlotIntervalCurve::setSymbol (const \fBQwtIntervalSymbol\fP * symbol)"
 Assign a symbol\&.
 .PP
 \fBParameters:\fP
@@ -446,7 +444,7 @@ Assign a symbol\&.
 \fIsymbol\fP Symbol 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsymbol()\fP 
 .RE
@@ -460,7 +458,7 @@ Assign a symbol\&.
 Style of the curve 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetStyle()\fP 
 .RE
@@ -474,13 +472,13 @@ Style of the curve
 Current symbol or NULL, when no symbol has been assigned 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetSymbol()\fP 
 .RE
 .PP
 
-.SS "bool QwtPlotIntervalCurve::testPaintAttribute (\fBPaintAttribute\fPattribute) const"
+.SS "bool QwtPlotIntervalCurve::testPaintAttribute (\fBPaintAttribute\fP attribute) const"
 
 .PP
 \fBReturns:\fP
@@ -488,7 +486,7 @@ Current symbol or NULL, when no symbol has been assigned
 True, when attribute is enabled 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBPaintAttribute\fP, \fBsetPaintAttribute()\fP 
 .RE

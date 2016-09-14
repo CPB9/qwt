@@ -1,10 +1,8 @@
-.TH "QwtPlotZoneItem" 3 "Thu Dec 11 2014" "Version 6.1.2" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotZoneItem" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-QwtPlotZoneItem \- 
-.PP
-A plot item, which displays a zone\&.  
+QwtPlotZoneItem \- A plot item, which displays a zone\&.  
 
 .SH SYNOPSIS
 .br
@@ -97,7 +95,7 @@ Sets the following item attributes:
 .PP
 The z value is initialized by 5
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBQwtPlotItem::setItemAttribute()\fP, \fBQwtPlotItem::setZ()\fP 
 .RE
@@ -124,13 +122,13 @@ Reimplemented from \fBQwtPlotItem\fP\&.
 Brush used to fill the zone 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetPen()\fP, \fBbrush()\fP 
 .RE
 .PP
 
-.SS "void QwtPlotZoneItem::draw (QPainter *painter, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect) const\fC [virtual]\fP"
+.SS "void QwtPlotZoneItem::draw (QPainter * painter, const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & canvasRect) const\fC [virtual]\fP"
 Draw the zone
 .PP
 \fBParameters:\fP
@@ -155,7 +153,7 @@ Implements \fBQwtPlotItem\fP\&.
 Zone interval 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetInterval()\fP, \fBorientation()\fP 
 .RE
@@ -169,7 +167,7 @@ Zone interval
 Orientation of the zone 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetOrientation()\fP 
 .RE
@@ -183,7 +181,7 @@ Orientation of the zone
 Pen used to draw the border lines 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetPen()\fP, \fBbrush()\fP 
 .RE
@@ -200,7 +198,7 @@ Pen used to draw the border lines
 
 .PP
 Reimplemented from \fBQwtPlotItem\fP\&.
-.SS "void QwtPlotZoneItem::setBrush (const QBrush &brush)"
+.SS "void QwtPlotZoneItem::setBrush (const QBrush & brush)"
 
 .PP
 Assign a brush\&. The brush is used to fill the zone
@@ -210,13 +208,13 @@ Assign a brush\&. The brush is used to fill the zone
 \fIbrush\fP Brush 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBpen()\fP, \fBsetBrush()\fP 
 .RE
 .PP
 
-.SS "void QwtPlotZoneItem::setInterval (doublemin, doublemax)"
+.SS "void QwtPlotZoneItem::setInterval (double min, double max)"
 Set the interval of the zone
 .PP
 For a horizontal zone the interval is related to the y axis, for a vertical zone it is related to the x axis\&.
@@ -228,13 +226,13 @@ For a horizontal zone the interval is related to the y axis, for a vertical zone
 \fImax\fP Maximum of the interval
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBinterval()\fP, \fBsetOrientation()\fP 
 .RE
 .PP
 
-.SS "void QwtPlotZoneItem::setInterval (const \fBQwtInterval\fP &interval)"
+.SS "void QwtPlotZoneItem::setInterval (const \fBQwtInterval\fP & interval)"
 Set the interval of the zone
 .PP
 For a horizontal zone the interval is related to the y axis, for a vertical zone it is related to the x axis\&.
@@ -244,24 +242,24 @@ For a horizontal zone the interval is related to the y axis, for a vertical zone
 \fIinterval\fP Zone interval
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBinterval()\fP, \fBsetOrientation()\fP 
 .RE
 .PP
 
-.SS "void QwtPlotZoneItem::setOrientation (Qt::Orientationorientation)"
+.SS "void QwtPlotZoneItem::setOrientation (Qt::Orientation orientation)"
 
 .PP
 Set the orientation of the zone\&. A horizontal zone highlights an interval of the y axis, a vertical zone of the x axis\&. It is unbounded in the opposite direction\&.
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBorientation()\fP, \fBQwtPlotItem::setAxes()\fP 
 .RE
 .PP
 
-.SS "void QwtPlotZoneItem::setPen (const QColor &color, qrealwidth = \fC0\&.0\fP, Qt::PenStylestyle = \fCQt::SolidLine\fP)"
+.SS "void QwtPlotZoneItem::setPen (const QColor & color, qreal width = \fC0\&.0\fP, Qt::PenStyle style = \fCQt::SolidLine\fP)"
 Build and assign a pen
 .PP
 In Qt5 the default pen width is 1\&.0 ( 0\&.0 in Qt4 ) what makes it non cosmetic ( see QPen::isCosmetic() )\&. This method has been introduced to hide this incompatibility\&.
@@ -275,13 +273,13 @@ In Qt5 the default pen width is 1\&.0 ( 0\&.0 in Qt4 ) what makes it non cosmeti
 \fIstyle\fP Pen style
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBpen()\fP, \fBbrush()\fP 
 .RE
 .PP
 
-.SS "void QwtPlotZoneItem::setPen (const QPen &pen)"
+.SS "void QwtPlotZoneItem::setPen (const QPen & pen)"
 
 .PP
 Assign a pen\&. The pen is used to draw the border lines of the zone
@@ -291,7 +289,7 @@ Assign a pen\&. The pen is used to draw the border lines of the zone
 \fIpen\fP Pen 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBpen()\fP, \fBsetBrush()\fP 
 .RE

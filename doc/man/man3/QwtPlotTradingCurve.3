@@ -1,10 +1,8 @@
-.TH "QwtPlotTradingCurve" 3 "Thu Dec 11 2014" "Version 6.1.2" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotTradingCurve" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-QwtPlotTradingCurve \- 
-.PP
-\fBQwtPlotTradingCurve\fP illustrates movements in the price of a financial instrument over time\&.  
+QwtPlotTradingCurve \- \fBQwtPlotTradingCurve\fP illustrates movements in the price of a financial instrument over time\&.  
 
 .SH SYNOPSIS
 .br
@@ -17,13 +15,13 @@ Inherits \fBQwtPlotSeriesItem\fP, and \fBQwtSeriesStore< QwtOHLCSample >\fP\&.
 
 .in +1c
 .ti -1c
-.RI "enum \fBSymbolStyle\fP { \fBNoSymbol\fP = -1, \fBBar\fP, \fBCandleStick\fP, \fBUserSymbol\fP = 100 }"
+.RI "enum \fBSymbolStyle\fP { \fBNoSymbol\fP = -1, \fBBar\fP, \fBCandleStick\fP, \fBUserSymbol\fP = 100 }
+.RI "\fISymbol styles\&. \fP""
 .br
-.RI "\fISymbol styles\&. \fP"
 .ti -1c
-.RI "enum \fBDirection\fP { \fBIncreasing\fP, \fBDecreasing\fP }"
+.RI "enum \fBDirection\fP { \fBIncreasing\fP, \fBDecreasing\fP }
+.RI "\fIDirection of a price movement\&. \fP""
 .br
-.RI "\fIDirection of a price movement\&. \fP"
 .ti -1c
 .RI "enum \fBPaintAttribute\fP { \fBClipSymbols\fP = 0x01 }"
 .br
@@ -172,7 +170,7 @@ The closing price is lower than the opening price\&.
 .SS "enum \fBQwtPlotTradingCurve::PaintAttribute\fP"
 Attributes to modify the drawing algorithm\&. 
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetPaintAttribute()\fP, \fBtestPaintAttribute()\fP 
 .RE
@@ -189,7 +187,7 @@ Check if a symbol is on the plot canvas before painting it\&.
 .PP
 Symbol styles\&. The default setting is QwtPlotSeriesItem::CandleStick\&. 
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetSymbolStyle()\fP, \fBsymbolStyle()\fP 
 .RE
@@ -211,7 +209,7 @@ The range between opening/closing price are displayed as a filled box\&. The fil
 \fB\fIUserSymbol \fP\fP
 SymbolTypes >= UserSymbol are displayed by \fBdrawUserSymbol()\fP, that needs to be overloaded and implemented in derived curve classes\&.
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBdrawUserSymbol()\fP 
 .RE
@@ -219,7 +217,7 @@ SymbolTypes >= UserSymbol are displayed by \fBdrawUserSymbol()\fP, that needs to
 
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "QwtPlotTradingCurve::QwtPlotTradingCurve (const QString &title = \fCQString::null\fP)\fC [explicit]\fP"
+.SS "QwtPlotTradingCurve::QwtPlotTradingCurve (const QString & title = \fCQString::null\fP)\fC [explicit]\fP"
 Constructor 
 .PP
 \fBParameters:\fP
@@ -228,7 +226,7 @@ Constructor
 .RE
 .PP
 
-.SS "QwtPlotTradingCurve::QwtPlotTradingCurve (const \fBQwtText\fP &title)\fC [explicit]\fP"
+.SS "QwtPlotTradingCurve::QwtPlotTradingCurve (const \fBQwtText\fP & title)\fC [explicit]\fP"
 Constructor 
 .PP
 \fBParameters:\fP
@@ -250,7 +248,7 @@ Bounding rectangle of all samples\&. For an empty series the rectangle is invali
 
 .PP
 Reimplemented from \fBQwtPlotSeriesItem\fP\&.
-.SS "void QwtPlotTradingCurve::drawBar (QPainter *painter, const \fBQwtOHLCSample\fP &sample, Qt::Orientationorientation, boolinverted, doublewidth) const\fC [protected]\fP"
+.SS "void QwtPlotTradingCurve::drawBar (QPainter * painter, const \fBQwtOHLCSample\fP & sample, Qt::Orientation orientation, bool inverted, double width) const\fC [protected]\fP"
 
 .PP
 Draw a bar\&. 
@@ -268,13 +266,13 @@ Draw a bar\&.
 \fIwidth\fP Width or height of the candle, depending on the orientation
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBBar\fP 
 .RE
 .PP
 
-.SS "void QwtPlotTradingCurve::drawCandleStick (QPainter *painter, const \fBQwtOHLCSample\fP &sample, Qt::Orientationorientation, doublewidth) const\fC [protected]\fP"
+.SS "void QwtPlotTradingCurve::drawCandleStick (QPainter * painter, const \fBQwtOHLCSample\fP & sample, Qt::Orientation orientation, double width) const\fC [protected]\fP"
 
 .PP
 Draw a candle stick\&. 
@@ -290,13 +288,13 @@ Draw a candle stick\&.
 \fIwidth\fP Width or height of the candle, depending on the orientation
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBCandleStick\fP 
 .RE
 .PP
 
-.SS "void QwtPlotTradingCurve::drawSeries (QPainter *painter, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect, intfrom, intto) const\fC [virtual]\fP"
+.SS "void QwtPlotTradingCurve::drawSeries (QPainter * painter, const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & canvasRect, int from, int to) const\fC [virtual]\fP"
 Draw an interval of the curve
 .PP
 \fBParameters:\fP
@@ -314,7 +312,7 @@ Draw an interval of the curve
 \fIto\fP Index of the last point to be painted\&. If to < 0 the curve will be painted to its last point\&.
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBdrawSymbols()\fP 
 .RE
@@ -322,7 +320,7 @@ Draw an interval of the curve
 
 .PP
 Implements \fBQwtPlotSeriesItem\fP\&.
-.SS "void QwtPlotTradingCurve::drawSymbols (QPainter *painter, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect, intfrom, intto) const\fC [protected]\fP, \fC [virtual]\fP"
+.SS "void QwtPlotTradingCurve::drawSymbols (QPainter * painter, const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & canvasRect, int from, int to) const\fC [protected]\fP, \fC [virtual]\fP"
 Draw symbols
 .PP
 \fBParameters:\fP
@@ -340,13 +338,13 @@ Draw symbols
 \fIto\fP Index of the last point to be painted
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBdrawSeries()\fP 
 .RE
 .PP
 
-.SS "void QwtPlotTradingCurve::drawUserSymbol (QPainter *painter, \fBSymbolStyle\fPsymbolStyle, const \fBQwtOHLCSample\fP &sample, Qt::Orientationorientation, boolinverted, doublesymbolWidth) const\fC [protected]\fP, \fC [virtual]\fP"
+.SS "void QwtPlotTradingCurve::drawUserSymbol (QPainter * painter, \fBSymbolStyle\fP symbolStyle, const \fBQwtOHLCSample\fP & sample, Qt::Orientation orientation, bool inverted, double symbolWidth) const\fC [protected]\fP, \fC [virtual]\fP"
 
 .PP
 Draw a symbol for a symbol style >= UserSymbol\&. The implementation does nothing and is intended to be overloaded
@@ -367,7 +365,7 @@ Draw a symbol for a symbol style >= UserSymbol\&. The implementation does nothin
 .RE
 .PP
 
-.SS "\fBQwtGraphic\fP QwtPlotTradingCurve::legendIcon (intindex, const QSizeF &size) const\fC [virtual]\fP"
+.SS "\fBQwtGraphic\fP QwtPlotTradingCurve::legendIcon (int index, const QSizeF & size) const\fC [virtual]\fP"
 
 .PP
 \fBReturns:\fP
@@ -382,7 +380,7 @@ A rectangle filled with the color of the symbol pen
 \fIsize\fP Icon size
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetLegendIconSize()\fP, \fBlegendData()\fP 
 .RE
@@ -398,7 +396,7 @@ Reimplemented from \fBQwtPlotItem\fP\&.
 Maximum for the symbol width 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetMaxSymbolWidth()\fP, \fBminSymbolWidth()\fP, \fBsymbolExtent()\fP 
 .RE
@@ -412,7 +410,7 @@ Maximum for the symbol width
 Minmum for the symbol width 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetMinSymbolWidth()\fP, \fBmaxSymbolWidth()\fP, \fBsymbolExtent()\fP 
 .RE
@@ -429,7 +427,7 @@ Minmum for the symbol width
 
 .PP
 Reimplemented from \fBQwtPlotItem\fP\&.
-.SS "double QwtPlotTradingCurve::scaledSymbolWidth (const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect) const\fC [protected]\fP, \fC [virtual]\fP"
+.SS "double QwtPlotTradingCurve::scaledSymbolWidth (const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & canvasRect) const\fC [protected]\fP, \fC [virtual]\fP"
 Calculate the symbol width in paint coordinates
 .PP
 The width is calculated by scaling the symbol extent into paint device coordinates bounded by the minimum/maximum symbol width\&.
@@ -448,13 +446,13 @@ The width is calculated by scaling the symbol extent into paint device coordinat
 Symbol width in paint coordinates
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsymbolExtent()\fP, \fBminSymbolWidth()\fP, \fBmaxSymbolWidth()\fP 
 .RE
 .PP
 
-.SS "void QwtPlotTradingCurve::setMaxSymbolWidth (doublewidth)"
+.SS "void QwtPlotTradingCurve::setMaxSymbolWidth (double width)"
 Set a maximum for the symbol width
 .PP
 A value <= 0\&.0 means an unlimited width
@@ -464,13 +462,13 @@ A value <= 0\&.0 means an unlimited width
 \fIwidth\fP Width in paint device coordinates 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBmaxSymbolWidth()\fP, \fBsetMinSymbolWidth()\fP, \fBsetSymbolExtent()\fP 
 .RE
 .PP
 
-.SS "void QwtPlotTradingCurve::setMinSymbolWidth (doublewidth)"
+.SS "void QwtPlotTradingCurve::setMinSymbolWidth (double width)"
 Set a minimum for the symbol width
 .PP
 \fBParameters:\fP
@@ -478,13 +476,13 @@ Set a minimum for the symbol width
 \fIwidth\fP Width in paint device coordinates 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBminSymbolWidth()\fP, \fBsetMaxSymbolWidth()\fP, \fBsetSymbolExtent()\fP 
 .RE
 .PP
 
-.SS "void QwtPlotTradingCurve::setPaintAttribute (\fBPaintAttribute\fPattribute, boolon = \fCtrue\fP)"
+.SS "void QwtPlotTradingCurve::setPaintAttribute (\fBPaintAttribute\fP attribute, bool on = \fCtrue\fP)"
 Specify an attribute how to draw the curve
 .PP
 \fBParameters:\fP
@@ -494,13 +492,13 @@ Specify an attribute how to draw the curve
 \fIon\fP On/Off 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBtestPaintAttribute()\fP 
 .RE
 .PP
 
-.SS "void QwtPlotTradingCurve::setSamples (const QVector< \fBQwtOHLCSample\fP > &samples)"
+.SS "void QwtPlotTradingCurve::setSamples (const QVector< \fBQwtOHLCSample\fP > & samples)"
 Initialize data with an array of samples\&. 
 .PP
 \fBParameters:\fP
@@ -508,13 +506,13 @@ Initialize data with an array of samples\&.
 \fIsamples\fP Vector of samples
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 QwtPlotSeriesItem::setData() 
 .RE
 .PP
 
-.SS "void QwtPlotTradingCurve::setSamples (\fBQwtSeriesData\fP< \fBQwtOHLCSample\fP > *data)"
+.SS "void QwtPlotTradingCurve::setSamples (\fBQwtSeriesData\fP< \fBQwtOHLCSample\fP > * data)"
 Assign a series of samples
 .PP
 \fBsetSamples()\fP is just a wrapper for \fBsetData()\fP without any additional value - beside that it is easier to find for the developer\&.
@@ -530,7 +528,7 @@ The item takes ownership of the data object, deleting it when its not used anymo
 .RE
 .PP
 
-.SS "void QwtPlotTradingCurve::setSymbolBrush (\fBDirection\fPdirection, const QBrush &brush)"
+.SS "void QwtPlotTradingCurve::setSymbolBrush (\fBDirection\fP direction, const QBrush & brush)"
 Set the symbol brush
 .PP
 \fBParameters:\fP
@@ -540,13 +538,13 @@ Set the symbol brush
 \fIbrush\fP Brush used to fill the body of all candlestick symbols with the direction
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsymbolBrush()\fP, \fBsetSymbolPen()\fP 
 .RE
 .PP
 
-.SS "void QwtPlotTradingCurve::setSymbolExtent (doubleextent)"
+.SS "void QwtPlotTradingCurve::setSymbolExtent (double extent)"
 
 .PP
 Set the extent of the symbol\&. The width of the symbol is given in scale coordinates\&. When painting a symbol the width is scaled into paint device coordinates by \fBscaledSymbolWidth()\fP\&. The scaled width is bounded by \fBminSymbolWidth()\fP, \fBmaxSymbolWidth()\fP
@@ -556,13 +554,13 @@ Set the extent of the symbol\&. The width of the symbol is given in scale coordi
 \fIextent\fP Symbol width in scale coordinates
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsymbolExtent()\fP, \fBscaledSymbolWidth()\fP, \fBsetMinSymbolWidth()\fP, \fBsetMaxSymbolWidth()\fP 
 .RE
 .PP
 
-.SS "void QwtPlotTradingCurve::setSymbolPen (const QColor &color, qrealwidth = \fC0\&.0\fP, Qt::PenStylestyle = \fCQt::SolidLine\fP)"
+.SS "void QwtPlotTradingCurve::setSymbolPen (const QColor & color, qreal width = \fC0\&.0\fP, Qt::PenStyle style = \fCQt::SolidLine\fP)"
 Build and assign the symbol pen
 .PP
 In Qt5 the default pen width is 1\&.0 ( 0\&.0 in Qt4 ) what makes it non cosmetic ( see QPen::isCosmetic() )\&. This method has been introduced to hide this incompatibility\&.
@@ -576,24 +574,24 @@ In Qt5 the default pen width is 1\&.0 ( 0\&.0 in Qt4 ) what makes it non cosmeti
 \fIstyle\fP Pen style
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 pen(), brush() 
 .RE
 .PP
 
-.SS "void QwtPlotTradingCurve::setSymbolPen (const QPen &pen)"
+.SS "void QwtPlotTradingCurve::setSymbolPen (const QPen & pen)"
 
 .PP
 Set the symbol pen\&. The symbol pen is used for rendering the lines of the bar or candlestick symbols
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsymbolPen()\fP, \fBsetSymbolBrush()\fP 
 .RE
 .PP
 
-.SS "void QwtPlotTradingCurve::setSymbolStyle (\fBSymbolStyle\fPstyle)"
+.SS "void QwtPlotTradingCurve::setSymbolStyle (\fBSymbolStyle\fP style)"
 Set the symbol style
 .PP
 \fBParameters:\fP
@@ -601,13 +599,13 @@ Set the symbol style
 \fIstyle\fP Symbol style
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsymbolStyle()\fP, \fBsetSymbolExtent()\fP, \fBsetSymbolPen()\fP, \fBsetSymbolBrush()\fP 
 .RE
 .PP
 
-.SS "QBrush QwtPlotTradingCurve::symbolBrush (\fBDirection\fPdirection) const"
+.SS "QBrush QwtPlotTradingCurve::symbolBrush (\fBDirection\fP direction) const"
 
 .PP
 \fBParameters:\fP
@@ -620,7 +618,7 @@ Set the symbol style
 Brush used to fill the body of all candlestick symbols with the direction
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetSymbolPen()\fP, \fBsymbolBrush()\fP 
 .RE
@@ -634,7 +632,7 @@ Brush used to fill the body of all candlestick symbols with the direction
 Extent of a symbol in scale coordinates 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetSymbolExtent()\fP, \fBscaledSymbolWidth()\fP, \fBminSymbolWidth()\fP, \fBmaxSymbolWidth()\fP 
 .RE
@@ -648,7 +646,7 @@ Extent of a symbol in scale coordinates
 Symbol pen 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetSymbolPen()\fP, \fBsymbolBrush()\fP 
 .RE
@@ -662,13 +660,13 @@ Symbol pen
 Symbol style 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetSymbolStyle()\fP, \fBsymbolExtent()\fP, \fBsymbolPen()\fP, \fBsymbolBrush()\fP 
 .RE
 .PP
 
-.SS "bool QwtPlotTradingCurve::testPaintAttribute (\fBPaintAttribute\fPattribute) const"
+.SS "bool QwtPlotTradingCurve::testPaintAttribute (\fBPaintAttribute\fP attribute) const"
 
 .PP
 \fBReturns:\fP
@@ -676,7 +674,7 @@ Symbol style
 True, when attribute is enabled 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBPaintAttribute\fP, \fBsetPaintAttribute()\fP 
 .RE

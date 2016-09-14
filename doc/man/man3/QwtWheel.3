@@ -1,10 +1,8 @@
-.TH "QwtWheel" 3 "Thu Dec 11 2014" "Version 6.1.2" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtWheel" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-QwtWheel \- 
-.PP
-The Wheel Widget\&.  
+QwtWheel \- The Wheel Widget\&.  
 
 .SH SYNOPSIS
 .br
@@ -235,7 +233,7 @@ The wheel widget can be used to change values over a very large range in very sm
 .PP
 The default range of the wheel is [0\&.0, 100\&.0]
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 The radio example\&. 
 .RE
@@ -251,13 +249,13 @@ The radio example\&.
 Border width 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetBorderWidth()\fP 
 .RE
 .PP
 
-.SS "void QwtWheel::drawTicks (QPainter *painter, const QRectF &rect)\fC [protected]\fP, \fC [virtual]\fP"
+.SS "void QwtWheel::drawTicks (QPainter * painter, const QRectF & rect)\fC [protected]\fP, \fC [virtual]\fP"
 Draw the Wheel's ticks
 .PP
 \fBParameters:\fP
@@ -268,7 +266,7 @@ Draw the Wheel's ticks
 .RE
 .PP
 
-.SS "void QwtWheel::drawWheelBackground (QPainter *painter, const QRectF &rect)\fC [protected]\fP, \fC [virtual]\fP"
+.SS "void QwtWheel::drawWheelBackground (QPainter * painter, const QRectF & rect)\fC [protected]\fP, \fC [virtual]\fP"
 Draw the Wheel's background gradient
 .PP
 \fBParameters:\fP
@@ -287,7 +285,7 @@ Draw the Wheel's background gradient
 True, when the wheel is inverted 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetInverted()\fP 
 .RE
@@ -301,13 +299,13 @@ True, when the wheel is inverted
 True, when tracking is enabled 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetTracking()\fP, \fBvalueChanged()\fP, \fBwheelMoved()\fP 
 .RE
 .PP
 
-.SS "void QwtWheel::keyPressEvent (QKeyEvent *event)\fC [protected]\fP, \fC [virtual]\fP"
+.SS "void QwtWheel::keyPressEvent (QKeyEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
 Handle key events
 .PP
 .IP "\(bu" 2
@@ -350,7 +348,7 @@ Qt::Key_PageDown
 mass 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetMass()\fP 
 .RE
@@ -364,7 +362,7 @@ mass
 The maximum of the range 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetRange()\fP, \fBsetMaximum()\fP, \fBminimum()\fP 
 .RE
@@ -378,7 +376,7 @@ The maximum of the range
 The minimum of the range 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetRange()\fP, \fBsetMinimum()\fP, \fBmaximum()\fP 
 .RE
@@ -398,7 +396,7 @@ The return value is based on the wheel width\&.
 .RE
 .PP
 
-.SS "void QwtWheel::mouseMoveEvent (QMouseEvent *event)\fC [protected]\fP, \fC [virtual]\fP"
+.SS "void QwtWheel::mouseMoveEvent (QMouseEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
 
 .PP
 Mouse Move Event handler\&. Turn the wheel according to the mouse position
@@ -409,7 +407,7 @@ Mouse Move Event handler\&. Turn the wheel according to the mouse position
 .RE
 .PP
 
-.SS "void QwtWheel::mousePressEvent (QMouseEvent *event)\fC [protected]\fP, \fC [virtual]\fP"
+.SS "void QwtWheel::mousePressEvent (QMouseEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
 
 .PP
 Mouse press event handler\&. Start movement of the wheel\&.
@@ -420,7 +418,7 @@ Mouse press event handler\&. Start movement of the wheel\&.
 .RE
 .PP
 
-.SS "void QwtWheel::mouseReleaseEvent (QMouseEvent *event)\fC [protected]\fP, \fC [virtual]\fP"
+.SS "void QwtWheel::mouseReleaseEvent (QMouseEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
 
 .PP
 Mouse Release Event handler\&. When the wheel has no mass the movement of the wheel stops, otherwise it starts flying\&.
@@ -439,7 +437,7 @@ Mouse Release Event handler\&. When the wheel has no mass the movement of the wh
 Orientation 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetOrientation()\fP 
 .RE
@@ -453,13 +451,13 @@ Orientation
 Page step count 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetPageStepCount()\fP, \fBsingleStep()\fP 
 .RE
 .PP
 
-.SS "void QwtWheel::paintEvent (QPaintEvent *event)\fC [protected]\fP, \fC [virtual]\fP"
+.SS "void QwtWheel::paintEvent (QPaintEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
 
 .PP
 Qt Paint Event\&. 
@@ -470,7 +468,7 @@ Qt Paint Event\&.
 .RE
 .PP
 
-.SS "void QwtWheel::setBorderWidth (intwidth)"
+.SS "void QwtWheel::setBorderWidth (int width)"
 
 .PP
 Set the border width\&. The border defaults to 2\&.
@@ -480,13 +478,13 @@ Set the border width\&. The border defaults to 2\&.
 \fIwidth\fP Border width 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBborderWidth()\fP 
 .RE
 .PP
 
-.SS "void QwtWheel::setInverted (boolon)"
+.SS "void QwtWheel::setInverted (bool on)"
 
 .PP
 En/Disable inverted appearance\&. An inverted wheel increases its values in the opposite direction\&. The direction of an inverted horizontal wheel will be from right to left an inverted vertical wheel will increase from bottom to top\&.
@@ -496,13 +494,13 @@ En/Disable inverted appearance\&. An inverted wheel increases its values in the 
 \fIon\fP En/Disable inverted appearance 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBisInverted()\fP 
 .RE
 .PP
 
-.SS "void QwtWheel::setMass (doublemass)\fC [slot]\fP"
+.SS "void QwtWheel::setMass (double mass)\fC [slot]\fP"
 
 .PP
 Set the slider's mass for flywheel effect\&. If the slider's mass is greater then 0, it will continue to move after the mouse button has been released\&. Its speed decreases with time at a rate depending on the slider's mass\&. A large mass means that it will continue to move for a long time\&.
@@ -514,13 +512,13 @@ Derived widgets may overload this function to make it public\&.
 \fImass\fP New mass in kg
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBmass()\fP 
 .RE
 .PP
 
-.SS "void QwtWheel::setMaximum (doublevalue)"
+.SS "void QwtWheel::setMaximum (double value)"
 Set the maximum value of the range
 .PP
 \fBParameters:\fP
@@ -528,13 +526,13 @@ Set the maximum value of the range
 \fIvalue\fP Maximum value 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetRange()\fP, \fBsetMinimum()\fP, \fBmaximum()\fP 
 .RE
 .PP
 
-.SS "void QwtWheel::setMinimum (doublevalue)"
+.SS "void QwtWheel::setMinimum (double value)"
 Set the minimum value of the range
 .PP
 \fBParameters:\fP
@@ -542,7 +540,7 @@ Set the minimum value of the range
 \fIvalue\fP Minimum value 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetRange()\fP, \fBsetMaximum()\fP, \fBminimum()\fP
 .RE
@@ -553,7 +551,7 @@ The maximum is adjusted if necessary to ensure that the range remains valid\&.
 .RE
 .PP
 
-.SS "void QwtWheel::setOrientation (Qt::Orientationorientation)"
+.SS "void QwtWheel::setOrientation (Qt::Orientation orientation)"
 
 .PP
 Set the wheel's orientation\&. The default orientation is Qt::Horizontal\&.
@@ -563,13 +561,13 @@ Set the wheel's orientation\&. The default orientation is Qt::Horizontal\&.
 \fIorientation\fP Qt::Horizontal or Qt::Vertical\&. 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBorientation()\fP 
 .RE
 .PP
 
-.SS "void QwtWheel::setPageStepCount (intcount)"
+.SS "void QwtWheel::setPageStepCount (int count)"
 
 .PP
 Set the page step count\&. pageStepCount is a multiplicator for the single step size that typically corresponds to the user pressing PageUp or PageDown\&.
@@ -583,13 +581,13 @@ The default value is 1\&.
 \fIcount\fP Multiplicator for the single step size 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBpageStepCount()\fP, \fBsetSingleStep()\fP 
 .RE
 .PP
 
-.SS "void QwtWheel::setRange (doublemin, doublemax)"
+.SS "void QwtWheel::setRange (double min, double max)"
 
 .PP
 Set the minimum and maximum values\&. The maximum is adjusted if necessary to ensure that the range remains valid\&. The value might be modified to be inside of the range\&.
@@ -601,13 +599,13 @@ Set the minimum and maximum values\&. The maximum is adjusted if necessary to en
 \fImax\fP Maximum value
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBminimum()\fP, \fBmaximum()\fP 
 .RE
 .PP
 
-.SS "void QwtWheel::setSingleStep (doublestepSize)"
+.SS "void QwtWheel::setSingleStep (double stepSize)"
 
 .PP
 Set the step size of the counter\&. A value <= 0\&.0 disables stepping
@@ -617,13 +615,13 @@ Set the step size of the counter\&. A value <= 0\&.0 disables stepping
 \fIstepSize\fP Single step size 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsingleStep()\fP, \fBsetPageStepCount()\fP 
 .RE
 .PP
 
-.SS "void QwtWheel::setStepAlignment (boolon)"
+.SS "void QwtWheel::setStepAlignment (bool on)"
 
 .PP
 En/Disable step alignment\&. When step alignment is enabled value changes initiated by user input ( mouse, keyboard, wheel ) are aligned to the multiples of the single step\&.
@@ -633,13 +631,13 @@ En/Disable step alignment\&. When step alignment is enabled value changes initia
 \fIon\fP On/Off 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBstepAlignment()\fP, \fBsetSingleStep()\fP 
 .RE
 .PP
 
-.SS "void QwtWheel::setTickCount (intcount)"
+.SS "void QwtWheel::setTickCount (int count)"
 
 .PP
 Adjust the number of grooves in the wheel's surface\&. The number of grooves is limited to 6 <= count <= 50\&. Values outside this range will be clipped\&. The default value is 10\&.
@@ -649,13 +647,13 @@ Adjust the number of grooves in the wheel's surface\&. The number of grooves is 
 \fIcount\fP Number of grooves per 360 degrees 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBtickCount()\fP 
 .RE
 .PP
 
-.SS "void QwtWheel::setTotalAngle (doubleangle)\fC [slot]\fP"
+.SS "void QwtWheel::setTotalAngle (double angle)\fC [slot]\fP"
 
 .PP
 Set the total angle which the wheel can be turned\&. One full turn of the wheel corresponds to an angle of 360 degrees\&. A total angle of n*360 degrees means that the wheel has to be turned n times around its axis to get from the minimum value to the maximum value\&.
@@ -667,13 +665,13 @@ The default setting of the total angle is 360 degrees\&.
 \fIangle\fP total angle in degrees 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBtotalAngle()\fP 
 .RE
 .PP
 
-.SS "void QwtWheel::setTracking (boolenable)"
+.SS "void QwtWheel::setTracking (bool enable)"
 
 .PP
 En/Disable tracking\&. If tracking is enabled (the default), the wheel emits the \fBvalueChanged()\fP signal while the wheel is moving\&. If tracking is disabled, the wheel emits the \fBvalueChanged()\fP signal only when the wheel movement is terminated\&.
@@ -685,13 +683,13 @@ The \fBwheelMoved()\fP signal is emitted regardless id tracking is enabled or no
 \fIenable\fP On/Off 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBisTracking()\fP 
 .RE
 .PP
 
-.SS "void QwtWheel::setUpdateInterval (intinterval)"
+.SS "void QwtWheel::setUpdateInterval (int interval)"
 
 .PP
 Specify the update interval when the wheel is flying\&. Default and minimum value is 50 ms\&.
@@ -701,13 +699,13 @@ Specify the update interval when the wheel is flying\&. Default and minimum valu
 \fIinterval\fP Interval in milliseconds 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBupdateInterval()\fP, \fBsetMass()\fP, \fBsetTracking()\fP 
 .RE
 .PP
 
-.SS "void QwtWheel::setValue (doublevalue)\fC [slot]\fP"
+.SS "void QwtWheel::setValue (double value)\fC [slot]\fP"
 
 .PP
 Set a new value without adjusting to the step raster\&. 
@@ -717,7 +715,7 @@ Set a new value without adjusting to the step raster\&.
 \fIvalue\fP New value
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBvalue()\fP, \fBvalueChanged()\fP 
 .RE
@@ -728,7 +726,7 @@ The value is clipped when it lies outside the range\&.
 .RE
 .PP
 
-.SS "void QwtWheel::setViewAngle (doubleangle)\fC [slot]\fP"
+.SS "void QwtWheel::setViewAngle (double angle)\fC [slot]\fP"
 
 .PP
 Specify the visible portion of the wheel\&. You may use this function for fine-tuning the appearance of the wheel\&. The default value is 175 degrees\&. The value is limited from 10 to 175 degrees\&.
@@ -738,13 +736,13 @@ Specify the visible portion of the wheel\&. You may use this function for fine-t
 \fIangle\fP Visible angle in degrees 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBviewAngle()\fP, \fBsetTotalAngle()\fP 
 .RE
 .PP
 
-.SS "void QwtWheel::setWheelBorderWidth (intborderWidth)"
+.SS "void QwtWheel::setWheelBorderWidth (int borderWidth)"
 
 .PP
 Set the wheel border width of the wheel\&. The wheel border must not be smaller than 1 and is limited in dependence on the wheel's size\&. Values outside the allowed range will be clipped\&.
@@ -756,13 +754,13 @@ The wheel border defaults to 2\&.
 \fIborderWidth\fP Border width 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 internalBorder() 
 .RE
 .PP
 
-.SS "void QwtWheel::setWheelWidth (intwidth)"
+.SS "void QwtWheel::setWheelWidth (int width)"
 
 .PP
 Set the width of the wheel\&. Corresponds to the wheel height for horizontal orientation, and the wheel width for vertical orientation\&.
@@ -772,13 +770,13 @@ Set the width of the wheel\&. Corresponds to the wheel height for horizontal ori
 \fIwidth\fP the wheel's width 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBwheelWidth()\fP 
 .RE
 .PP
 
-.SS "void QwtWheel::setWrapping (boolon)"
+.SS "void QwtWheel::setWrapping (bool on)"
 
 .PP
 En/Disable wrapping\&. If wrapping is true stepping up from \fBmaximum()\fP value will take you to the \fBminimum()\fP value and vice versa\&.
@@ -788,7 +786,7 @@ En/Disable wrapping\&. If wrapping is true stepping up from \fBmaximum()\fP valu
 \fIon\fP En/Disable wrapping 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBwrapping()\fP 
 .RE
@@ -802,7 +800,7 @@ En/Disable wrapping\&. If wrapping is true stepping up from \fBmaximum()\fP valu
 Single step size 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetSingleStep()\fP 
 .RE
@@ -825,7 +823,7 @@ a size hint
 True, when the step alignment is enabled 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetStepAlignment()\fP, \fBsingleStep()\fP 
 .RE
@@ -839,13 +837,13 @@ True, when the step alignment is enabled
 Number of grooves in the wheel's surface\&. 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 setTickCnt() 
 .RE
 .PP
 
-.SS "void QwtWheel::timerEvent (QTimerEvent *event)\fC [protected]\fP, \fC [virtual]\fP"
+.SS "void QwtWheel::timerEvent (QTimerEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
 
 .PP
 Qt timer event\&. The flying wheel effect is implemented using a timer
@@ -855,7 +853,7 @@ Qt timer event\&. The flying wheel effect is implemented using a timer
 \fIevent\fP Timer event
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBupdateInterval()\fP 
 .RE
@@ -869,7 +867,7 @@ Qt timer event\&. The flying wheel effect is implemented using a timer
 Total angle which the wheel can be turned\&. 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetTotalAngle()\fP 
 .RE
@@ -883,7 +881,7 @@ Total angle which the wheel can be turned\&.
 Update interval when the wheel is flying 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetUpdateInterval()\fP, \fBmass()\fP, \fBisTracking()\fP 
 .RE
@@ -897,13 +895,13 @@ Update interval when the wheel is flying
 Current value of the wheel 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetValue()\fP, \fBvalueChanged()\fP 
 .RE
 .PP
 
-.SS "double QwtWheel::valueAt (const QPoint &pos) const\fC [protected]\fP, \fC [virtual]\fP"
+.SS "double QwtWheel::valueAt (const QPoint & pos) const\fC [protected]\fP, \fC [virtual]\fP"
 Determine the value corresponding to a specified point
 .PP
 \fBParameters:\fP
@@ -917,7 +915,7 @@ Value corresponding to pos
 .RE
 .PP
 
-.SS "void QwtWheel::valueChanged (doublevalue)\fC [signal]\fP"
+.SS "void QwtWheel::valueChanged (double value)\fC [signal]\fP"
 
 .PP
 Notify a change of value\&. When tracking is enabled this signal will be emitted every time the value changes\&.
@@ -927,7 +925,7 @@ Notify a change of value\&. When tracking is enabled this signal will be emitted
 \fIvalue\fP new value 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetTracking()\fP 
 .RE
@@ -941,7 +939,7 @@ Notify a change of value\&. When tracking is enabled this signal will be emitted
 Visible portion of the wheel 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetViewAngle()\fP, \fBtotalAngle()\fP 
 .RE
@@ -955,13 +953,13 @@ Visible portion of the wheel
 Wheel border width 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetWheelBorderWidth()\fP 
 .RE
 .PP
 
-.SS "void QwtWheel::wheelEvent (QWheelEvent *event)\fC [protected]\fP, \fC [virtual]\fP"
+.SS "void QwtWheel::wheelEvent (QWheelEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
 
 .PP
 Handle wheel events\&. In/Decrement the value
@@ -972,7 +970,7 @@ Handle wheel events\&. In/Decrement the value
 .RE
 .PP
 
-.SS "void QwtWheel::wheelMoved (doublevalue)\fC [signal]\fP"
+.SS "void QwtWheel::wheelMoved (double value)\fC [signal]\fP"
 This signal is emitted when the user moves the wheel with the mouse\&.
 .PP
 \fBParameters:\fP
@@ -1002,7 +1000,7 @@ This signal is emitted when the user releases the mouse
 Width of the wheel 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetWheelWidth()\fP 
 .RE
@@ -1016,7 +1014,7 @@ Width of the wheel
 True, when wrapping is set 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetWrapping()\fP 
 .RE

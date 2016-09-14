@@ -1,10 +1,8 @@
-.TH "QwtPlotSeriesItem" 3 "Thu Dec 11 2014" "Version 6.1.2" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotSeriesItem" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-QwtPlotSeriesItem \- 
-.PP
-Base class for plot items representing a series of samples\&.  
+QwtPlotSeriesItem \- Base class for plot items representing a series of samples\&.  
 
 .SH SYNOPSIS
 .br
@@ -39,7 +37,7 @@ Inherited by \fBQwtPlotAbstractBarChart\fP, \fBQwtPlotCurve\fP, \fBQwtPlotHistog
 .br
 .RI "\fIDraw the complete series\&. \fP"
 .ti -1c
-.RI "virtual void \fBdrawSeries\fP (QPainter *painter, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect, int from, int to) const =0"
+.RI "virtual void \fBdrawSeries\fP (QPainter *painter, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect, int from, int to) const  =0"
 .br
 .ti -1c
 .RI "virtual QRectF \fBboundingRect\fP () const "
@@ -63,7 +61,7 @@ Inherited by \fBQwtPlotAbstractBarChart\fP, \fBQwtPlotCurve\fP, \fBQwtPlotHistog
 Base class for plot items representing a series of samples\&. 
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "QwtPlotSeriesItem::QwtPlotSeriesItem (const QString &title = \fCQString::null\fP)\fC [explicit]\fP"
+.SS "QwtPlotSeriesItem::QwtPlotSeriesItem (const QString & title = \fCQString::null\fP)\fC [explicit]\fP"
 Constructor 
 .PP
 \fBParameters:\fP
@@ -72,7 +70,7 @@ Constructor
 .RE
 .PP
 
-.SS "QwtPlotSeriesItem::QwtPlotSeriesItem (const \fBQwtText\fP &title)\fC [explicit]\fP"
+.SS "QwtPlotSeriesItem::QwtPlotSeriesItem (const \fBQwtText\fP & title)\fC [explicit]\fP"
 Constructor 
 .PP
 \fBParameters:\fP
@@ -101,7 +99,7 @@ A width or height < 0\&.0 is ignored by the autoscaler
 Reimplemented from \fBQwtPlotItem\fP\&.
 .PP
 Reimplemented in \fBQwtPlotTradingCurve\fP, \fBQwtPlotIntervalCurve\fP, \fBQwtPlotHistogram\fP, \fBQwtPlotBarChart\fP, and \fBQwtPlotMultiBarChart\fP\&.
-.SS "void QwtPlotSeriesItem::draw (QPainter *painter, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect) const\fC [virtual]\fP"
+.SS "void QwtPlotSeriesItem::draw (QPainter * painter, const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & canvasRect) const\fC [virtual]\fP"
 
 .PP
 Draw the complete series\&. 
@@ -120,7 +118,7 @@ Draw the complete series\&.
 
 .PP
 Implements \fBQwtPlotItem\fP\&.
-.SS "virtual void QwtPlotSeriesItem::drawSeries (QPainter *painter, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect, intfrom, intto) const\fC [pure virtual]\fP"
+.SS "virtual void QwtPlotSeriesItem::drawSeries (QPainter * painter, const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & canvasRect, int from, int to) const\fC [pure virtual]\fP"
 Draw a subset of the samples
 .PP
 \fBParameters:\fP
@@ -149,24 +147,24 @@ Implemented in \fBQwtPlotCurve\fP, \fBQwtPlotTradingCurve\fP, \fBQwtPlotInterval
 Orientation of the plot item 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetOrientation()\fP 
 .RE
 .PP
 
-.SS "void QwtPlotSeriesItem::setOrientation (Qt::Orientationorientation)"
+.SS "void QwtPlotSeriesItem::setOrientation (Qt::Orientation orientation)"
 Set the orientation of the item\&.
 .PP
 The \fBorientation()\fP might be used in specific way by a plot item\&. F\&.e\&. a \fBQwtPlotCurve\fP uses it to identify how to display the curve int \fBQwtPlotCurve::Steps\fP or \fBQwtPlotCurve::Sticks\fP style\&.
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBorientation()\fP 
 .RE
 .PP
 
-.SS "void QwtPlotSeriesItem::updateScaleDiv (const \fBQwtScaleDiv\fP &xScaleDiv, const \fBQwtScaleDiv\fP &yScaleDiv)\fC [virtual]\fP"
+.SS "void QwtPlotSeriesItem::updateScaleDiv (const \fBQwtScaleDiv\fP & xScaleDiv, const \fBQwtScaleDiv\fP & yScaleDiv)\fC [virtual]\fP"
 
 .PP
 Update the item to changes of the axes scale division\&. Update the item, when the axes of plot have changed\&. The default implementation does nothing, but items that depend on the scale division (like \fBQwtPlotGrid()\fP) have to reimplement \fBupdateScaleDiv()\fP
@@ -180,7 +178,7 @@ Update the item to changes of the axes scale division\&. Update the item, when t
 \fIyScaleDiv\fP Scale division of the y-axis
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBQwtPlot::updateAxes()\fP, \fBScaleInterest\fP 
 .RE

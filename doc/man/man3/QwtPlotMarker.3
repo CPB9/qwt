@@ -1,10 +1,8 @@
-.TH "QwtPlotMarker" 3 "Thu Dec 11 2014" "Version 6.1.2" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotMarker" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-QwtPlotMarker \- 
-.PP
-A class for drawing markers\&.  
+QwtPlotMarker \- A class for drawing markers\&.  
 
 .SH SYNOPSIS
 .br
@@ -158,7 +156,7 @@ With \fBsetLabel()\fP, a label can be assigned to the marker\&. The \fBsetLabelA
 .SS "enum \fBQwtPlotMarker::LineStyle\fP"
 Line styles\&. 
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetLineStyle()\fP, \fBlineStyle()\fP 
 .RE
@@ -197,7 +195,7 @@ A width or height < 0\&.0 is ignored by the autoscaler
 
 .PP
 Reimplemented from \fBQwtPlotItem\fP\&.
-.SS "void QwtPlotMarker::draw (QPainter *painter, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect) const\fC [virtual]\fP"
+.SS "void QwtPlotMarker::draw (QPainter * painter, const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & canvasRect) const\fC [virtual]\fP"
 Draw the marker
 .PP
 \fBParameters:\fP
@@ -214,7 +212,7 @@ Draw the marker
 
 .PP
 Implements \fBQwtPlotItem\fP\&.
-.SS "void QwtPlotMarker::drawLabel (QPainter *painter, const QRectF &canvasRect, const QPointF &pos) const\fC [protected]\fP, \fC [virtual]\fP"
+.SS "void QwtPlotMarker::drawLabel (QPainter * painter, const QRectF & canvasRect, const QPointF & pos) const\fC [protected]\fP, \fC [virtual]\fP"
 Align and draw the text label of the marker
 .PP
 \fBParameters:\fP
@@ -226,13 +224,13 @@ Align and draw the text label of the marker
 \fIpos\fP Position of the marker, translated into widget coordinates
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBdrawLabel()\fP, \fBQwtSymbol::drawSymbol()\fP 
 .RE
 .PP
 
-.SS "void QwtPlotMarker::drawLines (QPainter *painter, const QRectF &canvasRect, const QPointF &pos) const\fC [protected]\fP, \fC [virtual]\fP"
+.SS "void QwtPlotMarker::drawLines (QPainter * painter, const QRectF & canvasRect, const QPointF & pos) const\fC [protected]\fP, \fC [virtual]\fP"
 Draw the lines marker
 .PP
 \fBParameters:\fP
@@ -244,7 +242,7 @@ Draw the lines marker
 \fIpos\fP Position of the marker, translated into widget coordinates
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBdrawLabel()\fP, \fBQwtSymbol::drawSymbol()\fP 
 .RE
@@ -258,7 +256,7 @@ Draw the lines marker
 the label 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetLabel()\fP 
 .RE
@@ -272,7 +270,7 @@ the label
 the label alignment 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetLabelAlignment()\fP, \fBsetLabelOrientation()\fP 
 .RE
@@ -286,13 +284,13 @@ the label alignment
 the label orientation 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetLabelOrientation()\fP, \fBlabelAlignment()\fP 
 .RE
 .PP
 
-.SS "\fBQwtGraphic\fP QwtPlotMarker::legendIcon (intindex, const QSizeF &size) const\fC [virtual]\fP"
+.SS "\fBQwtGraphic\fP QwtPlotMarker::legendIcon (int index, const QSizeF & size) const\fC [virtual]\fP"
 
 .PP
 \fBReturns:\fP
@@ -307,7 +305,7 @@ Icon representing the marker on the legend
 \fIsize\fP Icon size
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetLegendIconSize()\fP, \fBlegendData()\fP 
 .RE
@@ -323,7 +321,7 @@ Reimplemented from \fBQwtPlotItem\fP\&.
 the line pen 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetLinePen()\fP 
 .RE
@@ -337,7 +335,7 @@ the line pen
 the line style 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetLineStyle()\fP 
 .RE
@@ -354,7 +352,7 @@ the line style
 
 .PP
 Reimplemented from \fBQwtPlotItem\fP\&.
-.SS "void QwtPlotMarker::setLabel (const \fBQwtText\fP &label)"
+.SS "void QwtPlotMarker::setLabel (const \fBQwtText\fP & label)"
 
 .PP
 Set the label\&. 
@@ -364,13 +362,13 @@ Set the label\&.
 \fIlabel\fP Label text 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBlabel()\fP 
 .RE
 .PP
 
-.SS "void QwtPlotMarker::setLabelAlignment (Qt::Alignmentalign)"
+.SS "void QwtPlotMarker::setLabelAlignment (Qt::Alignment align)"
 
 .PP
 Set the alignment of the label\&. In case of \fBQwtPlotMarker::HLine\fP the alignment is relative to the y position of the marker, but the horizontal flags correspond to the canvas rectangle\&. In case of \fBQwtPlotMarker::VLine\fP the alignment is relative to the x position of the marker, but the vertical flags correspond to the canvas rectangle\&.
@@ -382,13 +380,13 @@ In all other styles the alignment is relative to the marker's position\&.
 \fIalign\fP Alignment\&. 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBlabelAlignment()\fP, \fBlabelOrientation()\fP 
 .RE
 .PP
 
-.SS "void QwtPlotMarker::setLabelOrientation (Qt::Orientationorientation)"
+.SS "void QwtPlotMarker::setLabelOrientation (Qt::Orientation orientation)"
 
 .PP
 Set the orientation of the label\&. When orientation is Qt::Vertical the label is rotated by 90\&.0 degrees ( from bottom to top )\&.
@@ -398,13 +396,13 @@ Set the orientation of the label\&. When orientation is Qt::Vertical the label i
 \fIorientation\fP Orientation of the label
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBlabelOrientation()\fP, \fBsetLabelAlignment()\fP 
 .RE
 .PP
 
-.SS "void QwtPlotMarker::setLinePen (const QColor &color, qrealwidth = \fC0\&.0\fP, Qt::PenStylestyle = \fCQt::SolidLine\fP)"
+.SS "void QwtPlotMarker::setLinePen (const QColor & color, qreal width = \fC0\&.0\fP, Qt::PenStyle style = \fCQt::SolidLine\fP)"
 Build and assign a line pen
 .PP
 In Qt5 the default pen width is 1\&.0 ( 0\&.0 in Qt4 ) what makes it non cosmetic ( see QPen::isCosmetic() )\&. This method has been introduced to hide this incompatibility\&.
@@ -418,13 +416,13 @@ In Qt5 the default pen width is 1\&.0 ( 0\&.0 in Qt4 ) what makes it non cosmeti
 \fIstyle\fP Pen style
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 pen(), brush() 
 .RE
 .PP
 
-.SS "void QwtPlotMarker::setLinePen (const QPen &pen)"
+.SS "void QwtPlotMarker::setLinePen (const QPen & pen)"
 Specify a pen for the line\&.
 .PP
 \fBParameters:\fP
@@ -432,13 +430,13 @@ Specify a pen for the line\&.
 \fIpen\fP New pen 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBlinePen()\fP 
 .RE
 .PP
 
-.SS "void QwtPlotMarker::setLineStyle (\fBLineStyle\fPstyle)"
+.SS "void QwtPlotMarker::setLineStyle (\fBLineStyle\fP style)"
 
 .PP
 Set the line style\&. 
@@ -448,13 +446,13 @@ Set the line style\&.
 \fIstyle\fP Line style\&. 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBlineStyle()\fP 
 .RE
 .PP
 
-.SS "void QwtPlotMarker::setSpacing (intspacing)"
+.SS "void QwtPlotMarker::setSpacing (int spacing)"
 
 .PP
 Set the spacing\&. When the label is not centered on the marker position, the spacing is the distance between the position and the label\&.
@@ -464,13 +462,13 @@ Set the spacing\&. When the label is not centered on the marker position, the sp
 \fIspacing\fP Spacing 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBspacing()\fP, \fBsetLabelAlignment()\fP 
 .RE
 .PP
 
-.SS "void QwtPlotMarker::setSymbol (const \fBQwtSymbol\fP *symbol)"
+.SS "void QwtPlotMarker::setSymbol (const \fBQwtSymbol\fP * symbol)"
 
 .PP
 Assign a symbol\&. 
@@ -480,7 +478,7 @@ Assign a symbol\&.
 \fIsymbol\fP New symbol 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsymbol()\fP 
 .RE
@@ -494,7 +492,7 @@ Assign a symbol\&.
 the spacing 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetSpacing()\fP 
 .RE
@@ -508,7 +506,7 @@ the spacing
 the symbol 
 .RE
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBsetSymbol()\fP, \fBQwtSymbol\fP 
 .RE

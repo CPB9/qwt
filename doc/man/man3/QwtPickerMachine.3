@@ -1,10 +1,8 @@
-.TH "QwtPickerMachine" 3 "Thu Dec 11 2014" "Version 6.1.2" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPickerMachine" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-QwtPickerMachine \- 
-.PP
-A state machine for \fBQwtPicker\fP selections\&.  
+QwtPickerMachine \- A state machine for \fBQwtPicker\fP selections\&.  
 
 .SH SYNOPSIS
 .br
@@ -20,9 +18,9 @@ Inherited by \fBQwtPickerClickPointMachine\fP, \fBQwtPickerClickRectMachine\fP, 
 .RI "enum \fBSelectionType\fP { \fBNoSelection\fP = -1, \fBPointSelection\fP, \fBRectSelection\fP, \fBPolygonSelection\fP }"
 .br
 .ti -1c
-.RI "enum \fBCommand\fP { \fBBegin\fP, \fBAppend\fP, \fBMove\fP, \fBRemove\fP, \fBEnd\fP }"
+.RI "enum \fBCommand\fP { \fBBegin\fP, \fBAppend\fP, \fBMove\fP, \fBRemove\fP, \fBEnd\fP }
+.RI "\fICommands - the output of a state machine\&. \fP""
 .br
-.RI "\fICommands - the output of a state machine\&. \fP"
 .in -1c
 .SS "Public Member Functions"
 
@@ -62,7 +60,7 @@ A state machine for \fBQwtPicker\fP selections\&.
 
 \fBQwtPickerMachine\fP accepts key and mouse events and translates them into selection commands\&.
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBQwtEventPattern::MousePatternCode\fP, \fBQwtEventPattern::KeyPatternCode\fP 
 .RE
@@ -73,7 +71,7 @@ A state machine for \fBQwtPicker\fP selections\&.
 .SS "enum \fBQwtPickerMachine::SelectionType\fP"
 Type of a selection\&. 
 .PP
-\fBSee Also:\fP
+\fBSee also:\fP
 .RS 4
 \fBselectionType()\fP 
 .RE
