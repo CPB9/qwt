@@ -129,8 +129,6 @@ moc_headers = [
   'qwt_wheel.h',
 ]
 
-#    add_definitions()
-
 cpp_args = []
 cpp_dep_args = []
 if target_machine.system() == 'windows'
@@ -151,6 +149,7 @@ qwt_lib = shared_library('qwt',
   sources : src + processed,
   dependencies : qt5_dep,
   include_directories : inc,
+  cpp_args : cpp_args,
 )
 
 qwt_dep = declare_dependency(
